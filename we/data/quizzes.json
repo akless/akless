@@ -1,0 +1,322 @@
+{
+  "le01": {
+    "questions": [
+      {
+        "text": "Was ist HTML?",
+        "input": "radio",
+        "answers": [
+          "Programm",
+          "Formatierungssprache",
+          "Programmiersprache",
+          "Auszeichnungssprache",
+          "Skriptspache",
+          "etwas essbares",
+          "internetfähiges Gerät",
+          "Forschungseinrichtung",
+          "Web-Service"
+        ],
+        "correct": 3
+      },
+      {
+        "text": "Wofür steht HTML?",
+        "input": "radio",
+        "answers": [
+          "High-level Technology Media Language",
+          "Home Technology Media Language",
+          "Home Tool Markup Language",
+          "How To Miss Without Laugh",
+          "Hyperlink Media Language",
+          "Hyperlinks and Text Markup Language",
+          "Hypertext Markup Language",
+          "Hypertext Markup Level",
+          "Hypertext Media Language"
+        ],
+        "correct": 6
+      },
+      {
+        "text": "Wofür wird HTML eingesetzt?",
+        "input": "radio",
+        "answers": [
+          "für den Aufruf von Webseiten",
+          "zur Auswertung von Benutzerinteraktionen",
+          "um morgens aus dem Bett zu kommen",
+          "für Bild- und Ton-Produktion",
+          "zum Erstellen von Animationen",
+          "zum Gestalten von Layout und Design",
+          "zum Nachladen von Daten",
+          "zum Programmieren von Webseiten",
+          "zur Strukturierung digitaler Dokumente"
+        ],
+        "correct": 8
+      },
+      {
+        "text": "Wofür wird HTML eingesetzt?",
+        "input": "radio",
+        "answers": [
+          {
+            "text": "Bill Gates",
+            "comment": "Bill Gates ist der Gründer von Microsoft."
+          },
+          {
+            "text": "Fred Feuerstein",
+            "comment": "Fred Feuerstein ist der Vater in der Familie Feuerstein aus der gleichnamigen Zeichentrickserie."
+          },
+          {
+            "text": "Jeff Bezos",
+            "comment": "Jeff Bezos ist der Gründer von Amazon."
+          },
+          {
+            "text": "Larry Page",
+            "comment": "Larry Page ist einer der Google-Gründer."
+          },
+          {
+            "text": "Mark Zuckerberg",
+            "comment": "Mark Zuckerberg ist der Gründer von Facebook."
+          },
+          {
+            "text": "Mike Sandel",
+            "comment": "Mike Sandel war der Chef von Tim Berners-Lee."
+          },
+          {
+            "text": "Robert Cailliau",
+            "comment": "Robert Cailliau ist der erste Web-Surfer und Freund von Tim-Berners-Lee."
+          },
+          {
+            "text": "Tim Berners-Lee",
+            "comment": "Tim Berners-Lee ist der Erfinder von HTML und der Begründer des World Wide Web (WWW)."
+          },
+          {
+            "text": "Steve Jobs",
+            "comment": "Steve Jobs ist der Gründer von Apple."
+          }
+        ],
+        "correct": 7
+      },
+      {
+        "text": "Zu welchem ursprünglichen Zweck wurde HTML erfunden?",
+        "input": "radio",
+        "answers": [
+          "Aufbau sozialer Netze",
+          "Austausch wissenschaftlicher Publikationen",
+          "Digitale Lehre",
+          "Militärische Zwecke",
+          "Sammeln von Daten",
+          "Streamen von Filmen",
+          "Stärkung von Demokratie",
+          "Tauschbörsen im Internet",
+          "Verbreitung von Unterhaltungselektronik"
+        ],
+        "correct": 1
+      },
+      {
+        "text": "Wer arbeitet an der Weiterentwicklung von HTML?",
+        "input": "checkbox",
+        "answers": [
+          "Europäische Union (EU)",
+          "Facebook",
+          "Offene Gesellschaft",
+          "Organisation des Nordatlantikvertrags (NATO)",
+          "Nationale Sicherheitsbehörde der USA (NSA)",
+          "Vereinte Nationen (UN)",
+          "World Wide Web Consortium (W3C)",
+          "Web Hypertext Application Technology Working Group (WHATWG)",
+          "Youtube"
+        ],
+        "correct": [ 6, 7 ]
+      },
+      {
+        "text": "In welcher Version liegt HTML aktuell vor?",
+        "input": "radio",
+        "answers": [
+          "HTML+",
+          "HTML 2",
+          "HTML 3",
+          "HTML 4",
+          "XHTML 1",
+          "XHTML 2",
+          "HTML5",
+          "HTML6",
+          "HTML10"
+        ],
+        "correct": 6
+      }
+    ]
+  },
+  "le02": {
+    "questions": [
+      {
+        "text": "Wie erstellt man eine neue Webseite mit dem Inhalt \"Hallo Welt!\" über ein HTML-basiertes digitales Dokument?",
+        "input": "number",
+        "answers": [
+          "Änderungen an der Datei speichern",
+          "Angabe der Dokumenttypdefinition",
+          "Datei einen Namen geben",
+          "Datei zum Bearbeiten öffnen",
+          "Dateiendung \".html\" festlegen",
+          "Fertigbaukasten wählen",
+          "Inhalt \"Hallo Welt!\" festlegen",
+          "Neue Datei anlegen",
+          "Registrierung im Internet"
+        ],
+        "correct": [ "7", "5", "2", "4", "3", "", "6", "1", "" ]
+      },
+      {
+        "text": "Mit welchem Programm kann der Inhalt eines HTML-basierten digitalen Dokuments als Webseite dargestellt werden?",
+        "input": "radio",
+        "answers": [
+          "Bildbearbeitungsprogramm",
+          "Dateimanager",
+          "Entwicklungsumgebung",
+          "Kommandozeilen-Tool",
+          "Messanger",
+          "Papierkorb",
+          "Texteditor",
+          "Video-Player",
+          "Webbrowser"
+        ],
+        "correct": 8
+      }
+    ]
+  },
+  "le03": {
+    "questions": [
+      {
+        "text": "Was ist ein HTML-Tag?",
+        "input": "radio",
+        "answers": [
+          "Anweisung",
+          "Attribut",
+          {
+            "text": "Auszeichnungselement",
+            "comment": "Reflektieren Sie noch einmal was Auszeichnungselement in Bezug auf HTML bedeutet."
+          },
+          "Befehl",
+          "Feiertag",
+          "Instruktion",
+          "Platzhalter",
+          "Sonderzeichen",
+          "Variable"
+        ],
+        "correct": 2
+      },
+      {
+        "text": "Wofür nutzt man einen HTML-Tag?",
+        "input": "checkbox",
+        "answers": [
+          {
+            "text": "Festlegung von Layout und Design",
+            "comment": "Hierfür verwendet man nicht HTML, sondern CSS."
+          },
+          {
+            "text": "Hinzufügen weiterer Inhalte, die über Text hinausgehen",
+            "comment": "z.B. Hyperlinks, Bilder, Audio, Video, Listen, Tabellen, Formulare und Buttons"
+          },
+          {
+            "text": "Programmierung der Webseite",
+            "comment": "HTML ist keine Programmiersprache, sondern eine reine Auszeichnungssprache."
+          },
+          {
+            "text": "Steuerung des Webbrowsers",
+            "comment": "Mit HTML steuert man den Aufbau der Webseite durch den Webbrowser, aber nicht den Webbrowser selbst."
+          },
+          "Strukturierung von HTML-Code",
+          "Strukturierung von Inhalten",
+          "Verwaltung digitaler Dokumente"
+        ],
+        "correct": [ 1, 7 ]
+      },
+      {
+        "text": "Woraus besteht ein HTML-Tag und wie setzt man ihn ein?",
+        "description": "Geben Sie für die folgenden HTML5-Codes an, in welchen davon die enthaltenen HTML-Tags korrekt eingesetzt werden.",
+        "input": "checkbox",
+        "encode": true,
+        "answers": [
+          "<h1>Überschrift<h1>",
+          "<h2>Überschrift</h2>",
+          "<h3>Überschrift</h4>",
+          "<p>Paragraph",
+          "<p>Paragraph<p>",
+          "<p>Paragraph</p>",
+          "Hallo Welt!<br>Willkommen.",
+          {
+            "text": "Hallo Welt!<br/>Willkommen.",
+            "comment": "Die Schreibweise <br/> gibt es in HTML5 nicht mehr."
+          },
+          {
+            "text": "Hallo Welt!<br></br>Willkommen.",
+            "comment": "Bei <br>-Tags wird nur ein öffnender HTML-Tag benötigt."
+          }
+        ],
+        "correct": [ 1, 5, 6 ]
+      },
+      {
+        "text": "Welche HTML-Tags dienen zur Markierung von Überschriften?",
+        "input": "checkbox",
+        "encode": true,
+        "answers": [
+          "<br>",
+          "<h>",
+          "<h1>",
+          "<h2>",
+          "<h3>",
+          "<h4>",
+          "<h5>",
+          "<h6>",
+          "<p>"
+        ],
+        "correct": [ 2, 3, 4, 5, 6, 7 ]
+      },
+      {
+        "text": "Welche HTML-Tags dienen zur Markierung von Paragraphen?",
+        "input": "checkbox",
+        "encode": true,
+        "answers": [
+          "<br>",
+          "<h>",
+          "<h1>",
+          "<h2>",
+          "<h3>",
+          "<h4>",
+          "<h5>",
+          "<h6>",
+          "<p>"
+        ],
+        "correct": [ 8 ]
+      },
+      {
+        "text": "Welche HTML-Tags dienen zur Markierung von Zeilenumbrüchen?",
+        "input": "checkbox",
+        "encode": true,
+        "answers": [
+          "<br>",
+          "<h>",
+          "<h1>",
+          "<h2>",
+          "<h3>",
+          "<h4>",
+          "<h5>",
+          "<h6>",
+          "<p>"
+        ],
+        "correct": [ 0 ]
+      },
+      {
+        "text": "Wie schreibt man einen Kommentar in HTML?",
+        "input": "radio",
+        "encode": true,
+        "answers": [
+          "<! Kommentar !>",
+          "<!- Kommentar -!>",
+          "<!- Kommentar ->",
+          "<!-- Kommentar --!>",
+          "<!-- Kommentar -->",
+          "<!>Kommentar<!>",
+          "<-!- Kommentar -!->",
+          "<-- Kommentar --!>",
+          "<-- Kommentar -->"
+        ],
+        "correct": 4
+      }
+    ]
+  }
+}
