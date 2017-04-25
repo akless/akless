@@ -1,5 +1,8 @@
 {
   "le01": {
+    "feedback": true,
+    "placeholder.finish": "Restart",
+    "onfinish": { "restart": true },
     "questions": [
       {
         "text": "Was ist HTML?",
@@ -143,6 +146,9 @@
     ]
   },
   "le02": {
+    "feedback": true,
+    "placeholder.finish": "Restart",
+    "onfinish": { "restart": true },
     "questions": [
       {
         "text": "Wie erstellt man eine neue Webseite mit dem Inhalt \"Hallo Welt!\" über ein HTML-basiertes digitales Dokument?",
@@ -158,7 +164,7 @@
           "Neue Datei anlegen",
           "Registrierung im Internet"
         ],
-        "correct": [ "7", "5", "2", "4", "3", "", "6", "1", "" ]
+        "correct": [ 7, 5, 2, 4, 3, "", 6, 1 ]
       },
       {
         "text": "Mit welchem Programm kann der Inhalt eines HTML-basierten digitalen Dokuments als Webseite dargestellt werden?",
@@ -179,6 +185,9 @@
     ]
   },
   "le03": {
+    "feedback": true,
+    "placeholder.finish": "Restart",
+    "onfinish": { "restart": true },
     "questions": [
       {
         "text": "Was ist ein HTML-Tag?",
