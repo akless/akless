@@ -7,7 +7,7 @@
 ( function () {
 
   var ccm_version = '8.0.0';
-  var ccm_url     = '../../ccm-developer/ccm/ccm.js';
+  var ccm_url     = '../js/ccm.js';
 
   var component_name = 'quiz';
   var component_obj  = {
@@ -70,7 +70,7 @@
           ]
         }
       },
-      css_layout: [ 'ccm.load', '../../ccm-components/quiz/layouts/default.css' ],
+      css_layout: [ 'ccm.load', '../css/quiz.css' ],
       placeholder: {
         question: 'Question',
         prev: 'Previous',
