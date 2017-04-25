@@ -1,8 +1,15 @@
 {
   "le01": {
     "feedback": true,
-    "placeholder.finish": "Restart",
     "onfinish": { "restart": true },
+    "placeholder": {
+      "question": "Frage",
+      "prev": "Zurück",
+      "submit": "Abschicken",
+      "correct": "%input% (correct: %correct%)",
+      "next": "Weiter",
+      "finish": "Neustart"
+    },
     "questions": [
       {
         "text": "Was ist HTML?",
@@ -147,8 +154,15 @@
   },
   "le02": {
     "feedback": true,
-    "placeholder.finish": "Restart",
     "onfinish": { "restart": true },
+    "placeholder": {
+      "question": "Frage",
+      "prev": "Zurück",
+      "submit": "Abschicken",
+      "correct": "%input% (correct: %correct%)",
+      "next": "Weiter",
+      "finish": "Neustart"
+    },
     "questions": [
       {
         "text": "Wie erstellt man eine neue Webseite mit dem Inhalt \"Hallo Welt!\" über ein HTML-basiertes digitales Dokument?",
@@ -187,8 +201,15 @@
   },
   "le03": {
     "feedback": true,
-    "placeholder.finish": "Restart",
     "onfinish": { "restart": true },
+    "placeholder": {
+      "question": "Frage",
+      "prev": "Zurück",
+      "submit": "Abschicken",
+      "correct": "%input% (correct: %correct%)",
+      "next": "Weiter",
+      "finish": "Neustart"
+    },
     "questions": [
       {
         "text": "Was ist ein HTML-Tag?",
