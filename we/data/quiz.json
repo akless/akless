@@ -152,6 +152,7 @@
     "questions": [
       {
         "text": "Wie erstellt man eine neue Webseite mit dem Inhalt \"Hallo Welt!\" über ein HTML-basiertes digitales Dokument?",
+        "description": "Im Folgenden sind einzelne Arbeitsschritte aufgeführt. Geben Sie für die zutreffenden Arbeitsschritte die richtige Reihenfolge an. Markieren Sie also den ersten Schritt mit \"1\", den Zweiten mit \"2\" u.s.w.. Markieren Sie die Schritte die nicht zutreffen mit \"0\".",
         "input": "number",
         "answers": [
           "Änderungen an der Datei speichern",
@@ -164,7 +165,7 @@
           "Neue Datei anlegen",
           "Registrierung im Internet"
         ],
-        "correct": [ 7, 5, 2, 4, 3, "", 6, 1 ]
+        "correct": [ 7, 5, 2, 4, 3, 0, 6, 1, 0 ]
       },
       {
         "text": "Mit welchem Programm kann der Inhalt eines HTML-basierten digitalen Dokuments als Webseite dargestellt werden?",
