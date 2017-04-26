@@ -15,17 +15,17 @@
         "text": "Was ist HTML?",
         "input": "radio",
         "answers": [
-          "Programm",
-          "Formatierungssprache",
-          "Programmiersprache",
           "Auszeichnungssprache",
-          "Skriptspache",
           "etwas essbares",
-          "internetfähiges Gerät",
+          "Formatierungssprache",
           "Forschungseinrichtung",
+          "internetfähiges Gerät",
+          "Programm",
+          "Programmiersprache",
+          "Skriptspache",
           "Web-Service"
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "text": "Wofür steht HTML?",
@@ -47,10 +47,10 @@
         "text": "Wofür wird HTML eingesetzt?",
         "input": "radio",
         "answers": [
-          "für den Aufruf von Webseiten",
-          "zur Auswertung von Benutzerinteraktionen",
-          "um morgens aus dem Bett zu kommen",
           "für Bild- und Ton-Produktion",
+          "für den Aufruf von Webseiten",
+          "um morgens aus dem Bett zu kommen",
+          "zur Auswertung von Benutzerinteraktionen",
           "zum Erstellen von Animationen",
           "zum Gestalten von Layout und Design",
           "zum Nachladen von Daten",
@@ -142,13 +142,13 @@
           "HTML 2",
           "HTML 3",
           "HTML 4",
-          "XHTML 1",
-          "XHTML 2",
           "HTML5",
           "HTML6",
-          "HTML10"
+          "HTML10",
+          "XHTML 1",
+          "XHTML 2"
         ],
-        "correct": 6
+        "correct": 4
       }
     ]
   },
