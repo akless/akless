@@ -1,13 +1,12 @@
 /**
- * @overview default layout of ccm component for rendering a quiz
  * @author André Kless <andre.kless@web.de.de> 2016-2017
  * @license The MIT License (MIT)
  */
 
 #main {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 0 1em;
+  font-family: 'WeblySleekUILight',sans-serif;
   overflow-x: auto;
-  padding: 0.5em;
 }
 
 .title > div {
