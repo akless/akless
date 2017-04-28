@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+/**
+ * @author André Kless <andre.kless@web.de.de> 2017
+ * @license The MIT License (MIT)
+ */
+
+@font-face {
+  font-family: 'WeblySleekUILight';
+  src: url('../font/WeblySleek/weblysleekuil.eot');
+  src: url('../font/WeblySleek/weblysleekuil.eot?#iefix') format('embedded-opentype'),
+       url('../font/WeblySleek/weblysleekuil.woff') format('woff'),
+       url('../font/WeblySleek/weblysleekuil.ttf') format('truetype'),
+       url('../font/WeblySleek/weblysleekuil.svg#WeblySleekUILight') format('svg');
+}
+
+@font-face {
+  font-family: 'WeblySleekUILight-Italic';
+  src: url('font/WeblySleek/weblysleekuili.eot');
+  src: url('font/WeblySleek/weblysleekuili.eot?#iefix') format('embedded-opentype'),
+       url('font/WeblySleek/weblysleekuili.woff') format('woff'),
+       url('font/WeblySleek/weblysleekuili.ttf') format('truetype'),
+       url('font/WeblySleek/weblysleekuili.svg#WeblySleekUILight-Italic') format('svg');
+}
+
+@font-face {
+  font-family: 'WeblySleekUISemilight';
+  src: url('font/WeblySleek/weblysleekuisl.eot');
+  src: url('font/WeblySleek/weblysleekuisl.eot?#iefix') format('embedded-opentype'),
+       url('font/WeblySleek/weblysleekuisl.woff') format('woff'),
+       url('font/WeblySleek/weblysleekuisl.ttf') format('truetype'),
+       url('font/WeblySleek/weblysleekuisl.svg#WeblySleekUISemilight') format('svg');
+}
+
+body {
+	padding: 0 1em;
+	font-family: 'WeblySleekUILight',sans-serif;
+	overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	letter-spacing: 0.1em;
+}
+
+p, li {
+	line-height: 1.6em;
+}
+
+figure {
+	text-align: center;
+}
+
+figure > * {
+	width: 100%;
+	max-width: 640px;
+	border-top: solid #c0cfb0 2px;
+	border-left: solid #c0cfb0 1px;
+	border-bottom: solid #84A266 2px;
+	border-right: solid #84A266 1px;
+}
+
+a, a:visited {
+  color: #84A266;
+}
+
+a:hover {
+  color: #ff8566;
+}
+
+hr {
+	margin-top: 2em;
+}
