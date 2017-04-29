@@ -1476,15 +1476,15 @@
       // create global namespace for component
       ccm.components[ component.index ] = {};
 
-      // prepare URL's of needed polyfills
+      // load needed polyfills (Custom Elements and Shadow DOM)
       var polyfills = [];
-      // no 'Custom Elements' support? => load polyfill  // TODO: update polyfill
       if ( !( 'registerElement' in document ) )
-        polyfills.push( [ '../js/document-register-element.js', '../js/webcomponents-lite.min.js' ] );
-      // no 'Shadow DOM v1' support? => load polyfill
+        polyfills.push( [
+          'https://cdnjs.cloudflare.com/ajax/libs/document-register-element/0.5.3/document-register-element.js',
+          'https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/webcomponents-lite.min.js'
+        ] );
       if ( !document.head.attachShadow || !document.head.createShadowRoot )
-        polyfills.push( '../js/shadydom.min.js' );
-      // load needed polyfills
+        polyfills.push( 'https://kaul.inf.h-brs.de/ccm/lib/shadydom.min.js' );
       if ( polyfills.length > 0 ) self.load( polyfills, proceed ); else return proceed();
 
       function proceed() {
