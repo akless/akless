@@ -917,15 +917,6 @@
 
   /*-------------------------------------- polyfills and public ccm namespaces ---------------------------------------*/
 
-  // no 'Custom Elements' support? => load polyfill  // TODO: update polyfill
-  if ( !( 'registerElement' in document ) ) {
-    document.write( '<script src="https://cdnjs.cloudflare.com/ajax/libs/document-register-element/0.5.3/document-register-element.js"></script>' );
-    document.write( '<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/webcomponents-lite.min.js"></script>' );
-  }
-  // no 'Shadow DOM v1' support? => load polyfill
-  if ( !document.head.attachShadow || !document.head.createShadowRoot )
-    document.write( '<script src="https://kaul.inf.h-brs.de/ccm/lib/shadydom.min.js"></script>' );
-
   // set global ccm namespace
   if ( !window.ccm ) ccm = {
 
@@ -1485,11 +1476,29 @@
       // create global namespace for component
       ccm.components[ component.index ] = {};
 
-      // setup component
-      setup();
+      // prepare URL's of needed polyfills
+      var polyfills = [];
+      // no 'Custom Elements' support? => load polyfill  // TODO: update polyfill
+      if ( !( 'registerElement' in document ) )
+        polyfills.push( [ '../js/document-register-element.js', '../js/webcomponents-lite.min.js' ] );
+      // no 'Shadow DOM v1' support? => load polyfill
+      if ( !document.head.attachShadow || !document.head.createShadowRoot )
+        polyfills.push( '../js/shadydom.min.js' );
+      // load needed polyfills
+      if ( polyfills.length > 0 ) self.load( polyfills, proceed ); else return proceed();
 
-      // initialize component
-      if ( component.init ) { component.init( finish ); delete component.init; } else return finish();
+      function proceed() {
+
+        // setup component
+        setup();
+
+        // create HTML tag for ccm component
+        createCustomElement();
+
+        // initialize component
+        if ( component.init ) { component.init( finish ); delete component.init; } else return finish();
+
+      }
 
       /**
        * @summary get ccm component index by URL
@@ -1572,24 +1581,21 @@
         // set specific framework version
         component.config.ccm = self;
 
-        // create HTML tag for ccm component
-        createCustomElement();
+      }
 
-        /**
-         * create HTML tag for ccm component
-         */
-        function createCustomElement() {
+      /**
+       * create HTML tag for ccm component
+       */
+      function createCustomElement() {
 
-          var tag = Object.create( HTMLElement.prototype );
-          tag.attachedCallback = function () {
-            if ( !document.body.contains( this ) ) return;
-            var config = self.helper.generateConfig( this );
-            config.element = this;
-            component.start( config );
-          };
-          document.registerElement( 'ccm-' + component.index, { prototype: tag } );
-
-        }
+        var tag = Object.create( HTMLElement.prototype );
+        tag.attachedCallback = function () {
+          if ( !document.body.contains( this ) ) return;
+          var config = self.helper.generateConfig( this );
+          config.element = this;
+          component.start( config );
+        };
+        document.registerElement( 'ccm-' + component.index, { prototype: tag } );
 
       }
 
@@ -3175,7 +3181,7 @@
       /**
        * @summary performs minor finish actions
        * @param {ccm.types.instance} instance - finished <i>ccm</i> instance
-       * @param {function|object} instance.onfinish - finish callback or settings for minor finish actions
+       * @param {function|object|string} instance.onfinish - finish callback or settings for minor finish actions or global function name that should be called as finish callback
        * @param {ccm.types.instance} [instance.onfinish.user] - <i>ccm</i> user instance (user will be logged in if not already logged in)
        * @param {ccm.types.key} [instance.onfinish.key] - dataset key for result data
        * @param {ccm.types.settings} [instance.onfinish.store_settings] - settings for a <i>ccm</i> datastore (result data will be set in this datastore)
@@ -3216,6 +3222,9 @@
 
         // has only function? => abort and call it as finish callback
         if ( typeof instance.onfinish === 'function' ) return instance.onfinish( instance, results );
+
+        // has only string as global function name? => abort and call it as finish callback
+        if ( typeof instance.onfinish === 'string' ) return this.executeByName( instance.onfinish, [ instance, results ] );
 
         // has user instance? => login user
         if ( instance.onfinish.user ) instance.onfinish.user.login( proceed ); else proceed();
