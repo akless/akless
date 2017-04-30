@@ -4,9 +4,12 @@
  */
 
 #main {
-  padding: 0 1em;
   font-family: 'WeblySleekUILight',sans-serif;
   overflow-x: auto;
+}
+
+.title {
+  font-size: 1.17em;
 }
 
 .title > div {
