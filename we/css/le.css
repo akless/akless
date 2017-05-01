@@ -13,7 +13,7 @@
   font-style: normal;
 }
 
-body {
+body, .ccm-content {
 	padding: 0 1em;
 	font-family: 'WeblySleek UI Light',sans-serif;
 	overflow-x: hidden;
