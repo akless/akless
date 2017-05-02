@@ -95,15 +95,15 @@
             "comment": "Robert Cailliau ist der erste Web-Surfer und Freund von Tim-Berners-Lee."
           },
           {
-            "text": "Tim Berners-Lee",
-            "comment": "Tim Berners-Lee ist der Erfinder von HTML und der Begründer des World Wide Web (WWW)."
-          },
-          {
             "text": "Steve Jobs",
             "comment": "Steve Jobs ist der Gründer von Apple."
+          },
+          {
+            "text": "Tim Berners-Lee",
+            "comment": "Tim Berners-Lee ist der Erfinder von HTML und der Begründer des World Wide Web (WWW)."
           }
         ],
-        "correct": 7
+        "correct": 8
       },
       {
         "text": "Zu welchem ursprünglichen Zweck wurde HTML erfunden?",
@@ -171,6 +171,10 @@
         "text": "Sind Sie in der Lage eine neue Webseite mit dem Inhalt \"Hallo Welt!\" über ein HTML-basiertes digitales Dokument zu erstellen?",
         "description": "Im Folgenden sind einzelne Arbeitsschritte aufgeführt. Geben Sie für die zutreffenden Arbeitsschritte die richtige Reihenfolge an. Markieren Sie also den ersten Schritt mit \"1\", den Zweiten mit \"2\" u.s.w.. Markieren Sie die Schritte die nicht zutreffen mit \"0\".",
         "input": "number",
+        "attributes": {
+          "min": 0,
+          "max": 9999999999
+        },
         "answers": [
           "Änderungen an der Datei speichern",
           "Angabe der Dokumenttypdefinition",
