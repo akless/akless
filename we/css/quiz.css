@@ -68,6 +68,16 @@
   padding-right: 0.5em;
 }
 
+.input, .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+label {
+  padding-bottom: 0.1em;
+}
+
 input {
   font-family: 'WeblySleekUILight',sans-serif;
   border-top: solid #c0cfb0 0.2em;
@@ -98,7 +108,7 @@ input[type=checkbox]:enabled, input[type=radio]:enabled, button:enabled {
 button {
   color: white;
   background-color: #84A266;
-  padding: 0.5em 1em;
+  padding: 0.5em 1em 0.6em 1em;
   border: none;
   font-family: 'WeblySleekUILight',sans-serif;
   border-radius: 0.5em;

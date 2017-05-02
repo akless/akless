@@ -173,7 +173,7 @@
         "input": "number",
         "attributes": {
           "min": 0,
-          "max": 9999999999
+          "max": 9
         },
         "answers": [
           "Änderungen an der Datei speichern",
