@@ -21,7 +21,8 @@
           id: 'main',
           inner: [
             { id: 'questions' },
-            { id: 'nav',
+            {
+              id: 'nav',
               inner: [
                 { id: 'prev' },
                 { id: 'next' },
@@ -31,7 +32,6 @@
           ]
         },
         question: {
-          id: '%id%',
           class: 'question',
           inner: [
             {
@@ -50,21 +50,18 @@
           ]
         },
         answer: {
-          id: '%id%',
           class: 'answer',
           inner: [
             {
               class: 'entry',
-              inner: [
-                {
-                  class: 'text',
-                  inner: {
-                    tag: 'label',
-                    inner: '%text%',
-                    for: '%id%-input'
-                  }
+              inner: {
+                class: 'text',
+                inner: {
+                  tag: 'label',
+                  inner: '%text%',
+                  for: '%id%-input'
                 }
-              ]
+              }
             },
             { class: 'comment' }
           ]
@@ -75,7 +72,6 @@
         question: 'Question',
         prev: 'Previous',
         submit: 'Submit',
-        correct: '%input% (correct: %correct%)',
         next: 'Next',
         finish: 'Finish'
       }
@@ -85,12 +81,12 @@
   //  encode: true,
   //  shuffle: true,
   //  random: true,
-  //  input: 'text',
+  //  input: 'radio',
   //  attributes: {},
   //  feedback: true,
   //  swap: true,
-  //  user: [ 'ccm.instance', '../user/ccm.user.js' ],
-  //  logger: [ 'ccm.instance', '../log/ccm.log.js', [ 'ccm.get', '../log/configs.json', 'greedy' ] ],
+  //  user: [ 'ccm.instance', './../../ccm-components/user/ccm.user.js' ],
+  //  logger: [ 'ccm.instance', './../../ccm-components/log/ccm.log.js', [ 'ccm.get', './../../ccm-components/log/configs.json', 'greedy' ] ],
   //  onchange: function ( instance, data ) { console.log( data ); },
   //  oninput: function ( instance, data ) { console.log( data ); },
   //  onprev: function ( instance, data ) { console.log( data ); },
@@ -207,7 +203,7 @@
           } );
 
           // remove no more needed instance configuration properties
-          delete my.text; delete my.description; delete my.answer; delete my.input; delete my.attributes; delete my.swap; delete my.encode; delete my.random; delete my.feedback; delete my.correct;
+          delete my.text; delete my.description; delete my.answers; delete my.input; delete my.attributes; delete my.swap; delete my.encode; delete my.random; delete my.feedback; delete my.correct;
 
         }
 
@@ -272,7 +268,6 @@
 
           // prepare question HTML structure
           question.elem = self.ccm.helper.html( my.html_templates.question, {
-            id:          i,
             question:    my.placeholder.question,
             nr:          i + 1,
             text:        question.encode ? self.ccm.helper.htmlEncode( question.text ) : question.text,
@@ -394,25 +389,25 @@
             if ( my.questions.length > 1 ) {
 
               // render 'prev' button
-              self.ccm.helper.setContent( main_elem.querySelector( '#prev' ), self.ccm.helper.html( {
+              self.ccm.helper.setContent( main_elem.querySelector( '#prev' ), self.ccm.helper.protect( self.ccm.helper.html( {
                 tag: 'button',
                 disabled: current_question === 0,
                 inner: my.placeholder.prev,
                 onclick: previousQuestion
-              } ) );
+              } ) ) );
 
               // render 'submit' or 'next' button
-              self.ccm.helper.setContent( main_elem.querySelector( '#next' ), self.ccm.helper.html( {
+              self.ccm.helper.setContent( main_elem.querySelector( '#next' ), self.ccm.helper.protect( self.ccm.helper.html( {
                 tag: 'button',
                 disabled: current_question === my.questions.length - 1 && ( !question.feedback || evaluated[ current_question ] ),
                 inner: my.placeholder[ question.feedback && !evaluated[ current_question ] ? 'submit' : 'next' ],
                 onclick: question.feedback && !evaluated[ current_question ] ? function () { evaluate( question ) } : nextQuestion
-              } ) );
+              } ) ) );
 
             }
 
             // render 'finish' button
-            if ( !finished ) self.ccm.helper.setContent( main_elem.querySelector( '#finish' ), self.ccm.helper.html( {
+            if ( !finished ) self.ccm.helper.setContent( main_elem.querySelector( '#finish' ), self.ccm.helper.protect( self.ccm.helper.html( {
               tag: 'button',
               disabled: current_question !== my.questions.length - 1 || question.feedback && !evaluated[ current_question ],
               inner: my.placeholder.finish,
@@ -442,7 +437,7 @@
                 }
 
               }
-            } ) );
+            } ) ) );
 
             /** switch to previous question */
             function previousQuestion() {
@@ -563,7 +558,7 @@
                   if ( question.input !== 'checkbox' && correct !== '' && input !== correct ) {
                     var input_tag = answer.elem.querySelector( 'input' );
                     input_tag.value = '';
-                    input_tag.setAttribute( 'placeholder', input === '' ? correct : self.ccm.helper.format( my.placeholder.correct, { correct: correct, input: input } ) );
+                    input_tag.setAttribute( 'placeholder', correct );
                   }
 
                 } );
