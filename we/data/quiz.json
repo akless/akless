@@ -1,4 +1,7 @@
 {
+  "author": "André Kless <andre.kless@web.de.de> 2017",
+  "license": "The MIT License (MIT)",
+
   "le01": {
     "feedback": true,
     "onfinish": { "restart": true },
