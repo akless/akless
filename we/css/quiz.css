@@ -87,3 +87,20 @@ input[type=checkbox]:enabled, input[type=radio]:enabled, button:enabled {
 #nav > div:not(:first-child) {
   padding-left: 0.5em;
 }
+
+button {
+  color: white;
+  background-color: #84A266;
+  padding: 0.5em 1em;
+  border: none;
+  font-family: 'WeblySleekUILight',sans-serif;
+  border-radius: 0.5em;
+  transition: background-color 0.4s;
+  letter-spacing: 0.1em;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #a6ba91;
+  border-color: #c0cfb0;
+}
