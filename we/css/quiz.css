@@ -68,6 +68,13 @@
   padding-right: 0.5em;
 }
 
+input {
+  font-family: 'WeblySleekUILight',sans-serif;
+  border-top: solid #c0cfb0 0.2em;
+  border-left: solid #c0cfb0 0.2em;
+  padding: 0.2em 0.5em;
+}
+
 input[type=checkbox]:enabled, input[type=radio]:enabled, button:enabled {
   cursor: pointer;
 }
