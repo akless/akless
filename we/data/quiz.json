@@ -3,15 +3,17 @@
   "license": "The MIT License (MIT)",
 
   "le01": {
+    "start_button": true,
+    "anytime_finish": true,
     "feedback": true,
     "onfinish": { "restart": true },
     "placeholder": {
+      "start": "Quiz starten",
       "question": "Frage",
       "prev": "Zurück",
       "submit": "Abschicken",
-      "correct": "%input% (correct: %correct%)",
       "next": "Weiter",
-      "finish": "Neustart"
+      "finish": "Beenden"
     },
     "questions": [
       {
@@ -156,15 +158,17 @@
     ]
   },
   "le02": {
+    "start_button": true,
+    "anytime_finish": true,
     "feedback": true,
     "onfinish": { "restart": true },
     "placeholder": {
+      "start": "Quiz starten",
       "question": "Frage",
       "prev": "Zurück",
       "submit": "Abschicken",
-      "correct": "%input% (correct: %correct%)",
       "next": "Weiter",
-      "finish": "Neustart"
+      "finish": "Beenden"
     },
     "questions": [
       {
@@ -207,15 +211,17 @@
     ]
   },
   "le03": {
+    "start_button": true,
+    "anytime_finish": true,
     "feedback": true,
     "onfinish": { "restart": true },
     "placeholder": {
+      "start": "Quiz starten",
       "question": "Frage",
       "prev": "Zurück",
       "submit": "Abschicken",
-      "correct": "%input% (correct: %correct%)",
       "next": "Weiter",
-      "finish": "Neustart"
+      "finish": "Beenden"
     },
     "questions": [
       {
