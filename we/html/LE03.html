@@ -4,8 +4,46 @@
 @license The MIT License (MIT)
 -->
 <meta charset="utf-8">
-<script src="../js/ccm.quiz.js"></script>
+<style>
+  @font-face {
+    font-family: 'WeblySleekUI';
+    src: url('../font/weblysleekuisl.eot');
+    src: url('../font/weblysleekuisl.eot?#iefix') format('embedded-opentype'),
+    url('../font/weblysleekuisl.woff') format('woff'),
+    url('../font/weblysleekuisl.ttf') format('truetype'),
+    url('../font/weblysleekuisl.svg#WeblySleekUISemilight') format('svg');
+  }
+  @font-face {
+    font-family: 'WeblySleekUI';
+    src: url('../font/weblysleekuisb.eot');
+    src: url('../font/weblysleekuisb.eot?#iefix') format('embedded-opentype'),
+    url('../font/weblysleekuisb.woff') format('woff'),
+    url('../font/weblysleekuisb.ttf') format('truetype'),
+    url('../font/weblysleekuisb.svg#WeblySleekUISemibold') format('svg');
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: 'WeblySleekUI';
+    src: url('../font/weblysleekuisli.eot');
+    src: url('../font/weblysleekuisli.eot?#iefix') format('embedded-opentype'),
+    url('../font/weblysleekuisli.woff') format('woff'),
+    url('../font/weblysleekuisli.ttf') format('truetype'),
+    url('../font/weblysleekuisli.svg#WeblySleekUISemilight-Italic') format('svg');
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'WeblySleekUI';
+    src: url('../font/weblysleekuisbi.eot');
+    src: url('../font/weblysleekuisbi.eot?#iefix') format('embedded-opentype'),
+    url('../font/weblysleekuisbi.woff') format('woff'),
+    url('../font/weblysleekuisbi.ttf') format('truetype'),
+    url('../font/weblysleekuisbi.svg#WeblySleekUISemibold-Italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+  }
+</style>
 <link rel="stylesheet" href="../css/le.css">
+<script src="../js/ccm.quiz.js"></script>
 
 <h1>Lerneinheit: HTML-Tags</h1>
 
@@ -31,25 +69,22 @@
 
 <h2>2 Inhalt</h2>
 
-[Video]
+<figure><video controls><source src="../video/LE03_Inhalt.mp4" type="video/mp4"></video></figure>
 
 <h3>2.1 Was ist ein HTML-Tag?</h3>
 
 <p>In der Auszeichnungssprache HTML sind die HTML-Tags die Auszeichnungselemente. Innerhalb einer HTML-Datei können mit HTML-Tags die Inhalte der Webseite strukturiert und neben Text auch andere Inhalte hinzugefügt werden. Mit ihnen kann beispielsweise markiert werden, welcher Text ein Paragraph und welcher eine Überschrift ist.</p>
 
-<code><pre>
-&lt;h1>Dies ist eine Überschrift&lt;/h1>
-&lt;p>Dies ist ein Paragraph&lt;/p>
-</pre></code>
+<figure><img src="../image/LE03_Inhalt.001.jpg"></figure>
+
+<p>In dieser Lerneinheit verwende ich den kostenfreien Online-Quelltext-Editor <a target="_blank" href="https://thimble.mozilla.org/de/">Thimble</a>, der weder die Installation eines Programms, noch ein bestimmtes Betriebssystem voraussetzt und mir zu meinen Änderungen in HTML direkt eine Vorschau der Webseite anzeigt.</p>
 
 <h3>2.2 Syntax eines HTML-Tags</h3>
 
 <p>Ein HTML-Tag beginnt im einfachsten Falle mit einer öffnenden spitzen Klammer, gefolgt von dem Namen des HTML-Tags und abschließend einer schließenden spitzen Klammer. Im Beispiel sieht man bereits, dass für die Markierung einer Überschrift ein &lt;h1>-Tag verwendet wird und für Paragraphen ein &lt;p>-Tag.</p>
 
-<code><pre>
-<b>&lt;h1></b>Dies ist eine Überschrift&lt;/h1>
-<b>&lt;p></b>Dies ist ein Paragraph&lt;/p>
-</pre></code>
+<code><pre><b>&lt;h1></b>Dies ist eine Überschrift&lt;/h1></pre></code>
+<code><pre><b>&lt;p></b>Dies ist ein Paragraph&lt;/p></pre></code>
 
 <h3>2.3 Öffnende und schließende HTML-Tags</h3>
 
@@ -69,68 +104,35 @@
 
 <h3>2.4 Nicht-schließende HTML-Tags</h3>
 
-<p>Es gibt aber auch wenige HTML-Tags, für die es keinen schließenden HTML-Tag gibt, sondern nur einen Öffnenden. Dies gilt z.B. für einen <br>-Tag, der lediglich einen Zeilenumbruch angibt und für den ein schließender HTML-Tag daher wenig Sinn macht.</p>
+<p>Es gibt aber auch wenige HTML-Tags, für die es keinen schließenden HTML-Tag gibt, sondern nur einen Öffnenden. Dies gilt z.B. für einen &lt;br>-Tag, der lediglich einen Zeilenumbruch angibt und für den ein schließender HTML-Tag daher wenig Sinn macht.</p>
 
-<code><pre>
-&lt;h1>Dies ist eine Überschrift&lt;/h1>
-&lt;p>
-  Dies ist ein Paragraph.<b>&lt;br></b>
-  Dieser Satz steht in einer neuen Zeile.
-&lt;/p>
-</pre></code>
+<figure><img src="../image/LE03_Inhalt.004.jpg"></figure>
 
 <h3>2.5 Strukturierung des HTML-Codes</h3>
 
 <p>Für den Webbrowser macht es übrigens keinen Unterschied, wie wir den HTML-Code strukturieren, er könnte genauso gut auch in einer einzigen langen Zeile stehen.</p>
 
-<code><pre>
-&lt;h1>Dies ist eine Überschrift&lt;/h1>&lt;p>Dies ist ein Paragraph.&lt;br>Dieser Satz steht in einer neuen Zeile.&lt;/p>
-</pre></code>
+<figure><img src="../image/LE03_Inhalt.005.jpg"></figure>
 
-<p>Damit der HTML-Code aber für das menschliche Auge möglichst gut lesbar ist, wird er üblicherweise, wie vorher gezeigt, mit Zeilenumbrüchen und Leerzeichen eingerückt. Überprüfen Sie am besten direkt immer selbst, wie der Webbrowser die Inhalte der Webseite nach einer Änderung des HTML-Codes darstellt, indem Sie Ihre Änderungen speichern und die HTML-Datei erneut mit dem Webbrowser öffnen bzw. dort neu laden.</p>
-
-[Abbildung: Screenshot der Webseite]
+<p>Damit der HTML-Code aber für das menschliche Auge möglichst gut lesbar ist, wird er üblicherweise, wie vorher gezeigt, mit Zeilenumbrüchen und Leerzeichen eingerückt. Überprüfen Sie am besten direkt immer selbst, wie der Webbrowser die Inhalte der Webseite nach einer Änderung des HTML-Codes darstellt, indem Sie Ihre Änderungen speichern und die HTML-Datei erneut mit dem Webbrowser öffnen bzw. dort neu laden. Beim Online-Quelltext-Editor Thimble genügt ein Klick auf den "Vorschau aktualisieren"-Button.</p>
 
 <h3>2.6 Überschriftenebenen</h3>
 
 <p>Zum Markieren von Überschriften gibt es in HTML neben dem &lt;h1>-Tag noch die HTML-Tags &lt;h2>, &lt;h3>, &lt;h4>, &lt;h5> und &lt;h6>. Jeder dieser Tags steht für eine Überschriftenebene, von denen es somit insgesamt 6 Ebenen gibt. Der von uns bereits verwendete &lt;h1>-Tag steht für die oberste Überschriftenebene. Die Überschrift zu einem Kapitel würde man also beispielsweise mit einem &lt;h1>-Tag markieren und die der Unterkapitel mit einem &lt;h2>-Tag, usw..</p>
 
-<code><pre>
-&lt;h1>Kapitel 1: HTML&lt;/h1>
-&lt;p>In diesem Kapitel werden Grundlagen in HTML vermittelt.&lt;/p>
-
-&lt;h2>1.1: Was ist HTML?&lt;/h2>
-&lt;p>HTML ist eine Auszeichnungssprache über die...&lt;/p>
-
-&lt;h2>1.2: Erste "Hallo Welt"-Webseite&lt;/h2>
-&lt;p>Zum Erstellen einer Webseite benötigen Sie...&lt;/p>
-</pre></code>
+<figure><img src="../image/LE03_Inhalt.006.jpg"></figure>
 
 <p>Experimentieren Sie ruhig etwas mit diesen HTML-Tags und schauen Sie sich das Ergebnis im Webbrowser an.</p>
-
-[Abbildung: Screenshot der Webseite]
 
 <h3>2.7 Kommentare</h3>
 
 <p>In HTML gibt es die Möglichkeit an beliebigen Stellen im HTML-Code Kommentare zu hinterlegen. Alles was innerhalb eines Kommentars steht wird vom Webbrowser nicht angezeigt und ignoriert. Dies kann nützlich sein um individuelle Anmerkungen im Code zu hinterlegen oder bestimmte Code-Bereiche, die kurzzeitig nicht benötigt werden, gezielt "auszukommentieren". Das bedeutet diese Bereiche also nicht zu löschen, sondern sie nur ignorieren zu lassen, um sie später leicht jederzeit wiederherherstellen zu können.</p>
 
-<code><pre>
-&lt;!-- Dies ist ein einzeiliger Kommentar -->
-
-&lt;!--
-Dies ist ein mehrzeiliger Kommentar.
-Kommentare werden vom Webbrowser nicht ausgewertet und ignoriert.
--->
-
-&lt;!--
-&lt;h1>Diese Überschrift ist auskommentiert.&lt;/h1>
-&lt;p>Genauso wie dieser Paragraph.&lt;/p>
--->
-</pre></code>
+<figure><img src="../image/LE03_Inhalt.007.jpg"></figure>
 
 <h3>2.8 Syntax eines HTML-Kommentars</h3>
 
-<p>Ein Kommentar beginnt immer mit einer öffnenden spitzen Klammer, gefolgt von einem Ausrufezeichen und zwei Trennstrichen (&lt;!--) und endet mit zwei Trennstrichen gefolgt von einer schließenden spitzen Klassem (-->).</p>
+<p>Ein Kommentar beginnt immer mit einer öffnenden spitzen Klammer, gefolgt von einem Ausrufezeichen und zwei Trennstrichen (&lt;!--) und endet mit zwei Trennstrichen gefolgt von einer schließenden spitzen Klammer (-->).</p>
 
 <code><pre>
 <b style="color: darkgreen">&lt;!--</b> Alles was innerhalb eines Kommentars steht wird vom Webbrowser ignoriert <b style="color: darkred">--></b>
@@ -144,15 +146,11 @@ Kommentare werden vom Webbrowser nicht ausgewertet und ignoriert.
 
 <h2>4. Alternative Materialien (ALPHA's)</h2>
 
-<ul>
-  <li>...</li>
-</ul>
+<h3>4.1 ... | ...</h3>
 
-<h2>5. Weiterführende Materialien (Xperts)</h2>
+<p>...</p>
 
-<ul>
-  <li>...</li>
-</ul>
+<p>Link: <a target="_blank" href="...">...</a></p>
 
 <hr>
 
