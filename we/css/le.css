@@ -3,19 +3,9 @@
  * @license The MIT License (MIT)
  */
 
-@font-face {
-	font-family: 'WeblySleek UI Light';
-	src: url('../font/weblysleekuil.eot?') format('eot'),
-			 url('../font/weblysleekuil.woff') format('woff'),
-			 url('../font/weblysleekuil.ttf') format('truetype'),
-			 url('../font/weblysleekuil.svg#WeblySleekUILight') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
 body, .ccm-content {
 	padding: 0 1em;
-	font-family: 'WeblySleek UI Light',sans-serif;
+	font-family: 'WeblySleekUI',sans-serif;
 	overflow-x: hidden;
 }
 
