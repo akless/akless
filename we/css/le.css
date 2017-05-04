@@ -15,7 +15,7 @@
 
 body, .ccm-content {
 	padding: 0 1em;
-	font-family: Arial, Tahoma, "Lucida Sans", "WeblySleek UI Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-family: 'WeblySleek UI Light',sans-serif;
 	overflow-x: hidden;
 }
 
