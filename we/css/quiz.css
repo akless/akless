@@ -5,6 +5,7 @@
 
 #main {
   font-family: 'WeblySleekUI',sans-serif;
+  font-size: 20px;
   overflow-x: auto;
 }
 
@@ -70,7 +71,8 @@ label {
 }
 
 input {
-  font-family: 'WeblySleekUI',sans-serif;
+  font-family: inherit;
+  font-size: 80%;
   padding: 0.2em 0.5em;
 }
 
@@ -99,7 +101,8 @@ button {
   background-color: #00709B;
   padding: 0.5em 1em 0.6em 1em;
   border: none;
-  font-family: 'WeblySleekUI',sans-serif;
+  font-family: inherit;
+  font-size: 80%;
   border-radius: 0.5em;
   transition: background-color 0.4s;
   letter-spacing: 0.1em;
