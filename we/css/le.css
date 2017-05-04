@@ -24,18 +24,15 @@ figure {
 figure > * {
 	width: 100%;
 	max-width: 640px;
-	border-top: solid #c0cfb0 2px;
-	border-left: solid #c0cfb0 1px;
-	border-bottom: solid #84A266 2px;
-	border-right: solid #84A266 1px;
+	border: 2px solid #00709B;
 }
 
 a, a:visited {
-  color: #84A266;
+  color: #00709B;
 }
 
 a:hover {
-  color: #ff8566;
+  color: #00ACEE;
 }
 
 a[rel=license] {

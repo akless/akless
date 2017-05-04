@@ -52,6 +52,7 @@
 
 .entry {
   display: flex;
+  padding: 0.1em;
 }
 
 .entry > div:first-child {
@@ -70,8 +71,6 @@ label {
 
 input {
   font-family: 'WeblySleekUI',sans-serif;
-  border-top: solid #c0cfb0 0.2em;
-  border-left: solid #c0cfb0 0.2em;
   padding: 0.2em 0.5em;
 }
 
@@ -97,7 +96,7 @@ input[type=checkbox]:enabled, input[type=radio]:enabled, button:enabled {
 
 button {
   color: white;
-  background-color: #84A266;
+  background-color: #00709B;
   padding: 0.5em 1em 0.6em 1em;
   border: none;
   font-family: 'WeblySleekUI',sans-serif;
@@ -108,8 +107,8 @@ button {
 
 button:hover:enabled {
   cursor: pointer;
-  background-color: #a6ba91;
-  border-color: #c0cfb0;
+  background-color: #00ACEE;
+  border-color: #6FD1F7;
 }
 
 button:active {
