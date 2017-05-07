@@ -5,7 +5,7 @@
  */
 
 #main {
-  font-family: 'WeblySleekUI',sans-serif;
+  font-family: WeblySleekUI, sans-serif;
   font-size: 20px;
   overflow-x: auto;
 }
@@ -33,7 +33,6 @@
 .description {
   padding-top: 0.8em;
   font-size: 80%;
-  font-style: italic;
 }
 
 .answers {
