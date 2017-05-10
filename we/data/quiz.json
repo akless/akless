@@ -3,6 +3,7 @@
   "license": "The MIT License (MIT)",
 
   "le01": {
+    "css_layout": [ "ccm.load", "../css/quiz.css" ],
     "feedback": true,
     "start_button": true,
     "navigation": true,
@@ -159,6 +160,7 @@
     ]
   },
   "le02": {
+    "css_layout": [ "ccm.load", "../css/quiz.css" ],
     "feedback": true,
     "start_button": true,
     "navigation": true,
@@ -213,6 +215,7 @@
     ]
   },
   "le03": {
+    "css_layout": [ "ccm.load", "../css/quiz.css" ],
     "feedback": true,
     "start_button": true,
     "navigation": true,
