@@ -1,5 +1,5 @@
 /**
- * @overview ccm component for rendering learning unit
+ * @overview ccm component for rendering a learning unit
  * @author André Kless <andre.kless@web.de> 2017
  * @license The MIT License (MIT)
  */
