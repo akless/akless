@@ -90,14 +90,14 @@ input[type=checkbox]:enabled, input[type=radio]:enabled, button:enabled {
 }
 
 #nav {
-  padding-top: 0.5em;
+  padding-top: 0.25em;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
-#nav > div:not(:first-child) {
-  padding-left: 0.5em;
+#nav > div {
+  padding: 0.25em;
 }
 
 button {
