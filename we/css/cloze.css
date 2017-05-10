@@ -6,7 +6,7 @@
 
 #main {
   font-family: WeblySleekUI, sans-serif;
-  font-size: 20px;
+  font-size: 19px;
   overflow-x: auto;
 }
 
@@ -15,8 +15,8 @@
 }
 
 .gap input {
-  font-family: monospace;
-  font-size: 80%;
+  font-family: inherit;
+  font-size: inherit;
   padding-left: 0.2em;
   letter-spacing: 0.1em;
 }
@@ -68,4 +68,18 @@ button:active {
 
 button:disabled {
   opacity: 0.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0.1em;
+}
+
+code {
+  display: block;
+  margin: 0.5em 0;
+  border: 0.1em solid gray;
+  border-radius: 0.5em;
+  background-color: snow;
+  padding: 0.5em;
+  font-size: 80%;
 }

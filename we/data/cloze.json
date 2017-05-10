@@ -1,8 +1,12 @@
 {
+  "author": "André Kless <andre.kless@web.de.de> 2017",
+  "license": "The MIT License (MIT)",
+
   "le03": {
     "css_layout": [ "ccm.load", "../css/cloze.css" ],
     "start_button": true,
     "feedback": true,
+    "text": "Ergänzen Sie in dem folgenden HTML-Code die fehlenden HTML-Tags, so dass die daraus resultierende Webseite, so wie unten in der Vorschau gezeigt, aussieht. <code> [[<h1>]]Anwendung von HTML-Tags[[</h1>]]<br>[[<h2>]]Motivation[[</h2>]]<br>[[<p>]]Der Lückentext unterstützt Sie dabei selbst einzuschätzen, ob Sie in der Lage sind die HTML-Tags zum Markieren von Überschriften, Paragraphen, Zeilenumbrüchen und HTML-Kommentaren einzusetzen.[[</p>]]<br>[[<!--]]<br>&lt;h2>Auskommentierung von HTML-Code&lt;/h2><br>&lt;p>Dieser Abschnitt wurde auskommentiert.&lt;/p><br>[[-->]]<br>[[<h2>]]Auswertung[[</h2>]]<br>[[<p>]]Klicken Sie auf \"Abschicken\", wenn Sie alle fehlenden HTML-Tags ergänzt haben.[[<br>]] Sie erhalten dann ein unmittelbares Feedback.[[</p>]] </code> <fieldset> <legend>Vorschau</legend> <h1>Anwendung von HTML-Tags</h1> <h2>Motivation</h2> <p>Der Lückentext unterstützt Sie dabei selbst einzuschätzen, ob Sie in der Lage sind die HTML-Tags zum Markieren von Überschriften, Paragraphen, Zeilenumbrüchen und HTML-Kommentaren einzusetzen.</p><!-- <h2>Auskommentierung von HTML-Code</h2> <p>Dieser Abschnitt wurde auskommentiert.</p>--> <h2>Auswertung</h2> <p>Klicken Sie auf \"Abschicken\", wenn Sie alle fehlenden HTML-Tags ergänzt haben.<br>Sie erhalten dann oben im Lückentext ein unmittelbares Feedback.</p></fieldset>",
     "blank": true,
     "onfinish": { "restart": true },
     "placeholder" : {
