@@ -6,7 +6,7 @@
     "feedback": true,
     "start_button": true,
     "navigation": true,
-    "anytime_finish": false,
+    "anytime_finish": true,
     "onfinish": { "restart": true },
     "placeholder": {
       "start": "Quiz starten",
