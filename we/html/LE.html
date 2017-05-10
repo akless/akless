@@ -5,7 +5,15 @@
 -->
 <meta charset="utf-8">
 <style>
-  body { margin: 0; }
+  body {
+    margin: 0;
+    background-color: #00709B;
+  }
+  div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
   @font-face {
     font-family: 'WeblySleekUI';
     src: url('../font/weblysleekuisl.eot');
@@ -44,6 +52,8 @@
   }
 </style>
 <script src="../js/ccm.le.js"></script>
-<ccm-le key='["ccm.get","../data/le.json", "le01" ]'></ccm-le>
-<ccm-le key='["ccm.get","../data/le.json", "le02" ]'></ccm-le>
-<ccm-le key='["ccm.get","../data/le.json", "le03" ]'></ccm-le>
+<div>
+  <ccm-le key='["ccm.get","../data/le.json", "le01" ]'></ccm-le>
+  <ccm-le key='["ccm.get","../data/le.json", "le02" ]'></ccm-le>
+  <ccm-le key='["ccm.get","../data/le.json", "le03" ]'></ccm-le>
+</div>
