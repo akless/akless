@@ -28,6 +28,9 @@
 
       this.init = function ( callback ) {
 
+        // show loading icon until rendering is finished
+        self.ccm.helper.hide( self );
+
         // no container for inner HTML of own ccm Custom Element? => use empty container
         if ( !self.node ) self.node = document.createElement( 'div' );
 
@@ -111,7 +114,14 @@
 
       this.start = function ( callback ) {
 
-        my.content.start( callback );
+        // render content
+        my.content.start( function () {
+
+          // replace loading icon with hidden rendered content
+          self.ccm.helper.show( self );
+
+          if ( callback ) callback();
+        } );
 
       };
 
