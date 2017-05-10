@@ -1,0 +1,14 @@
+{
+  "le03": {
+    "css_layout": [ "ccm.load", "../css/cloze.css" ],
+    "start_button": true,
+    "feedback": true,
+    "blank": true,
+    "onfinish": { "restart": true },
+    "placeholder" : {
+      "start": "Lückentext starten",
+      "submit": "Abschicken",
+      "finish": "Beenden"
+    }
+  }
+}
