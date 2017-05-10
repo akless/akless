@@ -5,6 +5,7 @@
 -->
 <meta charset="utf-8">
 <style>
+  body { margin: 0; }
   @font-face {
     font-family: 'WeblySleekUI';
     src: url('../font/weblysleekuisl.eot');
@@ -42,132 +43,114 @@
     font-style: italic;
   }
 </style>
-<link rel="stylesheet" href="../css/le.css">
-<script src="../js/ccm.quiz.js"></script>
+<script src="../js/ccm.le.js"></script>
 
-<h1>Lerneinheit: HTML-Tags</h1>
+<ccm-le>
+  <script src="../js/ccm.quiz.js"></script>
+  <script src="../js/ccm.cloze.js"></script>
 
-<h2>1. Motivation, Lernziele und Voraussetzungen</h2>
+  <h1>Lerneinheit: HTML-Tags</h1>
 
-<p>Nach dem Erstellen einer neuen HTML-Datei und der Dokumenttypdefinition in deren erster Zeile, können wir in den darauffolgenden Zeilen bereits die ersten Inhalte für die Webseite angeben und uns diese dann in einem Webbrowser auch darstellen lassen. Wenn Sie diese Schritte bereits beherrschen, können wir als nächstes die Frage stellen, wie die Inhalte der Webseite nun mit Hilfe von HTML auch strukturiert werden können und wie neben einfachem Text auch andere Inhalte, wie z.B. Hyperlinks, Bilder, Audio, Video, Listen, Tabellen, Formulare und Buttons mittels HTML in die Webseite integrierbar sind. Voraussetzung dafür ist es, sich mit den Befehlen in HTML, den sogenannten HTML-Tags, auszukennen. In dieser Lerneinheit lernen Sie daher, was ein HTML-Tag ist, woraus er besteht, wofür man ihn nutzt und wie man ihn einsetzt. Dabei werden Sie bereits die konkreten HTML-Tags zur Markierung von Überschriften, Paragraphen und Zeilenumbrüchen kennenlernen und auch wie man Kommentare in HTML schreibt.</p>
+  <h2>1. Motivation, Lernziele und Voraussetzungen</h2>
 
-<figure><audio controls><source src="../audio/LE03_Motivation.mp3"></audio></figure>
+  <p>Nach dem Erstellen einer neuen HTML-Datei und der Dokumenttypdefinition in deren erster Zeile, können wir in den darauffolgenden Zeilen bereits die ersten Inhalte für die Webseite angeben und uns diese dann in einem Webbrowser auch darstellen lassen. Wenn Sie diese Schritte bereits beherrschen, können wir als nächstes die Frage stellen, wie die Inhalte der Webseite nun mit Hilfe von HTML auch strukturiert werden können und wie neben einfachem Text auch andere Inhalte, wie z.B. Hyperlinks, Bilder, Audio, Video, Listen, Tabellen, Formulare und Buttons mittels HTML in die Webseite integrierbar sind. Voraussetzung dafür ist es, sich mit den Befehlen in HTML, den sogenannten HTML-Tags, auszukennen. In dieser Lerneinheit lernen Sie daher, was ein HTML-Tag ist, woraus er besteht, wofür man ihn nutzt und wie man ihn einsetzt. Dabei werden Sie bereits die konkreten HTML-Tags zur Markierung von Überschriften, Paragraphen und Zeilenumbrüchen kennenlernen und auch wie man Kommentare in HTML schreibt.</p>
 
-<h3>1.1 Lernziele</h3>
+  <ccm-le-audio src="../audio/LE03_Motivation.mp3"></ccm-le-audio>
 
-<ul>
-  <li>Ich weiß, was ein HTML-Tag ist, wofür man ihn nutzt, woraus er besteht und wie man ihn einsetzt.</li>
-  <li>Ich kenne die konkreten HTML-Tags zum Markieren von Überschriften, Paragraphen und Zeilenumbrüchen und bin in der Lage diese einzusetzen.</li>
-  <li>Ich weiß wie man einen Kommentar in HTML schreibt.</li>
-</ul>
+  <h3>1.1 Lernziele</h3>
 
-<h3>1.2 Voraussetzungen</h3>
+  <ul>
+    <li>Ich weiß, was ein HTML-Tag ist, wofür man ihn nutzt, woraus er besteht und wie man ihn einsetzt.
+    <li>Ich kenne die konkreten HTML-Tags zum Markieren von Überschriften, Paragraphen und Zeilenumbrüchen und bin in der Lage diese einzusetzen.
+    <li>Ich weiß wie man einen Kommentar in HTML schreibt, wofür man ihn einsetzt und bin in der Lage Kommentare in HTML einzusetzen.
+  </ul>
 
-<ul>
-  <li>Ich bin in der Lage eine neue Webseite mit dem Inhalt "Hallo Welt!" über ein HTML-basiertes digitales Dokument zu erstellen und mir den Inhalt der Webseite über einen Webbrowser anzeigen zu lassen.</li>
-</ul>
+  <h3>1.2 Voraussetzungen</h3>
 
-<h2>2 Inhalt</h2>
+  <ul>
+    <li>Ich bin in der Lage eine neue Webseite mit dem Inhalt "Hallo Welt!" über ein HTML-basiertes digitales Dokument zu erstellen und mir den Inhalt der Webseite über einen Webbrowser anzeigen zu lassen.
+  </ul>
 
-<figure><video controls><source src="../video/LE03_Inhalt.mp4" type="video/mp4"></video></figure>
+  <h2>2. Inhalt: HTML-Tags</h2>
 
-<h3>2.1 Was ist ein HTML-Tag?</h3>
+  <ccm-le-video src="../video/LE03_Inhalt.mp4"></ccm-le-video>
 
-<p>In der Auszeichnungssprache HTML sind die HTML-Tags die Auszeichnungselemente. Innerhalb einer HTML-Datei können mit HTML-Tags die Inhalte der Webseite strukturiert und neben Text auch andere Inhalte hinzugefügt werden. Mit ihnen kann beispielsweise markiert werden, welcher Text ein Paragraph und welcher eine Überschrift ist.</p>
+  <h3>2.1 Was ist ein HTML-Tag?</h3>
 
-<figure><img src="../image/LE03_Inhalt.001.jpg"></figure>
+  <p>In der Auszeichnungssprache HTML sind die HTML-Tags die Auszeichnungselemente. Innerhalb einer HTML-Datei können mit HTML-Tags die Inhalte der Webseite strukturiert und neben Text auch andere Inhalte hinzugefügt werden. Mit ihnen kann beispielsweise markiert werden, welcher Text ein Paragraph und welcher eine Überschrift ist.</p>
 
-<p>In diesem Video verwende ich den kostenfreien Online-Quelltext-Editor <a target="_blank" href="https://thimble.mozilla.org/de/">Thimble</a>, der weder die Installation eines Programms, noch ein bestimmtes Betriebssystem voraussetzt und mir zu meinen Änderungen in HTML direkt eine Vorschau der Webseite anzeigt.</p>
+  <ccm-le-img src="../image/LE03_Inhalt.001.jpg"></ccm-le-img>
 
-<h3>2.2 Syntax eines HTML-Tags</h3>
+  <p>In diesem Video verwende ich den kostenfreien Online-Quelltext-Editor <a href="https://thimble.mozilla.org/de/">Thimble</a>, der weder die Installation eines Programms, noch ein bestimmtes Betriebssystem voraussetzt und mir zu Änderungen in HTML direkt eine Vorschau der Webseite anzeigt.</p>
 
-<p>Ein HTML-Tag beginnt im einfachsten Falle mit einer öffnenden spitzen Klammer, gefolgt von dem Namen des HTML-Tags und abschließend einer schließenden spitzen Klammer. Im Beispiel sieht man bereits, dass für die Markierung einer Überschrift ein &lt;h1>-Tag verwendet wird und für Paragraphen ein &lt;p>-Tag.</p>
+  <h3>2.2 Syntax eines HTML-Tags</h3>
 
-<code><pre><b>&lt;h1></b>Dies ist eine Überschrift&lt;/h1></pre></code>
-<code><pre><b>&lt;p></b>Dies ist ein Paragraph&lt;/p></pre></code>
+  <p>Ein HTML-Tag beginnt im einfachsten Falle mit einer öffnenden spitzen Klammer, gefolgt von dem Namen des HTML-Tags und abschließend einer schließenden spitzen Klammer. Im Beispiel sieht man bereits, dass für die Markierung einer Überschrift ein &lt;h1>-Tag verwendet wird und für Paragraphen ein &lt;p>-Tag.</p>
 
-<h3>2.3 Öffnende und schließende HTML-Tags</h3>
+  <h3>2.3 Öffnende und schließende HTML-Tags</h3>
 
-<p>Zu den meisten HTML-Tags gibt es eine öffnende und schließende Variante, wie man bereits am Beispiel von Überschrift und Paragraph erkennen kann. Bei der Überschrift wird dadurch beispielsweise markiert, wo die Überschrift anfängt und wo sie endet bzw. welcher Text genau später vom Webbrowser als Überschrift zu interpretieren ist.</p>
+  <p>Zu den meisten HTML-Tags gibt es eine öffnende und schließende Variante, wie man bereits am Beispiel von Überschrift und Paragraph erkennen kann. Bei der Überschrift wird dadurch beispielsweise markiert, wo die Überschrift anfängt und wo sie endet bzw. welcher Text genau später vom Webbrowser als Überschrift zu interpretieren ist.</p>
 
-<code><pre>
-<b style="color: darkgreen">&lt;h1></b>Dies ist eine Überschrift<b style="color: darkred">&lt;/h1></b>
-<b style="color: darkgreen">&lt;p></b>Dies ist ein Paragraph<b style="color: darkred">&lt;/p></b>
-</pre></code>
+  <p>Um beide Varianten zu unterscheiden, hat der schließende HTML-Tag zusätzlich, direkt nach der öffnenden spitzen Klammer, also als zweites Zeichen, einen Schrägstrich "/".</p>
 
-<p>Um beide Varianten zu unterscheiden, hat der schließende HTML-Tag zusätzlich, direkt nach der öffnenden spitzen Klammer, also als zweites Zeichen, einen Schrägstrich "/".</p>
+  <h3>2.4 Nicht-schließende HTML-Tags</h3>
 
-<code><pre>
-<span style="color: darkgreen">&lt;h1></span>Dies ist eine Überschrift<span style="color: darkred">&lt;<b style="color: red">/</b>h1></span>
-<span style="color: darkgreen">&lt;p></span>Dies ist ein Paragraph<span style="color: darkred">&lt;<b style="color: red">/</b>p></span>
-</pre></code>
+  <p>Es gibt aber auch wenige HTML-Tags, für die es keinen schließenden HTML-Tag gibt, sondern nur einen Öffnenden. Dies gilt z.B. für einen &lt;br>-Tag, der lediglich einen Zeilenumbruch angibt und für den ein schließender HTML-Tag daher wenig Sinn macht.</p>
 
-<h3>2.4 Nicht-schließende HTML-Tags</h3>
+  <ccm-le-img src="../image/LE03_Inhalt.004.jpg"></ccm-le-img>
 
-<p>Es gibt aber auch wenige HTML-Tags, für die es keinen schließenden HTML-Tag gibt, sondern nur einen Öffnenden. Dies gilt z.B. für einen &lt;br>-Tag, der lediglich einen Zeilenumbruch angibt und für den ein schließender HTML-Tag daher wenig Sinn macht.</p>
+  <h3>2.5 Strukturierung des HTML-Codes</h3>
 
-<figure><img src="../image/LE03_Inhalt.004.jpg"></figure>
+  <p>Für den Webbrowser macht es übrigens keinen Unterschied, wie wir den HTML-Code strukturieren, er könnte genauso gut auch in einer einzigen langen Zeile stehen.</p>
 
-<h3>2.5 Strukturierung des HTML-Codes</h3>
+  <ccm-le-img src="../image/LE03_Inhalt.005.jpg"></ccm-le-img>
 
-<p>Für den Webbrowser macht es übrigens keinen Unterschied, wie wir den HTML-Code strukturieren, er könnte genauso gut auch in einer einzigen langen Zeile stehen.</p>
+  <p>Damit der HTML-Code aber für das menschliche Auge möglichst gut lesbar ist, wird er üblicherweise, wie vorher gezeigt, mit Zeilenumbrüchen und Leerzeichen eingerückt. Überprüfen Sie am besten direkt immer selbst, wie der Webbrowser die Inhalte der Webseite nach einer Änderung des HTML-Codes darstellt, indem Sie Ihre Änderungen speichern und die HTML-Datei erneut mit dem Webbrowser öffnen bzw. dort neu laden. Beim Online-Quelltext-Editor Thimble genügt ein Klick auf "Vorschau aktualisieren".</p>
 
-<figure><img src="../image/LE03_Inhalt.005.jpg"></figure>
+  <h3>2.6 Überschriftenebenen</h3>
 
-<p>Damit der HTML-Code aber für das menschliche Auge möglichst gut lesbar ist, wird er üblicherweise, wie vorher gezeigt, mit Zeilenumbrüchen und Leerzeichen eingerückt. Überprüfen Sie am besten direkt immer selbst, wie der Webbrowser die Inhalte der Webseite nach einer Änderung des HTML-Codes darstellt, indem Sie Ihre Änderungen speichern und die HTML-Datei erneut mit dem Webbrowser öffnen bzw. dort neu laden. Beim Online-Quelltext-Editor Thimble genügt ein Klick auf den "Vorschau aktualisieren"-Button.</p>
+  <p>Zum Markieren von Überschriften gibt es in HTML neben dem &lt;h1>-Tag noch die HTML-Tags &lt;h2>, &lt;h3>, &lt;h4>, &lt;h5> und &lt;h6>. Jeder dieser Tags steht für eine Überschriftenebene, von denen es somit insgesamt 6 Ebenen gibt. Der von uns bereits verwendete &lt;h1>-Tag steht für die oberste Überschriftenebene. Die Überschrift zu einem Kapitel würde man also beispielsweise mit einem &lt;h1>-Tag markieren und die der Unterkapitel mit einem &lt;h2>-Tag, usw..</p>
 
-<h3>2.6 Überschriftenebenen</h3>
+  <ccm-le-img src="../image/LE03_Inhalt.006.jpg"></ccm-le-img>
 
-<p>Zum Markieren von Überschriften gibt es in HTML neben dem &lt;h1>-Tag noch die HTML-Tags &lt;h2>, &lt;h3>, &lt;h4>, &lt;h5> und &lt;h6>. Jeder dieser Tags steht für eine Überschriftenebene, von denen es somit insgesamt 6 Ebenen gibt. Der von uns bereits verwendete &lt;h1>-Tag steht für die oberste Überschriftenebene. Die Überschrift zu einem Kapitel würde man also beispielsweise mit einem &lt;h1>-Tag markieren und die der Unterkapitel mit einem &lt;h2>-Tag, usw..</p>
+  <p>Experimentieren Sie ruhig etwas mit diesen HTML-Tags und schauen Sie sich das Ergebnis im Webbrowser an.</p>
 
-<figure><img src="../image/LE03_Inhalt.006.jpg"></figure>
+  <h3>2.7 Kommentare</h3>
 
-<p>Experimentieren Sie ruhig etwas mit diesen HTML-Tags und schauen Sie sich das Ergebnis im Webbrowser an.</p>
+  <p>In HTML gibt es die Möglichkeit an beliebigen Stellen im HTML-Code Kommentare zu hinterlegen. Alles was innerhalb eines Kommentars steht wird vom Webbrowser nicht angezeigt und ignoriert. Dies kann nützlich sein um individuelle Anmerkungen im Code zu hinterlegen oder bestimmte Code-Bereiche, die kurzzeitig nicht benötigt werden, gezielt "auszukommentieren". Das bedeutet diese Bereiche also nicht zu löschen, sondern sie nur ignorieren zu lassen, um sie später leicht jederzeit wiederherherstellen zu können.</p>
 
-<h3>2.7 Kommentare</h3>
+  <ccm-le-img src="../image/LE03_Inhalt.007.jpg"></ccm-le-img>
 
-<p>In HTML gibt es die Möglichkeit an beliebigen Stellen im HTML-Code Kommentare zu hinterlegen. Alles was innerhalb eines Kommentars steht wird vom Webbrowser nicht angezeigt und ignoriert. Dies kann nützlich sein um individuelle Anmerkungen im Code zu hinterlegen oder bestimmte Code-Bereiche, die kurzzeitig nicht benötigt werden, gezielt "auszukommentieren". Das bedeutet diese Bereiche also nicht zu löschen, sondern sie nur ignorieren zu lassen, um sie später leicht jederzeit wiederherherstellen zu können.</p>
+  <h3>2.8 Syntax eines HTML-Kommentars</h3>
 
-<figure><img src="../image/LE03_Inhalt.007.jpg"></figure>
+  <p>Ein Kommentar beginnt immer mit einer öffnenden spitzen Klammer, gefolgt von einem Ausrufezeichen und zwei Trennstrichen (&lt;!--) und endet mit zwei Trennstrichen gefolgt von einer schließenden spitzen Klammer (-->).</p>
 
-<h3>2.8 Syntax eines HTML-Kommentars</h3>
+  <p>Vor allem bei umfangreichen Webseiten sind Kommentare nützlich, um HTML-Code mit Anmerkungen anzureichern, die helfen sich in dem Quelltext schneller zurechtzufinden.</p>
 
-<p>Ein Kommentar beginnt immer mit einer öffnenden spitzen Klammer, gefolgt von einem Ausrufezeichen und zwei Trennstrichen (&lt;!--) und endet mit zwei Trennstrichen gefolgt von einer schließenden spitzen Klammer (-->).</p>
+  <h2>3. Selbsttest</h2>
 
-<code><pre>
-<b style="color: darkgreen">&lt;!--</b> Alles was innerhalb eines Kommentars steht wird vom Webbrowser ignoriert <b style="color: darkred">--></b>
-</pre></code>
+  <h3>3.1 Quiz</h3>
 
-<p>Vor allem bei umfangreichen Webseiten sind Kommentare nützlich, um HTML-Code mit Anmerkungen anzureichern, die helfen sich in dem Quelltext schneller zurechtzufinden.</p>
+  <ccm-quiz key='["ccm.get","../data/quiz.json","le03"]'></ccm-quiz>
 
-<h2>3. Selbsttest</h2>
+  <h3>3.2 Lückentext</h3>
 
-<ccm-quiz key='["ccm.get","../data/quiz.json","le03"]'></ccm-quiz>
+  <p></p>
 
-<h2>4. Alternative Materialien</h2>
+  <ccm-cloze key='["ccm.get","../data/quiz.json","le03"]'></ccm-cloze>
 
-<h3>4.1 HTML/Regeln/Textauszeichnung | SELFHTML-Wiki</h3>
+  <h2>4. Alternative Materialien</h2>
 
-<p>Einführung in Elemente und Tags in HTML aus der Internet-Dokumentation <a target="_blank" href="https://de.wikipedia.org/wiki/SELFHTML">SELFHTML</a>.</p>
+  <h3>4.1 HTML/Regeln/Textauszeichnung | SELFHTML-Wiki</h3>
 
-<p>Link: <a target="_blank" href="https://wiki.selfhtml.org/wiki/HTML/Regeln/Textauszeichnung#Elemente_und_Tags_in_HTML">https://wiki.selfhtml.org/wiki/HTML/Regeln/Textauszeichnung#Elemente_und_Tags_in_HTML</a></p>
+  <p>Einführung in Elemente und Tags in HTML aus der Internet-Dokumentation <a href="https://de.wikipedia.org/wiki/SELFHTML">SELFHTML</a>.</p>
 
-<h3>4.2 HTML Grundkurs: Was ist ein HTML Tag? | SIFA Digital - YouTube</h3>
+  <ccm-le-link href="https://wiki.selfhtml.org/wiki/HTML/Regeln/Textauszeichnung#Elemente_und_Tags_in_HTML"></ccm-le-link>
 
-<p>YouTube-Video aus einem HTML-Grundkurs zur Einführung in HTML-Tags.</p>
+  <h3>4.2 HTML-Grundkurs: Was ist ein HTML-Tag? | YouTube</h3>
 
-<p>Link: <a target="_blank" href="https://youtu.be/g9khWkRT74A">https://youtu.be/g9khWkRT74A</a></p>
+  <p>YouTube-Video aus einem HTML-Grundkurs zur Einführung in HTML-Tags.</p>
 
-<hr>
+  <ccm-le-link href="https://youtu.be/g9khWkRT74A"></ccm-le-link>
 
-<p xmlns:dct="https://purl.org/dc/terms/">
-  <a rel="license"
-     href="https://creativecommons.org/publicdomain/zero/1.0/">
-    <img src="https://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0">
-  </a>
-  <br>
-  Soweit unter den gesetzlichen Voraussetzungen möglich hat
-  <span resource="[_:publisher]" rel="dct:publisher">
-    <span property="dct:title">André Kless</span></span>
-  sämtliche Urheber- und Verwertungsrechte für dieses Werk abgetreten.
-</p>
+</ccm-le>

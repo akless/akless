@@ -3,11 +3,21 @@
  * @license The MIT License (MIT)
  */
 
-body, .ccm-content {
+.ccm-content {
+	display: flex;
+	justify-content: center;
+	background-color: #00709B;
+}
+
+#main {
+	margin: 0.2em;
+	border-radius: 0.5em;
+	background-color: white;
 	padding: 0 1em;
 	font-family: WeblySleekUI, sans-serif;
-	font-size: 20px;
+	font-size: 19px;
 	overflow-x: hidden;
+	max-width: 720px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -25,7 +35,11 @@ figure {
 figure > * {
 	width: 100%;
 	max-width: 640px;
-	border: 2px solid #00709B;
+	box-shadow: 0 0 5px #00709B;
+}
+
+a {
+	word-break: break-all;
 }
 
 a, a:visited {
@@ -42,4 +56,30 @@ a[rel=license] {
 
 hr {
 	margin-top: 2em;
+}
+
+button {
+	color: white;
+	background-color: #00709B;
+	padding: 0.5em 1em 0.6em 1em;
+	border: none;
+	font-family: inherit;
+	font-size: 80%;
+	border-radius: 0.5em;
+	transition: background-color 0.4s;
+	letter-spacing: 0.1em;
+}
+
+button:hover:enabled {
+	cursor: pointer;
+	background-color: #00ACEE;
+	border-color: #6FD1F7;
+}
+
+button:active {
+	outline: none;
+}
+
+button:disabled {
+	opacity: 0.5;
 }

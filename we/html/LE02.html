@@ -5,6 +5,7 @@
 -->
 <meta charset="utf-8">
 <style>
+  body { margin: 0; }
   @font-face {
     font-family: 'WeblySleekUI';
     src: url('../font/weblysleekuisl.eot');
@@ -42,104 +43,94 @@
     font-style: italic;
   }
 </style>
-<link rel="stylesheet" href="../css/le.css">
-<script src="../js/ccm.quiz.js"></script>
+<script src="../js/ccm.le.js"></script>
 
-<h1>Lerneinheit: Erste “Hallo Welt!”-Webseite</h1>
+<ccm-le>
+  <script src="../js/ccm.quiz.js"></script>
 
-<h2>1. Motivation, Lernziele und Voraussetzungen</h2>
+  <h1>Lerneinheit:<br>Erste “Hallo Welt!”-Webseite</h1>
 
-<p>Wer sich eine eigene Webseite zulegen möchte und danach googelt landet im Internet schnell bei einem von vielen Dienstleistern, die genau das mit wenigen Klicks anbieten. Meist verbirgt sich dahinter dann eine Art Fertigbaukasten, mit dem man ohne HTML-Kenntnisse sich aus diversen Vorlagen und Layouts seine Webseite schnell und einfach zusammenklicken kann und anschließend nur noch die eigenen Inhalte wie Texte und Bilder an den passenden Stellen ergänzen braucht. Sind diese Vorlagen für die eigenen Zwecke allerdings nicht ausreichend individuell anpassbar, beginnt die Suche nach Alternativen. Wer es sich leisten kann, könnte sich nun überlegen einen Webdesigner zu beauftragen. Wäre es aber nicht vielleicht auch möglich, es selbst zu tun? Doch wie fängt man da an? Nun, falls Sie bereits damit vertraut sind was HTML ist und wofür es eingesetzt wird, wissen Sie bereits, dass es sich bei einer Webseite um ein in HTML geschriebenes digitales Dokument handelt, das von einem Webbrowser gelesen und schließlich als Webseite dargestellt wird. Der erste Schritt ist also das Anlegen eines solchen digitalen Dokuments. In dieser Lerneinheit erfahren Sie, wie man ein HTML-basiertes digitales Dokument erstellt, editieren und mit einem Webbrowser ausführen kann. Hierzu sollten Sie bereits über einen Computer verfügen, auf dem Sie eine Datei erstellen können und auf dem bereits ein Webbrowser installiert ist. Sie sollten wissen wie man eine Datei erstellt, umbenennt, die Dateiendung festlegt und wie man eine Datei mit einem bestimmten Programm öffnen kann.</p>
+  <h2>1. Motivation, Lernziele und Voraussetzungen</h2>
 
-<figure><audio controls><source src="../audio/LE02_Motivation.mp3"></audio></figure>
+  <p>Wer sich eine eigene Webseite zulegen möchte und danach googelt landet im Internet schnell bei einem von vielen Dienstleistern, die genau das mit wenigen Klicks anbieten. Meist verbirgt sich dahinter dann eine Art Fertigbaukasten, mit dem man ohne HTML-Kenntnisse sich aus diversen Vorlagen und Layouts seine Webseite schnell und einfach zusammenklicken kann und anschließend nur noch die eigenen Inhalte wie Texte und Bilder an den passenden Stellen ergänzen braucht. Sind diese Vorlagen für die eigenen Zwecke allerdings nicht ausreichend individuell anpassbar, beginnt die Suche nach Alternativen. Wer es sich leisten kann, könnte sich nun überlegen einen Webdesigner zu beauftragen. Wäre es aber nicht vielleicht auch möglich, es selbst zu tun? Doch wie fängt man da an? Nun, falls Sie bereits damit vertraut sind was HTML ist und wofür es eingesetzt wird, wissen Sie bereits, dass es sich bei einer Webseite um ein in HTML geschriebenes digitales Dokument handelt, das von einem Webbrowser gelesen und schließlich als Webseite dargestellt wird. Der erste Schritt ist also das Anlegen eines solchen digitalen Dokuments. In dieser Lerneinheit erfahren Sie, wie man ein HTML-basiertes digitales Dokument erstellt, editieren und mit einem Webbrowser ausführen kann. Hierzu sollten Sie bereits über einen Computer verfügen, auf dem Sie eine Datei erstellen können und auf dem bereits ein Webbrowser installiert ist. Sie sollten wissen wie man eine Datei erstellt, umbenennt, die Dateiendung festlegt und wie man eine Datei mit einem bestimmten Programm öffnen kann.</p>
 
-<h3>1.1 Lernziele</h3>
+  <ccm-le-audio src="../audio/LE02_Motivation.mp3"></ccm-le-audio>
 
-<ul>
-  <li>Ich bin in der Lage eine neue Webseite mit dem Inhalt "Hallo Welt!" über ein HTML-basiertes digitales Dokument zu erstellen.
-  <li>Ich weiß, mit welchem Programm der Inhalt eines HTML-basierten digitalen Dokuments als Webseite dargestellt werden kann.
-</ul>
+  <h3>1.1 Lernziele</h3>
 
-<h3>1.2 Voraussetzungen</h3>
+  <ul>
+    <li>Ich bin in der Lage eine neue Webseite mit dem Inhalt "Hallo Welt!" über ein HTML-basiertes digitales Dokument zu erstellen.
+    <li>Ich weiß, mit welchem Programm der Inhalt eines HTML-basierten digitalen Dokuments als Webseite dargestellt werden kann.
+  </ul>
 
-<ul>
-  <li>Ich weiß, was HTML ist und wofür es eingesetzt wird.
-  <li>Ich habe einen Computer auf dem man eine Datei erstellen kann und auf dem bereits ein Webbrowser installiert ist.
-  <li>Ich weiß, wie man eine Datei erstellt, umbenennt, die Dateiendung festlegt und wie man sie mit einem bestimmten Programm öffnen kann.
-</ul>
+  <h3>1.2 Voraussetzungen</h3>
 
-<p>Falls Sie bisher nur wenige Erfahrungen im Umgang mit Dateien und Programmen haben, lassen Sie sich von jemanden aus Ihrem Bekanntenkreis helfen oder besuchen Sie einen entsprechenden Computer-Einsteigerkurs, um die erforderlichen Kenntnisse zu erwerben.</p>
+  <ul>
+    <li>Ich weiß, was HTML ist und wofür es eingesetzt wird.
+    <li>Ich habe einen Computer auf dem man eine Datei erstellen kann und auf dem bereits ein Webbrowser installiert ist.
+    <li>Ich weiß, wie man eine Datei erstellt, umbenennt, die Dateiendung festlegt und wie man sie mit einem bestimmten Programm öffnen kann.
+  </ul>
 
-<h2>2. Inhalt: Erste “Hallo Welt!”-Webseite</h2>
+  <p>Falls Sie nur wenige Erfahrungen im Umgang mit Dateien und Programmen haben, lassen Sie sich von jemanden aus Ihrem Bekanntenkreis helfen oder besuchen Sie einen entsprechenden Computer-Einsteigerkurs, um die nötigen Kenntnisse zu erwerben.</p>
 
-<figure><video controls><source src="../video/LE02_Inhalt.mp4" type="video/mp4"></video></figure>
+  <h2>2. Inhalt: Erste “Hallo Welt!”-Webseite</h2>
 
-<h3>2.1 Erstellung einer HTML-Datei</h3>
+  <ccm-le-video src="../video/LE02_Inhalt.mp4"></ccm-le-video>
 
-<p>Zum Erstellen einer Webseite wird ein HTML-basiertes digitales Dokument benötigt. Dabei handelt es sich üblicherweise um nichts anderes als eine sogenannte HTML-Datei, also eine Datei mit der Dateiendung ".html", die wir nun erstellen. Hierzu legen wir eine neue Datei an, geben ihr einen Namen und legen als Dateiendung ".html" fest. Bitte beachten, dass die Vorgehensweise zur Erstellung einer Datei sich je nach Betriebssystem unterscheidet.</p>
+  <h3>2.1 Erstellung einer HTML-Datei</h3>
 
-<figure><img src="../image/LE02_Inhalt.001.jpg"></figure>
+  <p>Zum Erstellen einer Webseite wird ein HTML-basiertes digitales Dokument benötigt. Dabei handelt es sich üblicherweise um nichts anderes als eine sogenannte HTML-Datei, also eine Datei mit der Dateiendung ".html", die wir nun erstellen. Hierzu legen wir eine neue Datei an, geben ihr einen Namen und legen als Dateiendung ".html" fest. Bitte beachten, dass die Vorgehensweise zur Erstellung einer Datei sich je nach Betriebssystem unterscheidet.</p>
 
-<h3>2.2 Programme zur Bearbeitung einer HTML-Datei</h3>
+  <ccm-le-img src="../image/LE02_Inhalt.001.jpg"></ccm-le-img>
 
-<p>Um den Inhalt der erstellten HTML-Datei bearbeiten zu können, müssen wir sie mit einem dafür geeigneten Programm öffnen. Zur Bearbeitung einer HTML-Datei bieten sich eine Vielzahl unterschiedlichster Programme an: Vom einfachen <a target="_blank" href="https://de.wikipedia.org/wiki/Texteditor">Texteditor</a> über webbasierte Online-Editoren bis hin zu den professionellen <a target="_blank" href="https://de.wikipedia.org/wiki/Integrierte_Entwicklungsumgebung">integrierten Entwicklungsumgebungen</a>. Falls Sie noch unentschieden sind, welches konkrete Programm Sie verwenden möchten, recherchieren Sie dies im Internet. In diesem Video wird von mir der kostenfreie Texteditor "<a target="_blank" href="https://www.sublimetext.com/2">Sublime Text 2</a>" eingesetzt, der auch für alle gängigen Betriebssysteme angeboten wird. Im Internet finden sich aber wie gesagt auch viele weitere Alternativen.</p>
+  <h3>2.2 Programme zur Bearbeitung einer HTML-Datei</h3>
 
-<h3>2.3 Editieren einer HTML-Datei</h3>
+  <p>Um den Inhalt der erstellten HTML-Datei bearbeiten zu können, müssen wir sie mit einem dafür geeigneten Programm öffnen. Zur Bearbeitung einer HTML-Datei bieten sich eine Vielzahl unterschiedlichster Programme an: Vom einfachen <a href="https://de.wikipedia.org/wiki/Texteditor">Texteditor</a> über webbasierte Online-Editoren bis hin zu den professionellen <a href="https://de.wikipedia.org/wiki/Integrierte_Entwicklungsumgebung">integrierten Entwicklungsumgebungen</a>. Falls Sie noch unentschieden sind, welches konkrete Programm Sie verwenden möchten, recherchieren Sie dies im Internet. In diesem Video wird von mir der kostenfreie Texteditor "<a href="https://www.sublimetext.com/2">Sublime Text 2</a>" eingesetzt, der auch für alle gängigen Betriebssysteme angeboten wird. Im Internet finden sich aber wie gesagt auch viele weitere Alternativen.</p>
 
-<p>Sobald fest steht, welches konkrete Programm verwendet wird und dieses auch installiert ist, können wir die erstellte HTML-Datei nun mit diesem Programm zum Bearbeiten öffnen. Es erscheint ein leeres Editorfenster, über das wir den Inhalt der Datei festlegen können. Hier können wir zum einen die Inhalte unserer Webseite festlegen und zum anderen damit beginnen mittels HTML das digitale Dokument und damit die Webseite und deren Inhalte zu strukturieren.</p>
+  <h3>2.3 Editieren einer HTML-Datei</h3>
 
-<figure><img src="../image/LE02_Inhalt.003.jpg"></figure>
+  <p>Sobald fest steht, welches konkrete Programm verwendet wird und dieses auch installiert ist, können wir die erstellte HTML-Datei nun mit diesem Programm zum Bearbeiten öffnen. Es erscheint ein leeres Editorfenster, über das wir den Inhalt der Datei festlegen können. Hier können wir zum einen die Inhalte unserer Webseite festlegen und zum anderen damit beginnen mittels HTML das digitale Dokument und damit die Webseite und deren Inhalte zu strukturieren.</p>
 
-<h3>2.4 Dokumenttypdefinition</h3>
+  <ccm-le-img src="../image/LE02_Inhalt.003.jpg"></ccm-le-img>
 
-<p>Damit der Webbrowser später beim Öffnen unserer HTML-Datei überhaupt weiß, in welcher Sprache der Inhalt der Datei zu interpretieren ist, erfolgt in der ersten Zeile zunächst die sogenannte <a target="_blank" href="https://de.wikipedia.org/wiki/Dokumenttypdefinition">Dokumenttypdefinition</a> oder kurz DOCTYPE-Angabe genannt. Da wir vor haben unser digitales Dokument in HTML5 zu schreiben, geben wir dies nun in der ersten Zeile der HTML-Datei wie folgt an:</p>
+  <h3>2.4 Dokumenttypdefinition</h3>
 
-<code><pre>&lt;!doctype html></pre></code>
+  <p>Damit der Webbrowser später beim Öffnen unserer HTML-Datei überhaupt weiß, in welcher Sprache der Inhalt der Datei zu interpretieren ist, erfolgt in der ersten Zeile zunächst die sogenannte <a href="https://de.wikipedia.org/wiki/Dokumenttypdefinition">Dokumenttypdefinition</a> oder kurz DOCTYPE-Angabe genannt. Da wir vor haben unser digitales Dokument in HTML5 zu schreiben, geben wir dies nun in der ersten Zeile der HTML-Datei wie folgt an:</p>
 
-<p>In den darauffolgenden Zeilen können wir nun den Inhalt für unsere Webseite festlegen. Für den Einstieg geben wir zunächst als Inhalt einfach nur "Hallo Welt!" an. Der Inhalt unserer HTML-Datei sieht damit also wie folgt aus:</p>
+  <code><pre>&lt;!doctype html></pre></code>
 
-<figure><img src="../image/LE02_Inhalt.004.jpg"></figure>
+  <p>In den darauffolgenden Zeilen können wir nun den Inhalt für unsere Webseite festlegen. Für den Einstieg geben wir zunächst als Inhalt einfach nur "Hallo Welt!" an. Der Inhalt unserer HTML-Datei sieht damit also wie folgt aus:</p>
 
-<h3>2.5 Öffnen der HTML-Datei im Webbrowser</h3>
+  <ccm-le-img src="../image/LE02_Inhalt.004.jpg"></ccm-le-img>
 
-<p>Damit wir sehen können, ob die Webseite nun den von uns festgelegten Inhalt enthält, wird es Zeit für den ersten Aufruf unserer Webseite. Zunächst gilt es aber noch die Änderungen an der Datei zu speichern. Danach öffnen wir die HTML-Datei, diesmal mit dem Webbrowser. In diesem Video verwende ich den Webbrowser <a target="_blank" href="https://de.wikipedia.org/wiki/Google_Chrome">Google Chrome</a>, es kann aber auch jeder andere moderne Webbrowser wie <a target="_blank" href="https://de.wikipedia.org/wiki/Mozilla_Firefox">Firefox</a>, <a target="_blank" href="https://de.wikipedia.org/wiki/Internet_Explorer">Internet Explorer</a>, <a target="_blank" href="https://de.wikipedia.org/wiki/Apple_Safari">Safari</a> oder <a target="_blank" href="https://de.wikipedia.org/wiki/Opera_(Browser)">Opera</a> verwendet werden. Daraufhin sollte nun eine leere Webseite erscheinen, die nur ganz oben links den von uns festgelegten Inhalt "Hallo Welt!" enthält.</p>
+  <h3>2.5 Öffnen der HTML-Datei im Webbrowser</h3>
 
-<figure><img src="../image/LE02_Inhalt.005.jpg"></figure>
+  <p>Damit wir sehen können, ob die Webseite nun den von uns festgelegten Inhalt enthält, wird es Zeit für den ersten Aufruf unserer Webseite. Zunächst gilt es aber noch die Änderungen an der Datei zu speichern. Danach öffnen wir die HTML-Datei, diesmal mit dem Webbrowser. In diesem Video verwende ich den Webbrowser <a href="https://de.wikipedia.org/wiki/Google_Chrome">Google Chrome</a>, es kann aber auch jeder andere moderne Webbrowser wie <a href="https://de.wikipedia.org/wiki/Mozilla_Firefox">Firefox</a>, <a href="https://de.wikipedia.org/wiki/Internet_Explorer">Internet Explorer</a>, <a href="https://de.wikipedia.org/wiki/Apple_Safari">Safari</a> oder <a href="https://de.wikipedia.org/wiki/Opera_(Browser)">Opera</a> verwendet werden. Daraufhin sollte nun eine leere Webseite erscheinen, die nur ganz oben links den von uns festgelegten Inhalt "Hallo Welt!" enthält.</p>
 
-<h2>3. Selbsttest</h2>
+  <ccm-le-img src="../image/LE02_Inhalt.005.jpg"></ccm-le-img>
 
-<ccm-quiz key='["ccm.get","../data/quiz.json","le02"]'></ccm-quiz>
+  <h2>3. Selbsttest</h2>
 
-<h2>4. Alternative Materialien</h2>
+  <ccm-quiz key='["ccm.get","../data/quiz.json","le02"]'></ccm-quiz>
 
-<h3>4.1 Die 9 besten kostenlosen HTML-Editoren für Webentwickler (Windows-Edition) | Dr. Web</h3>
+  <h2>4. Alternative Materialien</h2>
 
-<p>Online-Artikel der einige kostenlose Programme auflistet, die zum Bearbeiten einer HTML-Datei genutzt werden können. Der Artikel führt hauptsächlich Programme für Windows auf. Für Mac-Nutzer gibt es <a target="_blank" href="https://www.drweb.de/magazin/die-5-besten-kostenlosen-html-editoren-fuer-webentwickler-mac-edition-53159/">hier</a> aber auch einen Artikel.</p>
+  <h3>4.1 Die 9 besten kostenlosen HTML-Editoren für Webentwickler (Windows-Edition) | Dr. Web</h3>
 
-<p>Link: <a target="_blank" href="https://www.drweb.de/magazin/die-8-besten-kostenlosen-html-editoren-fuer-webentwickler-windows-edition-53187/">https://www.drweb.de/magazin/die-8-besten-kostenlosen-html-editoren-fuer-webentwickler-windows-edition-53187/</a></p>
+  <p>Online-Artikel der einige kostenlose Programme auflistet, die zum Bearbeiten einer HTML-Datei genutzt werden können. Der Artikel führt hauptsächlich Programme für Windows auf. Für Mac-Nutzer gibt es <a href="https://www.drweb.de/magazin/die-5-besten-kostenlosen-html-editoren-fuer-webentwickler-mac-edition-53159/">hier</a> aber auch einen Artikel.</p>
 
-<h3>4.2 Thimble von Mozilla – Ein Online-Quelltext-Editor für Lernende & Ausbilder. | Mozilla</h3>
+  <ccm-le-link href="https://www.drweb.de/magazin/die-8-besten-kostenlosen-html-editoren-fuer-webentwickler-windows-edition-53187/"></ccm-le-link>
 
-<p>Sehr empfehlenswerter kostenloser Online-Quelltext-Editor zur Erstellung von Webseiten aus dem Hause <a target="_blank" href="https://de.wikipedia.org/wiki/Mozilla_Foundation">Mozilla</a>, aus dem auch der Webbrowser <a target="_blank" href="https://de.wikipedia.org/wiki/Mozilla_Firefox">Firefox</a> stammt. Ein Online-Editor hat den Vorteil, dass keinerlei Installation notwendig ist und kein bestimmtes Betriebssystem vorausgesetzt wird.</p>
+  <h3>4.2 Thimble von Mozilla – Ein Online-Quelltext-Editor für Lernende & Ausbilder. | Mozilla</h3>
 
-<p>Link: <a target="_blank" href="https://thimble.mozilla.org/de/">https://thimble.mozilla.org/de/</a></p>
+  <p>Sehr empfehlenswerter kostenloser Online-Quelltext-Editor zur Erstellung von Webseiten aus dem Hause <a href="https://de.wikipedia.org/wiki/Mozilla_Foundation">Mozilla</a>, aus dem auch der Webbrowser <a href="https://de.wikipedia.org/wiki/Mozilla_Firefox">Firefox</a> stammt. Ein Online-Editor hat den Vorteil, dass keinerlei Installation notwendig ist und kein bestimmtes Betriebssystem vorausgesetzt wird.</p>
 
-<h3>4.3 WebStorm: The Smartest JavaScript IDE | JetBrains</h3>
+  <ccm-le-link href="https://thimble.mozilla.org/de/"></ccm-le-link>
 
-<p>WebStorm ist die professionelle (nicht kostenlose) integrierte Entwicklungsumgebung, die ich auch selbst beruflich für die Webentwicklung primär einsetze und die insbesondere auch HTML5 unterstützt.</p>
+  <h3>4.3 WebStorm: The Smartest JavaScript IDE | JetBrains</h3>
 
-<p>Link: <a target="_blank" href="https://www.jetbrains.com/webstorm/">https://www.jetbrains.com/webstorm/</a></p>
+  <p>WebStorm ist die professionelle (nicht kostenlose) integrierte Entwicklungsumgebung, die ich auch selbst beruflich für die Webentwicklung primär einsetze und die insbesondere auch HTML5 unterstützt.</p>
 
-<hr>
+  <ccm-le-link href="https://www.jetbrains.com/webstorm/"></ccm-le-link>
 
-<p xmlns:dct="https://purl.org/dc/terms/">
-  <a rel="license"
-     href="https://creativecommons.org/publicdomain/zero/1.0/">
-    <img src="https://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0">
-  </a>
-  <br>
-  Soweit unter den gesetzlichen Voraussetzungen möglich hat
-  <span resource="[_:publisher]" rel="dct:publisher">
-    <span property="dct:title">André Kless</span></span>
-  sämtliche Urheber- und Verwertungsrechte für dieses Werk abgetreten.
-</p>
+</ccm-le>
