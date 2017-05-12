@@ -8,6 +8,7 @@
     "start_button": true,
     "navigation": true,
     "anytime_finish": true,
+    "random": true,
     "onfinish": { "restart": true },
     "placeholder": {
       "start": "Quiz starten",
@@ -54,17 +55,38 @@
         "text": "Wofür wird HTML eingesetzt?",
         "input": "radio",
         "answers": [
-          "für Bild- und Ton-Produktion",
-          "für den Aufruf von Webseiten",
+          {
+            "text": "dynamische Manipulation von Webseiten",
+            "comment": "Für die dynamische Manipulation von Webseiten nutzt man <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/JavaScript\">JavaScript</a>."
+          },
+          {
+            "text": "für Bild-, Audio- und Videoproduktion",
+            "comment": "Produzierte Bilder, Audios und Videos können aber mittels HTML in Webseiten eingefügt werden."
+          },
+          {
+            "text": "für den Aufruf von Webseiten",
+            "comment": "Für den Aufruf von Webseiten nutzt man einen <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Webbrowser\">Webbrowser</a>."
+          },
+          {
+            "text": "für elektronische Datenverwaltung",
+            "comment": "Für elektronische Datenverwaltung nutzt man <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Datenbank\">Datenbanken</a>."
+          },
           "um morgens aus dem Bett zu kommen",
-          "zur Auswertung von Benutzerinteraktionen",
-          "zum Erstellen von Animationen",
-          "zum Gestalten von Layout und Design",
-          "zum Nachladen von Daten",
-          "zum Programmieren von Webseiten",
-          "zur Strukturierung digitaler Dokumente"
+          {
+            "text": "zum Gestalten von Layout und Design",
+            "comment": "Für Layout und Design einer Webseite nutzt man <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Cascading_Style_Sheets\">Cascading Style Sheets (CSS)</a>."
+          },
+          {
+            "text": "zum Programmieren von Webseiten",
+            "comment": "HTML ist keine Programmiersprache, sondern eine reine Auszeichnungssprache."
+          },
+          "zur Strukturierung digitaler Dokumente",
+          {
+            "text": "zur Übertragung von Daten",
+            "comment": "Im Internet nutzt man für die Übertragung von Daten das <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol\">Hypertext Transfer Protocol (HTTP)</a>."
+          }
         ],
-        "correct": 8
+        "correct": 7
       },
       {
         "text": "Wer hat HTML erfunden?",
@@ -126,7 +148,7 @@
         "correct": 1
       },
       {
-        "text": "Wer arbeitet an der Weiterentwicklung von HTML?",
+        "text": "Wer arbeitet alles an der Weiterentwicklung von HTML?",
         "input": "checkbox",
         "answers": [
           "Europäische Union (EU)",
@@ -165,6 +187,7 @@
     "start_button": true,
     "navigation": true,
     "anytime_finish": true,
+    "random": true,
     "onfinish": { "restart": true },
     "placeholder": {
       "start": "Quiz starten",
@@ -220,6 +243,7 @@
     "start_button": true,
     "navigation": true,
     "anytime_finish": true,
+    "random": true,
     "onfinish": { "restart": true },
     "placeholder": {
       "start": "Quiz starten",
@@ -254,26 +278,40 @@
         "input": "checkbox",
         "answers": [
           {
-            "text": "Festlegung von Layout und Design",
-            "comment": "Hierfür verwendet man nicht HTML, sondern CSS."
+            "text": "Angaben zur Textpräsentation",
+            "comment": "Ein HTML-Tag dient vielmehr zur strukturierenden Auszeichnung, um Textbereichen eine Bedeutung zu geben."
+          },
+          {
+            "text": "Beschreibung dynamischer Abläufe",
+            "comment": "HTML-Tags beschreiben die Struktur und Semantik der Inhalte eines digitalen Dokuments."
+          },
+          {
+            "text": "Darstellungsorientierte Textauszeichnung",
+            "comment": "Ein HTML-Tag dient nur zur rein beschreibenden und nicht zur verfahrens- oder darstellungsorientierten Textauszeichnung."
+          },
+          {
+            "text": "Formatierung von Texten",
+            "comment": "Ein HTML-Tag dient nur der reinen semantischen Strukturierung von Texten und nicht zu dessen Formatierung."
           },
           {
             "text": "Hinzufügen weiterer Inhalte, die über Text hinausgehen",
             "comment": "z.B. Hyperlinks, Bilder, Audio, Video, Listen, Tabellen, Formulare und Buttons"
           },
           {
-            "text": "Programmierung der Webseite",
-            "comment": "HTML ist keine Programmiersprache, sondern eine reine Auszeichnungssprache."
+            "text": "Identifizierung von Textzeilen",
+            "comment": "HTML-Tags dienen zur Identifizierung von Inhaltstypen. Also welche Textbereiche beispielsweise vom Typ Überschrift sind."
+          },
+          {
+            "text": "Markierung von Feiertagen",
+            "comment": "Ein HTML-Tag dient eher zur Markierung von Textbereichen in digitalen Dokumenten, um ihnen eine <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Semantik\">Semantik</a> bzw. Bedeutung zu geben."
           },
           {
             "text": "Steuerung des Webbrowsers",
-            "comment": "Mit HTML steuert man den Aufbau der Webseite durch den Webbrowser, aber nicht den Webbrowser selbst."
+            "comment": "Mit HTML-Tags steuert man den strukturellen Aufbau einer Webseite."
           },
-          "Strukturierung von HTML-Code",
-          "Strukturierung von Inhalten",
-          "Verwaltung digitaler Dokumente"
+          "Strukturierung von Webseiteninhalten"
         ],
-        "correct": [ 1, 7 ]
+        "correct": [ 4, 8 ]
       },
       {
         "text": "Woraus besteht ein HTML-Tag und wie setzt man ihn ein?",
@@ -353,19 +391,43 @@
       {
         "text": "Wie schreibt man einen Kommentar in HTML?",
         "input": "radio",
-        "encode": true,
+        "encode": false,
         "answers": [
-          "<! Kommentar !>",
-          "<!- Kommentar -!>",
-          "<!- Kommentar ->",
-          "<!-- Kommentar --!>",
-          "<!-- Kommentar -->",
-          "<!>Kommentar<!>",
-          "<-!- Kommentar -!->",
-          "<-- Kommentar --!>",
-          "<-- Kommentar -->"
+          {
+            "text": "! Kommentar",
+            "comment": "So schreibt man einen Zeilenkommentar in der Programmiersprache <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Fortran\">Fortran</a>"
+          },
+          {
+            "text": "# Kommentar",
+            "comment": "So schreibt man einen Zeilenkommentar in den Programmiersprachen <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Perl_(Programmiersprache)\">Perl</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Python_(Programmiersprache)\">Python</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/R_(Programmiersprache)\">R</a> und <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Ruby_(Programmiersprache)\">Ruby</a>."
+          },
+          {
+            "text": "' Kommentar",
+            "comment": "So schreibt man einen Zeilenkommentar in den Programmiersprachen <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/BASIC\">BASIC</a> und <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Visual_Basic\">Visual Basic</a>."
+          },
+          {
+            "text": "/* Kommentar */",
+            "comment": "So schreibt man einen Blockkommentar in den Programmiersprachen <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/C_(Programmiersprache)\">C</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/C%2B%2B\">C++</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/C-Sharp\">C#</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/D_(Programmiersprache)\">D</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Pascal_(Programmiersprache)\">Pascal</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/JavaScript\">JavaScript</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/PHP\">PHP</a> und <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Java_(Programmiersprache)\">Java</a>."
+          },
+          {
+            "text": "/** Kommentar */",
+            "comment": "So schreibt man einen Dokumentationskommentar in den Programmiersprachen <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Java_(Programmiersprache)\">Java</a> und <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/JavaScript\">JavaScript</a>."
+          },
+          {
+            "text": "// Kommentar",
+            "comment": "So schreibt man einen Zeilenkommentar in den Programmiersprachen <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/C_(Programmiersprache)\">C</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/C%2B%2B\">C++</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/C-Sharp\">C#</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Pascal_(Programmiersprache)\">Pascal</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/JavaScript\">JavaScript</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/PHP\">PHP</a> und <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Java_(Programmiersprache)\">Java</a>."
+          },
+          {
+            "text": "; Kommentar",
+            "comment": "So schreibt man einen Zeilenkommentar in der Programmiersprache <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Assemblersprache\">Assembler</a>."
+          },
+          "&lt;!-- Kommentar -->",
+          {
+            "text": "{ Kommentar }",
+            "comment": "So schreibt man einen Blockkommentar in der Programmiersprache <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Pascal_(Programmiersprache)\">Pascal</a>."
+          }
         ],
-        "correct": 4
+        "correct": 7
       }
     ]
   }
