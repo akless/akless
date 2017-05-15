@@ -21,9 +21,33 @@
 	max-width: 720px;
 }
 
+header {
+  display: flex;
+  align-items: flex-end;
+  padding-top: 1em;
+}
+
+header img {
+  margin-right: 1em;
+  margin-bottom: 0.2em;
+  border-right: 1px solid black;
+  padding-right: 0.6em;
+  width: 100px;
+  height: 100px;
+}
+
+header h1 {
+  display: block;
+  line-height: 1em;
+  margin: 0;
+}
+
+header span {
+  color: #00ACEE;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
+  margin-top: 2em;
 	letter-spacing: 0.05em;
 }
 

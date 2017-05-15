@@ -16,8 +16,10 @@
 
     config: {
       css_file: '../css/le.css',
+      logo_file: '../image/logo.png',
       poster_file: '../image/poster.jpg',
       content: [ 'ccm.component', '../js/ccm.content.js' ],
+      title_prefix: 'Lerneinheit:',
       link_prefix: 'Link: '
     },
 
@@ -37,14 +39,20 @@
         // inner HTML of own ccm Custom Element is given via 'innerHTML' config property? => use it with higher priority
         if ( self.innerHTML ) self.node.innerHTML = self.innerHTML;
 
-        delete self.innerHTML;  // remove no more needed config property
-
         recursive( self.node );
 
-        var div = document.createElement( 'div' );
-        div.id = 'licence';
-        div.innerHTML = '<hr><p xmlns:dct="https://purl.org/dc/terms/"><a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/"><img src="https://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0"></a><br>Soweit unter den gesetzlichen Voraussetzungen möglich hat <span resource="[_:publisher]" rel="dct:publisher"><span property="dct:title">André Kless</span></span> sämtliche Urheber- und Verwertungsrechte für dieses Werk abgetreten.</p>';
-        self.node.appendChild( div );
+        // add header
+        var header = document.createElement( 'header' );
+        header.innerHTML = '<img src="' + self.logo_file + '"><h1>' + self.title_prefix + '<br><span>' + self.title + '</span></h1>';
+        self.node.insertBefore( header, self.node.firstChild );
+
+        // add footer
+        var footer = document.createElement( 'footer' );
+        footer.innerHTML = '<hr><p xmlns:dct="https://purl.org/dc/terms/"><a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/"><img src="https://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0"></a><br>Soweit unter den gesetzlichen Voraussetzungen möglich hat <span resource="[_:publisher]" rel="dct:publisher"><span property="dct:title">André Kless</span></span> sämtliche Urheber- und Verwertungsrechte für dieses Werk abgetreten.</p>';
+        self.node.appendChild( footer );
+
+        // remove no more needed config properties
+        delete self.innerHTML; delete self.logo_file; delete self.title_prefix; delete self.title; delete self.link_prefix;
 
         callback();
 
