@@ -264,7 +264,7 @@
           "ein Attribut",
           {
             "text": "ein Auszeichnungselement",
-            "comment": "Reflektieren Sie noch einmal was Auszeichnungselement in Bezug auf HTML bedeutet."
+            "comment": "Reflektieren Sie noch einmal was Auszeichnungselement in Bezug auf HTML genau bedeutet."
           },
           "ein Befehl",
           "ein Feiertag",
@@ -282,7 +282,7 @@
         "answers": [
           {
             "text": "Für eine darstellungsorientierte Textauszeichnung",
-            "comment": "Ein HTML-Tag dient nur zur rein beschreibenden und nicht zur verfahrens- oder darstellungsorientierten Textauszeichnung."
+            "comment": "Ein HTML-Tag dient nur zur beschreibenden und nicht zur verfahrens- oder darstellungsorientierten Textauszeichnung."
           },
           {
             "text": "Um Angaben zur Textpräsentation zu machen",
@@ -298,7 +298,7 @@
           },
           {
             "text": "Zum Markieren von Feiertagen",
-            "comment": "Ein HTML-Tag dient eher zur Markierung von Textbereichen in digitalen Dokumenten, um ihnen eine <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Semantik\">Semantik</a> bzw. Bedeutung zu geben."
+            "comment": "Ein HTML-Tag dient eher zur Markierung von Textbereichen in digitalen Dokumenten, um ihnen eine Bedeutung zu geben."
           },
           {
             "text": "Zur Formatierung von Texten",
@@ -324,7 +324,7 @@
         "answers": [
           {
             "text": "<h1>Überschrift<h1>",
-            "comment": "Hier fehlt beim schließenden <h1>-Tag der Schrägstrich \"/\"."
+            "comment": "Hier fehlt beim schließenden <h1>-Tag der Schrägstrich."
           },
           "<h2>Überschrift</h2>",
           {
@@ -337,7 +337,7 @@
           },
           {
             "text": "<p>Paragraph<p>",
-            "comment": "Hier fehlt beim schließenden <p>-Tag der Schrägstrich \"/\"."
+            "comment": "Hier fehlt beim schließenden <p>-Tag der Schrägstrich."
           },
           "<p>Paragraph</p>",
           "Hallo Welt!<br>Willkommen.",
@@ -409,36 +409,36 @@
         "answers": [
           {
             "text": "! Kommentar",
-            "comment": "So schreibt man einen Zeilenkommentar in der Programmiersprache <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Fortran\">Fortran</a>"
+            "comment": "So schreibt man einen Zeilenkommentar in Programmiersprachen wie <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Fortran\">Fortran</a>"
           },
           {
             "text": "# Kommentar",
-            "comment": "So schreibt man einen Zeilenkommentar in den Programmiersprachen <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Perl_(Programmiersprache)\">Perl</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Python_(Programmiersprache)\">Python</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/R_(Programmiersprache)\">R</a> und <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Ruby_(Programmiersprache)\">Ruby</a>."
+            "comment": "So schreibt man einen Zeilenkommentar in Programmiersprachen wie <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Perl_(Programmiersprache)\">Perl</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Python_(Programmiersprache)\">Python</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/R_(Programmiersprache)\">R</a> und <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Ruby_(Programmiersprache)\">Ruby</a>."
           },
           {
             "text": "' Kommentar",
-            "comment": "So schreibt man einen Zeilenkommentar in den Programmiersprachen <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/BASIC\">BASIC</a> und <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Visual_Basic\">Visual Basic</a>."
+            "comment": "So schreibt man einen Zeilenkommentar in Programmiersprachen wie <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/BASIC\">BASIC</a> und <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Visual_Basic\">Visual Basic</a>."
           },
           {
             "text": "/* Kommentar */",
-            "comment": "So schreibt man einen Blockkommentar in den Programmiersprachen <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/C_(Programmiersprache)\">C</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/C%2B%2B\">C++</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/C-Sharp\">C#</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/D_(Programmiersprache)\">D</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Pascal_(Programmiersprache)\">Pascal</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/JavaScript\">JavaScript</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/PHP\">PHP</a> und <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Java_(Programmiersprache)\">Java</a>."
+            "comment": "So schreibt man einen Blockkommentar in Programmiersprachen wie <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/C_(Programmiersprache)\">C</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/C%2B%2B\">C++</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/C-Sharp\">C#</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/D_(Programmiersprache)\">D</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Pascal_(Programmiersprache)\">Pascal</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/JavaScript\">JavaScript</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/PHP\">PHP</a> und <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Java_(Programmiersprache)\">Java</a>."
           },
           {
             "text": "/** Kommentar */",
-            "comment": "So schreibt man einen Dokumentationskommentar in den Programmiersprachen <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Java_(Programmiersprache)\">Java</a> und <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/JavaScript\">JavaScript</a>."
+            "comment": "So schreibt man einen Dokumentationskommentar in Programmiersprachen wie <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Java_(Programmiersprache)\">Java</a> und <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/JavaScript\">JavaScript</a>."
           },
           {
             "text": "// Kommentar",
-            "comment": "So schreibt man einen Zeilenkommentar in den Programmiersprachen <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/C_(Programmiersprache)\">C</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/C%2B%2B\">C++</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/C-Sharp\">C#</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Pascal_(Programmiersprache)\">Pascal</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/JavaScript\">JavaScript</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/PHP\">PHP</a> und <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Java_(Programmiersprache)\">Java</a>."
+            "comment": "So schreibt man einen Zeilenkommentar in Programmiersprachen wie <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/C_(Programmiersprache)\">C</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/C%2B%2B\">C++</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/C-Sharp\">C#</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Pascal_(Programmiersprache)\">Pascal</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/JavaScript\">JavaScript</a>, <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/PHP\">PHP</a> und <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Java_(Programmiersprache)\">Java</a>."
           },
           {
             "text": "; Kommentar",
-            "comment": "So schreibt man einen Zeilenkommentar in der Programmiersprache <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Assemblersprache\">Assembler</a>."
+            "comment": "So schreibt man einen Zeilenkommentar in Programmiersprachen wie <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Assemblersprache\">Assembler</a>."
           },
           "&lt;!-- Kommentar -->",
           {
             "text": "{ Kommentar }",
-            "comment": "So schreibt man einen Blockkommentar in der Programmiersprache <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Pascal_(Programmiersprache)\">Pascal</a>."
+            "comment": "So schreibt man einen Blockkommentar in Programmiersprachen wie <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Pascal_(Programmiersprache)\">Pascal</a>."
           }
         ],
         "correct": 7
