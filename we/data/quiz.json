@@ -15,7 +15,7 @@
       "question": "Frage",
       "prev": "Zurück",
       "next": "Weiter",
-      "submit": "Auswerten",
+      "submit": "Auflösung",
       "finish": "Beenden"
     },
     "questions": [
@@ -194,7 +194,7 @@
       "question": "Frage",
       "prev": "Zurück",
       "next": "Weiter",
-      "submit": "Abschicken",
+      "submit": "Auflösung",
       "finish": "Beenden"
     },
     "questions": [
@@ -250,26 +250,27 @@
       "question": "Frage",
       "prev": "Zurück",
       "next": "Weiter",
-      "submit": "Abschicken",
+      "submit": "Auflösung",
       "finish": "Beenden"
     },
     "questions": [
       {
         "text": "Was ist ein HTML-Tag?",
+        "description": "Wählen Sie unter den Folgenden Antworten die richtige aus.",
         "input": "radio",
         "answers": [
-          "Anweisung",
-          "Attribut",
+          "eine Anweisung",
+          "ein Attribut",
           {
-            "text": "Auszeichnungselement",
+            "text": "ein Auszeichnungselement",
             "comment": "Reflektieren Sie noch einmal was Auszeichnungselement in Bezug auf HTML bedeutet."
           },
-          "Befehl",
-          "Feiertag",
-          "Instruktion",
-          "Platzhalter",
-          "Sonderzeichen",
-          "Variable"
+          "ein Befehl",
+          "ein Feiertag",
+          "eine Instruktion",
+          "ein Platzhalter",
+          "ein Sonderzeichen",
+          "eine Variable"
         ],
         "correct": 2
       },
