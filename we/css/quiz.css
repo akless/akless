@@ -64,10 +64,6 @@
   padding-right: 0.5em;
 }
 
-label {
-  padding-bottom: 0.1em;
-}
-
 input {
   font-family: inherit;
   font-size: 80%;
@@ -78,25 +74,20 @@ input[type=checkbox]:enabled, input[type=radio]:enabled, button:enabled {
   cursor: pointer;
 }
 
-.comment {
-  display: inline-block;
-}
-
 .tooltip {
   position: relative;
-  display: inline-block;
-  margin-left: 0.5em;
-  border: 1px solid #00709B;
+  margin-left: 0.7em;
+  box-shadow: 0 0 5px #00709B;
   border-radius: 1em;
   padding: 0 0.3em;
   font-family: monospace;
+  font-size: 80%;
   color: #00709B;
   cursor: help;
 }
 
 .tooltiptext {
   font-family: WeblySleekUI, sans-serif;
-  font-size: 80%;
   visibility: hidden;
   width: 160px;
   height: 150px;
@@ -114,7 +105,7 @@ input[type=checkbox]:enabled, input[type=radio]:enabled, button:enabled {
 .tooltiptext::after {
   content: ' ';
   position: absolute;
-  top: 50%;
+  top: 49%;
   right: 100%;
   border: 5px solid transparent;
   border-right-color: black;
@@ -128,10 +119,11 @@ input[type=checkbox]:enabled, input[type=radio]:enabled, button:enabled {
 
 .tooltiptext > div > div {
   background-color: black;
-  color: white;
+  border-radius: 0.6em;
+  padding: 0.2em;
+  font-weight: normal;
   text-align: center;
-  padding: 0.3em;;
-  border-radius: 6px;
+  color: white;
 }
 
 .tooltiptext a, .tooltiptext a:visited, .tooltiptext a:hover {
