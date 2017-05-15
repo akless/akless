@@ -196,6 +196,7 @@
       "prev": "Zurück",
       "submit": "Auflösung",
       "next": "Nächste Frage",
+      "correct": "Korrekte Lösung: ",
       "finish": "Beenden"
     },
     "questions": [
