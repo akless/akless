@@ -14,7 +14,7 @@
 	margin: 0.2em;
 	border-radius: 0.5em;
 	background-color: white;
-	padding: 0 1em;
+	padding: 0 2em;
 	font-family: WeblySleekUI, sans-serif;
 	font-size: 19px;
 	overflow-x: hidden;
@@ -24,7 +24,7 @@
 header {
   display: flex;
   align-items: flex-end;
-  padding-top: 1em;
+  padding-top: 2em;
 }
 
 header img {
@@ -44,6 +44,10 @@ header h1 {
 
 header span {
   color: #00ACEE;
+}
+
+footer {
+  padding-bottom: 1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
