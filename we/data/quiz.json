@@ -150,7 +150,7 @@
       },
       {
         "text": "Wer arbeitet alles an der Weiterentwicklung von HTML?",
-        "description": "<b>Mehrfachauswahl möglich</b>",
+        "description": "<b style='color: orangered;' d>Mehrfachauswahl möglich</b>",
         "input": "checkbox",
         "answers": [
           "das World Wide Web Consortium (W3C)",
