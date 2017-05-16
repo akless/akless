@@ -149,7 +149,8 @@
         "correct": 4
       },
       {
-        "text": "Wer arbeitet alles an der Weiterentwicklung von HTML? (Merfachauswahl möglich)",
+        "text": "Wer arbeitet alles an der Weiterentwicklung von HTML?",
+        "description": "<b>Mehrfachauswahl möglich</b>",
         "input": "checkbox",
         "answers": [
           "das World Wide Web Consortium (W3C)",
