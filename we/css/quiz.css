@@ -77,11 +77,12 @@ input[type=checkbox]:enabled, input[type=radio]:enabled, button:enabled {
 .tooltip {
   position: relative;
   margin-left: 0.7em;
-  box-shadow: 0 0 5px #00709B;
+  border: 1px solid #00709B;
   border-radius: 1em;
   padding: 0 0.3em;
   font-family: monospace;
   font-size: 80%;
+  font-weight: bold;
   color: #00709B;
   cursor: help;
 }
