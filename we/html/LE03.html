@@ -3,18 +3,33 @@
 @author  André Kless <andre.kless@web.de.de> 2017
 @license The MIT License (MIT)
 -->
+<title>Lerneinheit: HTML-Tags</title>
 <meta charset="utf-8">
 <style>body { margin: 0; }</style>
 <link rel="stylesheet" type="text/css" href="../css/font.css">
 <script src="../js/ccm.le.js"></script>
 
-<ccm-le title="HTML-Tags">
+<ccm-le topic="HTML-Tags">
   <script src="../js/ccm.quiz.js"></script>
   <script src="../js/ccm.cloze.js"></script>
 
   <h2>1. Motivation, Lernziele und Voraussetzungen</h2>
 
-  <p>Nach dem Erstellen einer neuen HTML-Datei und der Dokumenttypdefinition in deren erster Zeile, können wir in den darauffolgenden Zeilen bereits die ersten Inhalte für die Webseite angeben und uns diese dann in einem Webbrowser auch darstellen lassen. Wenn Sie diese Schritte bereits beherrschen, können wir als nächstes die Frage stellen, wie die Inhalte der Webseite nun mit Hilfe von HTML auch strukturiert werden können und wie neben einfachem Text auch andere Inhalte, wie z.B. Hyperlinks, Bilder, Audio, Video, Listen, Tabellen, Formulare und Buttons mittels HTML in die Webseite integrierbar sind. Voraussetzung dafür ist es, sich mit den Befehlen in HTML, den sogenannten HTML-Tags, auszukennen. In dieser Lerneinheit lernen Sie daher, was ein HTML-Tag ist, woraus er besteht, wofür man ihn nutzt und wie man ihn einsetzt. Dabei werden Sie bereits die konkreten HTML-Tags zur Markierung von Überschriften, Paragraphen und Zeilenumbrüchen kennenlernen und auch wie man Kommentare in HTML schreibt.</p>
+  <p>
+    Nach dem Erstellen einer neuen <a href="https://de.wikipedia.org/wiki/Hypertext_Markup_Language">HTML</a>-<a href="https://de.wikipedia.org/wiki/Datei">Datei</a>
+    und der <a href="https://de.wikipedia.org/wiki/Dokumenttypdefinition">Dokumenttypdefinition</a> in deren erster
+    Zeile, können wir in den darauffolgenden Zeilen bereits die ersten Inhalte für die
+    <a href="https://de.wikipedia.org/wiki/Webseite">Webseite</a> angeben und uns diese dann in einem
+    <a href="https://de.wikipedia.org/wiki/Webbrowser">Webbrowser</a> auch darstellen lassen. Wenn Sie diese Schritte
+    bereits beherrschen, können wir als nächstes die Frage stellen, wie die Inhalte der Webseite nun mit Hilfe von HTML
+    auch strukturiert werden können und wie neben einfachem Text auch andere Inhalte, wie z.B. Bilder, Audios und
+    Videos mittels HTML in der Webseite <a href="https://de.wikipedia.org/wiki/Referenz_(Programmierung)">
+    referenzierbar</a> sind. Voraussetzung dafür ist es, sich mit den Befehlen in HTML, den sogenannten
+    HTML-<a href="https://de.wikipedia.org/wiki/Tag_(Informatik)">Tags</a>, auszukennen. In dieser Lerneinheit lernen
+    Sie daher, was ein HTML-Tag ist, woraus er besteht, wofür man ihn nutzt und wie man ihn einsetzt. Dabei werden Sie
+    bereits die konkreten HTML-Tags zur Markierung von Überschriften, Paragraphen und Zeilenumbrüchen kennenlernen und
+    auch wie man <a href="https://de.wikipedia.org/wiki/Kommentar_(Programmierung)"> Kommentare</a> in HTML schreibt.
+  </p>
 
   <ccm-le-audio src="../audio/LE03_Motivation.mp3"></ccm-le-audio>
 
@@ -32,45 +47,90 @@
     <li>Ich bin in der Lage eine neue Webseite mit dem Inhalt "Hallo Welt!" über ein HTML-basiertes digitales Dokument zu erstellen und mir den Inhalt der Webseite über einen Webbrowser anzeigen zu lassen.
   </ul>
 
-  <h2>2. Inhalt: HTML-Tags</h2>
+  <h2>2. Inhalt: <ccm-le-topic></ccm-le-topic></h2>
 
   <ccm-le-video src="../video/LE03_Inhalt.mp4"></ccm-le-video>
 
   <h3>2.1 Was ist ein HTML-Tag?</h3>
 
-  <p>In der Auszeichnungssprache HTML sind die HTML-Tags die Auszeichnungselemente. Innerhalb einer HTML-Datei können mit HTML-Tags die Inhalte der Webseite strukturiert und neben Text auch andere Inhalte hinzugefügt werden. Mit ihnen kann beispielsweise markiert werden, welcher Text ein Paragraph und welcher eine Überschrift ist.</p>
+  <p>
+    In der <a href="https://de.wikipedia.org/wiki/Auszeichnungssprache">Auszeichnungssprache</a> HTML sind die
+    HTML-Tags die <a href="https://de.wikipedia.org/wiki/Auszeichnungselement">Auszeichnungselemente</a>. Innerhalb
+    einer HTML-Datei können mit HTML-Tags die Inhalte der Webseite strukturiert und neben Text auch andere Inhalte
+    referenziert werden. Mit ihnen kann beispielsweise markiert werden, welcher Text ein Paragraph und welcher eine
+    Überschrift ist.
+  </p>
 
   <ccm-le-img src="../image/LE03_Inhalt.001.jpg"></ccm-le-img>
 
-  <p>In diesem Video verwende ich den kostenfreien Online-Quelltext-Editor <a href="https://thimble.mozilla.org/de/">Thimble</a>, der weder die Installation eines Programms, noch ein bestimmtes Betriebssystem voraussetzt und mir zu Änderungen in HTML direkt eine Vorschau der Webseite anzeigt.</p>
+  <p>
+    In diesem Video verwende ich den kostenfreien Online-Quelltext-Editor <a href="https://thimble.mozilla.org/de/">
+    Thimble</a>, der weder die <a href="https://de.wikipedia.org/wiki/Installation_(Computer)">Installation</a> eines
+    <a href="https://de.wikipedia.org/wiki/Computerprogramm">Programms</a>, noch ein bestimmtes
+    <a href="https://de.wikipedia.org/wiki/Betriebssystem">Betriebssystem</a> voraussetzt und mir zu Änderungen in HTML
+    direkt eine Vorschau der Webseite anzeigt.
+  </p>
 
   <h3>2.2 Syntax eines HTML-Tags</h3>
 
-  <p>Ein HTML-Tag beginnt im einfachsten Falle mit einer öffnenden spitzen Klammer, gefolgt von dem Namen des HTML-Tags und abschließend einer schließenden spitzen Klammer. Im Beispiel sieht man bereits, dass für die Markierung einer Überschrift ein &lt;h1>-Tag verwendet wird und für Paragraphen ein &lt;p>-Tag.</p>
+  <p>
+    Ein HTML-Tag beginnt mit einer öffnenden spitzen Klammer, gefolgt von dem Namen des HTML-Tags und abschließend
+    einer schließenden spitzen Klammer. Im Beispiel sieht man bereits, dass für die Markierung einer Überschrift ein
+    <a href="https://wiki.selfhtml.org/wiki/HTML/Textstrukturierung/Überschrift">&lt;h1></a>-Tag und für Paragraphen
+    ein <a href="https://wiki.selfhtml.org/wiki/HTML/Textstrukturierung/p">&lt;p></a>-Tag verwendet wird.
+  </p>
 
   <h3>2.3 Öffnende und schließende HTML-Tags</h3>
 
-  <p>Zu den meisten HTML-Tags gibt es eine öffnende und schließende Variante, wie man bereits am Beispiel von Überschrift und Paragraph erkennen kann. Bei der Überschrift wird dadurch beispielsweise markiert, wo die Überschrift anfängt und wo sie endet bzw. welcher Text genau später vom Webbrowser als Überschrift zu interpretieren ist.</p>
+  <p>
+    Zu den meisten HTML-Tags gibt es eine öffnende und schließende Variante, wie man bereits am Beispiel von
+    Überschrift und Paragraph erkennen kann. Bei der Überschrift wird dadurch beispielsweise markiert, wo die
+    Überschrift anfängt und wo sie endet bzw. welcher Text genau später vom Webbrowser als Überschrift zu
+    <a href="https://de.wikipedia.org/wiki/Interpreter">interpretieren</a> ist.
+  </p>
 
-  <p>Um beide Varianten zu unterscheiden, hat der schließende HTML-Tag zusätzlich, direkt nach der öffnenden spitzen Klammer, also als zweites Zeichen, einen Schrägstrich "/".</p>
+  <p>
+    Um beide Varianten zu unterscheiden, hat der schließende HTML-Tag zusätzlich, direkt nach der öffnenden spitzen
+    Klammer, also als zweites Zeichen, einen Schrägstrich "/".
+  </p>
 
   <h3>2.4 Nicht-schließende HTML-Tags</h3>
 
-  <p>Es gibt aber auch wenige HTML-Tags, für die es keinen schließenden HTML-Tag gibt, sondern nur einen Öffnenden. Dies gilt z.B. für einen &lt;br>-Tag, der lediglich einen Zeilenumbruch angibt und für den ein schließender HTML-Tag daher wenig Sinn macht.</p>
+  <p>
+    Es gibt aber auch wenige HTML-Tags, für die es keinen schließenden HTML-Tag gibt, sondern nur einen Öffnenden.
+    Solche HTML-Tags nennt man auch <a href="https://wiki.selfhtml.org/wiki/Inhaltsleer">inhaltsleer</a>. Dies gilt
+    z.B. für einen <a href="https://wiki.selfhtml.org/wiki/HTML/Textauszeichnung/br">&lt;br></a>-Tag, der lediglich
+    einen Zeilenumbruch angibt und für den ein schließender HTML-Tag daher wenig Sinn macht.
+  </p>
 
   <ccm-le-img src="../image/LE03_Inhalt.004.jpg"></ccm-le-img>
 
   <h3>2.5 Strukturierung des HTML-Codes</h3>
 
-  <p>Für den Webbrowser macht es übrigens keinen Unterschied, wie wir den HTML-Code strukturieren, er könnte genauso gut auch in einer einzigen langen Zeile stehen.</p>
+  <p>
+    Für den Webbrowser macht es übrigens keinen Unterschied, wie wir den HTML-Code strukturieren, er könnte genauso gut
+    auch in einer einzigen langen Zeile stehen.
+  </p>
 
   <ccm-le-img src="../image/LE03_Inhalt.005.jpg"></ccm-le-img>
 
-  <p>Damit der HTML-Code aber für das menschliche Auge möglichst gut lesbar ist, wird er üblicherweise, wie vorher gezeigt, mit Zeilenumbrüchen und Leerzeichen eingerückt. Überprüfen Sie am besten direkt immer selbst, wie der Webbrowser die Inhalte der Webseite nach einer Änderung des HTML-Codes darstellt, indem Sie Ihre Änderungen speichern und die HTML-Datei erneut mit dem Webbrowser öffnen bzw. dort neu laden. Beim Online-Quelltext-Editor Thimble genügt ein Klick auf "Vorschau aktualisieren".</p>
+  <p>
+    Damit der HTML-Code aber für das menschliche Auge möglichst gut lesbar ist, wird er üblicherweise, wie vorher
+    gezeigt, mit Zeilenumbrüchen und Leerzeichen eingerückt. Überprüfen Sie am besten direkt immer selbst, wie der
+    Webbrowser die Inhalte der Webseite nach einer Änderung des HTML-Codes darstellt, indem Sie Ihre Änderungen
+    speichern und die HTML-Datei erneut mit dem Webbrowser öffnen bzw. dort neu laden. Beim Online-Quelltext-Editor
+    Thimble genügt ein Klick auf "Vorschau aktualisieren".
+  </p>
 
   <h3>2.6 Überschriftenebenen</h3>
 
-  <p>Zum Markieren von Überschriften gibt es in HTML neben dem &lt;h1>-Tag noch die HTML-Tags &lt;h2>, &lt;h3>, &lt;h4>, &lt;h5> und &lt;h6>. Jeder dieser Tags steht für eine Überschriftenebene, von denen es somit insgesamt 6 Ebenen gibt. Der von uns bereits verwendete &lt;h1>-Tag steht für die oberste Überschriftenebene. Die Überschrift zu einem Kapitel würde man also beispielsweise mit einem &lt;h1>-Tag markieren und die der Unterkapitel mit einem &lt;h2>-Tag, usw..</p>
+  <p>
+    Zum Markieren von Überschriften gibt es in HTML neben dem &lt;h1>-Tag noch die HTML-Tags &lt;h2>, &lt;h3>, &lt;h4>,
+    &lt;h5> und &lt;h6>. Jeder dieser Tags steht für eine Überschriftenebene, von denen es somit insgesamt 6 Ebenen
+    gibt. Der von uns bereits verwendete &lt;h1>-Tag steht für die oberste Überschriftenebene. Die Überschrift zu einem
+    Kapitel würde man also beispielsweise mit einem &lt;h1>-Tag markieren und die der Unterkapitel mit einem
+    &lt;h2>-Tag, usw..
+  </p>
 
   <ccm-le-img src="../image/LE03_Inhalt.006.jpg"></ccm-le-img>
 
@@ -78,15 +138,27 @@
 
   <h3>2.7 Kommentare</h3>
 
-  <p>In HTML gibt es die Möglichkeit an beliebigen Stellen im HTML-Code Kommentare zu hinterlegen. Alles was innerhalb eines Kommentars steht wird vom Webbrowser nicht angezeigt und ignoriert. Dies kann nützlich sein, um individuelle Anmerkungen im Code zu hinterlegen oder bestimmte Code-Bereiche, die kurzzeitig nicht benötigt werden, gezielt "auszukommentieren". Das bedeutet also, diese Bereiche nicht zu löschen, sondern sie nur ignorieren zu lassen, um sie später leicht jederzeit wiederherherstellen zu können.</p>
+  <p>
+    In HTML gibt es die Möglichkeit an beliebigen Stellen im HTML-Code Kommentare zu hinterlegen. Alles was innerhalb
+    eines Kommentars steht wird vom Webbrowser nicht interpretiert und somit ignoriert. Dies kann nützlich sein, um
+    individuelle Anmerkungen im Code zu hinterlegen oder bestimmte Code-Bereiche, die kurzzeitig nicht benötigt werden,
+    gezielt "auszukommentieren". Das bedeutet also, diese Bereiche nicht zu löschen, sondern sie nur ignorieren zu
+    lassen, um sie später leicht jederzeit wiederherherstellen zu können.
+  </p>
 
   <ccm-le-img src="../image/LE03_Inhalt.007.jpg"></ccm-le-img>
 
   <h3>2.8 Syntax eines HTML-Kommentars</h3>
 
-  <p>Ein <a href="https://de.wikipedia.org/wiki/Kommentar_(Programmierung)">Kommentar</a> beginnt immer mit einer öffnenden spitzen Klammer, gefolgt von einem Ausrufezeichen und zwei Trennstrichen (&lt;!--) und endet mit zwei Trennstrichen gefolgt von einer schließenden spitzen Klammer (-->).</p>
+  <p>
+    Ein Kommentar beginnt in HTML mit einer öffnenden spitzen Klammer, gefolgt von einem Ausrufezeichen und zwei
+    Trennstrichen (&lt;!--) und endet mit zwei Trennstrichen gefolgt von einer schließenden spitzen Klammer (-->).
+  </p>
 
-  <p>Vor allem bei umfangreichen Webseiten sind Kommentare nützlich, um HTML-Code mit Anmerkungen anzureichern, die helfen, sich in dem Quelltext schneller zurechtzufinden.</p>
+  <p>
+    Vor allem bei umfangreichen Webseiten sind Kommentare nützlich, um HTML-Code mit Anmerkungen anzureichern, die
+    helfen, sich in dem Quelltext schneller zurechtzufinden.
+  </p>
 
   <h2>3. Selbsttest</h2>
 
@@ -102,7 +174,10 @@
 
   <h3>4.1 HTML/Regeln/Textauszeichnung | SELFHTML-Wiki</h3>
 
-  <p>Einführung in Elemente und Tags in HTML aus der Internet-Dokumentation <a href="https://de.wikipedia.org/wiki/SELFHTML">SELFHTML</a>.</p>
+  <p>
+    Einführung in Elemente und Tags in HTML aus der Internet-Dokumentation
+    <a href="https://de.wikipedia.org/wiki/SELFHTML">SELFHTML</a>.
+  </p>
 
   <ccm-le-link href="https://wiki.selfhtml.org/wiki/HTML/Regeln/Textauszeichnung#Elemente_und_Tags_in_HTML"></ccm-le-link>
 
