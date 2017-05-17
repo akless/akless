@@ -127,8 +127,16 @@ input[type=checkbox]:enabled, input[type=radio]:enabled, button:enabled {
   color: white;
 }
 
-.tooltiptext a, .tooltiptext a:visited, .tooltiptext a:hover {
-  color: #00ACEE;
+.tooltiptext a {
+  color: #6FD1F7;
+}
+
+.tooltiptext a:visited {
+  color: lightblue;
+}
+
+.tooltiptext a:hover {
+  color: orangered;
 }
 
 #buttons {
