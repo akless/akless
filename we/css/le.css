@@ -40,9 +40,14 @@ header h1 {
   display: block;
   line-height: 1em;
   margin: 0;
+  font-size: 38px;
 }
 
-header span {
+.prefix {
+  font-size: 29px;
+}
+
+.topic {
   color: #00ACEE;
 }
 
@@ -69,15 +74,15 @@ figure > * {
 }
 
 a {
-	word-break: break-all;
+	color: #00ACEE;
 }
 
-a, a:visited {
-  color: #00709B;
+a:visited {
+	color: #00709B;
 }
 
 a:hover {
-  color: #00ACEE;
+	color: darkred;
 }
 
 a[rel=license] {
