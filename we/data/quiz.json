@@ -150,7 +150,7 @@
       },
       {
         "text": "Wer arbeitet alles an der Weiterentwicklung von HTML?",
-        "description": "<b style='color: orangered;' d>Mehrfachauswahl möglich</b>",
+        "description": "<b style='color: orangered;'>Mehrfachauswahl möglich</b>",
         "input": "checkbox",
         "answers": [
           "das World Wide Web Consortium (W3C)",
@@ -279,7 +279,8 @@
         "correct": 1
       },
       {
-        "text": "Wofür nutzt man einen HTML-Tag? (Mehrauswahl möglich)",
+        "text": "Wofür nutzt man einen HTML-Tag?",
+        "description": "<b style='color: orangered;'>Mehrfachauswahl möglich</b>",
         "input": "checkbox",
         "answers": [
           {
@@ -319,8 +320,8 @@
         "correct": [ 3, 8 ]
       },
       {
-        "text": "Woraus besteht ein HTML-Tag und wie setzt man ihn ein? (Mehrauswahl möglich)",
-        "description": "Geben Sie für die folgenden HTML5-Codes an, in welchen davon die enthaltenen HTML-Tags korrekt eingesetzt werden.",
+        "text": "Woraus besteht ein HTML-Tag und wie setzt man ihn ein?",
+        "description": "Geben Sie für die folgenden HTML5-Codes an, in welchen davon die enthaltenen HTML-Tags korrekt eingesetzt werden.<br><br><b style='color: orangered;'>Mehrfachauswahl möglich</b>",
         "input": "checkbox",
         "encode": true,
         "answers": [
@@ -355,7 +356,8 @@
         "correct": [ 1, 5, 6 ]
       },
       {
-        "text": "Welche HTML-Tags dienen zur Markierung von Überschriften? (Mehrauswahl möglich)",
+        "text": "Welche HTML-Tags dienen zur Markierung von Überschriften?",
+        "description": "<b style='color: orangered;'>Mehrfachauswahl möglich</b>",
         "input": "checkbox",
         "encode": true,
         "answers": [
@@ -372,8 +374,8 @@
         "correct": [ 2, 3, 4, 5, 6, 7 ]
       },
       {
-        "text": "Welche HTML-Tags dienen zur Markierung von Paragraphen? (Mehrauswahl möglich)",
-        "input": "checkbox",
+        "text": "Welcher HTML-Tag dient zur Markierung von Paragraphen?",
+        "input": "radio",
         "encode": true,
         "answers": [
           "<br>",
@@ -386,11 +388,11 @@
           "<h6>",
           "<p>"
         ],
-        "correct": [ 8 ]
+        "correct": 8
       },
       {
-        "text": "Welche HTML-Tags dienen zur Markierung von Zeilenumbrüchen? (Mehrauswahl möglich)",
-        "input": "checkbox",
+        "text": "Welcher HTML-Tag dient zur Markierung von Zeilenumbrüchen?",
+        "input": "radio",
         "encode": true,
         "answers": [
           "<br>",
@@ -403,7 +405,7 @@
           "<h6>",
           "<p>"
         ],
-        "correct": [ 0 ]
+        "correct": 0
       },
       {
         "text": "Wie schreibt man einen Kommentar in HTML?",
@@ -444,6 +446,94 @@
           }
         ],
         "correct": 7
+      }
+    ]
+  },
+  "le04": {
+    "css_layout": [ "ccm.load", "../css/quiz.css" ],
+    "feedback": true,
+    "start_button": true,
+    "navigation": true,
+    "anytime_finish": true,
+    "random": true,
+    "onfinish": { "restart": true },
+    "placeholder": {
+      "start": "Quiz starten",
+      "question": "Frage",
+      "prev": "Zurück",
+      "submit": "Auflösung",
+      "next": "Nächste Frage",
+      "finish": "Beenden"
+    },
+    "questions": [
+      {
+        "text": "Welche HTML-Tags gehören zur HTML5-Grundstruktur?",
+        "description": "<b style='color: orangered;'>Mehrfachauswahl möglich</b>",
+        "input": "checkbox",
+        "encode": true,
+        "answers": [
+          "<a>",
+          "<body>",
+          "<br>",
+          "<head>",
+          "<html>",
+          "<img>",
+          "<meta>",
+          "<p>",
+          "<title>"
+        ],
+        "correct": [ 1, 3, 4, 8 ]
+      },
+      {
+        "text": "Welcher HTML-Tag dient zur Angabe von Meta-Informationen?",
+        "input": "radio",
+        "encode": true,
+        "answers": [
+          "<a>",
+          "<body>",
+          "<br>",
+          "<head>",
+          "<html>",
+          "<img>",
+          "<meta>",
+          "<p>",
+          "<title>"
+        ],
+        "correct": 6
+      },
+      {
+        "text": "Welcher HTML-Tag dient zur Referenzierung von Bildern?",
+        "input": "radio",
+        "encode": true,
+        "answers": [
+          "<a>",
+          "<body>",
+          "<br>",
+          "<head>",
+          "<html>",
+          "<img>",
+          "<meta>",
+          "<p>",
+          "<title>"
+        ],
+        "correct": 5
+      },
+      {
+        "text": "Welcher HTML-Tag dient zum Einfügen von Hyperlinks?",
+        "input": "radio",
+        "encode": true,
+        "answers": [
+          "<a>",
+          "<body>",
+          "<br>",
+          "<head>",
+          "<html>",
+          "<img>",
+          "<meta>",
+          "<p>",
+          "<title>"
+        ],
+        "correct": 0
       }
     ]
   }
