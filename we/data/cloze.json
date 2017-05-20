@@ -14,5 +14,18 @@
       "submit": "Abschicken",
       "finish": "Beenden"
     }
+  },
+  "le04": {
+    "css_layout": [ "ccm.load", "../css/cloze.css" ],
+    "start_button": true,
+    "feedback": true,
+    "text": "<p>Der Lückentext unterstützt Sie dabei selbst einzuschätzen, ob Sie nun das HTML-Grundgerüst kennen und in der Lage sind darin den Titel und die Zeichenkodierung einer Webseite festzulegen. Ergänzen Sie hierzu die fehlenden HTML-Tags.</p><code>[[<!DOCTYPE html>]]<br>[[<html>]]<br>&nbsp;&nbsp;[[<head>]]<br>&nbsp;&nbsp;&nbsp;&nbsp;[[<title>]]Titel der Webseite[[</title>]]<br>&nbsp;&nbsp;&nbsp;&nbsp;[[<meta charset=\"UTF-8\">]]<br>&nbsp;&nbsp;[[</head>]]<br>&nbsp;&nbsp;[[<body>]]<br>&nbsp;&nbsp;&nbsp;&nbsp;Hallo Welt!<br>&nbsp;&nbsp;[[</body>]]<br>[[</html>]]</code><p>Klicken Sie wenn Sie fertig sind auf \"Abschicken\".<br>Sie erhalten dann oben im Lückentext ein unmittelbares Feedback.</p>",
+    "blank": true,
+    "onfinish": { "restart": true },
+    "placeholder" : {
+      "start": "Lückentext starten",
+      "submit": "Abschicken",
+      "finish": "Beenden"
+    }
   }
 }

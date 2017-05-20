@@ -238,6 +238,43 @@
           "mit einer Entwicklungsumgebung"
         ],
         "correct": 7
+      },
+      {
+        "text": "Was hat es mit der Dokumenttyp-Deklaration in HTML auf sich?",
+        "description": "Die Dokumenttyp-Deklaration...",
+        "input": "radio",
+        "answers": [
+          "deklariert die Korrektheit des Dokumenttyps.",
+          "deklariert Meta-Informationen zur Webseite.",
+          "dient zur Festlegung von Titel und Zeichenkodierung der Webseite.",
+          "enthält alle Daten des gesamten HTML-Dokuments.",
+          "enthält das Veröffentlichungsdatum und den Namen des Authoren der Webseite.",
+          "enthält die Inhalte, die vom Webbrowser in der Webseite dargestellt werden.",
+          "gibt an in welcher Sprache das HTML-Dokument zu interpretieren ist.",
+          "gibt an mit welchem Programm das HTML-Dokument auszuführen ist.",
+          "gibt an unter welchen Bedingungen das HTML-Dokument zu öffnen ist."
+        ],
+        "correct": 6
+      },
+      {
+        "text": "Wie sieht die Dokumenttyp-Deklaration für HTML5 aus?",
+        "input": "radio",
+        "encode": true,
+        "answers": [
+          {
+            "text": "<!DOCTYPE HTML>",
+            "comment": "Seit HTML5 ist die Dokumenttyp-Deklaration endlich kürzer, unkomplizierter und verständlicher."
+          },
+          "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">",
+          "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">",
+          "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">",
+          "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Frameset//EN\" \"http://www.w3.org/TR/html4/frameset.dtd\">",
+          "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">",
+          "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">",
+          "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Frameset//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd\">",
+          "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -467,266 +504,97 @@
     },
     "questions": [
       {
-        "text": "Welche HTML-Tags gehören zur HTML5-Grundstruktur?",
+        "text": "Welche der folgenden aufgelisteten HTML-Tags gehören zur HTML-Grundstruktur und sind in HTML5 optional?",
         "description": "<b style='color: orangered;'>Mehrfachauswahl möglich</b>",
         "input": "checkbox",
         "encode": true,
         "answers": [
-          "<a>",
-          {
-            "text": "<body>",
-            "comment": "Der <body>-Tag enthält den anzuzeigenden Inhalt der Webseite."
-          },
-          "<br>",
-          {
-            "text": "<head>",
-            "comment": "Der <head>-Tag enthält unsichtbare Kopfdaten zur Webseite, wie etwa Titel und Zeichenkodierung."
-          },
-          {
-            "text": "<html>",
-            "comment": "Der <html>-Tag ist das Wurzelelement des gesamten HTML-basierten digitalen Dokuments."
-          },
-          "<img>",
-          {
-            "text": "<meta>",
-            "comment": "Obwohl der <meta>-Tag zur Festlegung der Zeichenkodierung enthalten sein sollte, gehört er nicht zur HTML-Grundstruktur."
-          },
+          "<!DOCTYPE html>",
+          "<html>",
+          "<body>",
+          "<head>",
+          "<title>",
+          "<meta>",
+          "<h1>",
           "<p>",
-          {
-            "text": "<title>",
-            "comment": "Über den <title>-Tag wird der Titel der Webseite angegeben."
-          }
+          "<br>"
         ],
-        "correct": [ 1, 3, 4, 8 ]
+        "correct": [ 1, 2, 3 ]
       },
       {
-        "text": "Welcher HTML-Tag dient zur Angabe von Meta-Informationen?",
+        "text": "Wie lautet das minimale HTML5-Grundgerüst?",
         "description": "Wählen Sie unter den folgenden Antworten die richtige Antwort aus.",
         "input": "radio",
         "encode": true,
         "answers": [
-          "<a>",
-          "<body>",
-          "<br>",
-          "<head>",
-          "<html>",
-          "<img>",
-          "<meta>",
-          "<p>",
-          "<title>"
-        ],
-        "correct": 6
-      },
-      {
-        "text": "Welcher HTML-Tag dient zum Einfügen von Hyperlinks?",
-        "input": "radio",
-        "encode": true,
-        "answers": [
-          "<a>",
-          "<body>",
-          "<br>",
-          "<head>",
-          "<html>",
-          "<img>",
-          "<meta>",
-          "<p>",
-          "<title>"
+          {
+            "text": "<!DOCTYPE html>",
+            "comment": "Die andern Bereiche des Grundgerüsts ergänzt der Webbrowser automatisch beim Aufruf der Webseite."
+          },
+          "<!DOCTYPE html><html></html>",
+          "<!DOCTYPE html><html><head></head></html>",
+          "<!DOCTYPE html><html><body></body></html>",
+          "<!DOCTYPE html><html><head></head><body></body></html>",
+          "<html></html>",
+          "<html><head></head></html>",
+          "<html><body></body></html>",
+          "<html><head></head><body></body></html>"
         ],
         "correct": 0
       },
       {
-        "text": "Welcher HTML-Tag dient zur Referenzierung von Bildern?",
+        "text": "Welche Bedeutung hat der <html>-Tag?",
+        "description": "Der &lt;html>-Tag enthält...",
         "input": "radio",
         "encode": true,
         "answers": [
-          "<a>",
-          "<body>",
-          "<br>",
-          "<head>",
-          "<html>",
-          "<img>",
-          "<meta>",
-          "<p>",
-          "<title>"
+          "alle Daten des gesamten HTML-Dokuments.",
+          "die Inhalte, die innerhalb der Webseite dargestellt werden.",
+          "Daten zur Webseite, die innerhalb der Webseite nicht angezeigt werden.",
+          "die Angabe, in welcher Sprache die Webseite zu interpretieren ist.",
+          "die Angabe des Titels der Webseite.",
+          "die Angabe der Zeichenkodierung.",
+          "das minimale HTML5-Grundgerüst.",
+          "die Dokumenttyp-Deklaration.",
+          "die Titelleiste des Webbrowserfensters."
         ],
-        "correct": 5
+        "correct": 0
       },
       {
-        "text": "Was ist ein HTML-Attribut?",
-        "input": "radio",
-        "answers": [
-          "ein Auszeichnungselement",
-          "ein Befehl",
-          "ein Feiertag",
-          "ein Platzhalter",
-          "ein Sonderzeichen",
-          "eine Anweisung",
-          "eine Eigenschaft",
-          "eine Instruktion",
-          "eine Variable"
-        ],
-        "correct": 6
-      },
-      {
-        "text": "Wofür nutzt man ein HTML-Attribut?",
-        "input": "radio",
-        "answers": [
-          {
-            "text": "für den Aufruf von Webseiten",
-            "comment": "Zum Aufrufen von Webseiten nutzt man einen <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Webbrowser\">Webbrowser</a>."
-          },
-          {
-            "text": "für die dynamische Manipulation von Webseiten",
-            "comment": "Zur dynamischen Manipulation von Webseiten nutzt man <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/JavaScript\">JavaScript</a>."
-          },
-          {
-            "text": "für die elektronische Datenverwaltung",
-            "comment": "Zur elektronischen Datenverwaltung nutzt man <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Datenbank\">Datenbanken</a>."
-          },
-          {
-            "text": "für die Gestaltung von Layout und Design von Webseiten",
-            "comment": "Zur Gestaltung von Layout und Design einer Webseite nutzt man <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Cascading_Style_Sheets\">Cascading Style Sheets (CSS)</a>."
-          },
-          {
-            "text": "für die Programmierung von Webseiten",
-            "comment": "HTML ist eine reine <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Auszeichnungssprache\">Auszeichnungssprache</a>. Das Einsetzen von HTML-Tags und Attributen ist kein Programmieren."
-          },
-          {
-            "text": "für die Strukturierung digitaler Dokumente",
-            "comment": "Für die Strukturierung digitaler Dokumente nutzt man <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Hypertext_Markup_Language\">HTML</a>."
-          },
-          {
-            "text": "für die Übertragung von Daten im Internet",
-            "comment": "Im Internet nutzt man zur Übertragung von Daten üblicherweise das <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol\">Hypertext Transfer Protocol (HTTP)</a>."
-          },
-          "um morgens aus dem Bett zu kommen",
-          {
-            "text": "zur Beschreibung zusätzlicher Eigenschaften von HTML-Tags",
-            "comment": "Ein HTML-Attribut ist eine Eigenschaft, die einem HTML-Tag zur Angabe zusätzlicher Informationen zuordenbar ist."
-          }
-        ],
-        "correct": 8
-      },
-      {
-        "text": "Woraus besteht ein HTML-Attribut und wie setzt man es ein?",
-        "description": "Geben Sie für die folgenden HTML-Codes an, in welchen davon die enthaltenen HTML-Attribute korrekt eingesetzt werden.<br><br><b style='color: orangered;'>Mehrfachauswahl möglich</b>",
-        "input": "checkbox",
-        "encode": true,
-        "answers": [
-          {
-            "text": "<a href=https://www.google.de>Hier klicken</a>",
-            "comment": "Bei HTML5-Attributen kann man doppelte Anführungszeichen auch weglassen, was aber zu Problemen führen kann."
-          },
-          "<a href=\"https://www.google.de\">Hier klicken</a>",
-          {
-            "text": "<a src=\"https://www.google.de\">Hier klicken</a>",
-            "comment": "Für <a>-Tags gibt es kein \"src\"-Attribut."
-          },
-          "<img src=\"image.jpg\" width=\"200\" height=\"100\">",
-          {
-            "text": "<img src='image.jpg' width='200' height='100'>",
-            "comment": "In HTML-Attributen können auch einfache statt doppelte Anführungszeichen verwendet werden. Üblich und empfohlen sind aber doppelte."
-          },
-          {
-            "text": "<img src=\"image.jpg\", width=\"200\", height=\"100\">",
-            "comment": "Mehrere Attribute eines HTML-Tags werden nur mit einem Leerzeichen voneinander getrennt."
-          },
-          "<meta charset=\"utf-8\">",
-          {
-            "text": "<meta charset:\"utf-8\">",
-            "comment": "Für die Zuweisung eines Wertes wird bei einem HTML-Attribut ein Gleichheitszeichen und kein Doppelpunkt eingesetzt."
-          },
-          {
-            "text": "<MetA charSET=\"UTF-8\">",
-            "comment": "Die Groß- und Kleinschreibung muss allgemein in HTML nicht beachtet werden. Üblich und empfohlen ist Kleinschreibung."
-          }
-        ],
-        "correct": [ true, true, false, true, true, false, true, false, true ]
-      },
-      {
-        "text": "Welches Attribut dient zur Festlegung einer Zeichenkodierung?",
+        "text": "Welche Bedeutung hat der <body>-Tag?",
+        "description": "Der &lt;body>-Tag enthält...",
         "input": "radio",
         "encode": true,
         "answers": [
-          "body",
-          "charset",
-          "head",
-          "height",
-          "html",
-          "href",
-          "src",
-          "title",
-          "width"
+          "alle Daten des gesamten HTML-Dokuments.",
+          "die Inhalte, die innerhalb der Webseite dargestellt werden.",
+          "Daten zur Webseite, die innerhalb der Webseite nicht angezeigt werden.",
+          "die Angabe, in welcher Sprache die Webseite zu interpretieren ist.",
+          "die Angabe des Titels der Webseite.",
+          "die Angabe der Zeichenkodierung.",
+          "das minimale HTML5-Grundgerüst.",
+          "die Dokumenttyp-Deklaration.",
+          "die Titelleiste des Webbrowserfensters."
         ],
         "correct": 1
       },
       {
-        "text": "Welches Attribut dient zur Festlegung eines Verweisziels?",
+        "text": "Welche Bedeutung hat der <head>-Tag?",
+        "description": "Der &lt;head>-Tag enthält...",
         "input": "radio",
         "encode": true,
         "answers": [
-          "body",
-          "charset",
-          "head",
-          "height",
-          "html",
-          "href",
-          "src",
-          "title",
-          "width"
+          "alle Daten des gesamten HTML-Dokuments.",
+          "die Inhalte, die innerhalb der Webseite dargestellt werden.",
+          "Daten zur Webseite, die innerhalb der Webseite nicht angezeigt werden.",
+          "die Angabe, in welcher Sprache die Webseite zu interpretieren ist.",
+          "die Angabe des Titels der Webseite.",
+          "die Angabe der Zeichenkodierung.",
+          "das minimale HTML5-Grundgerüst.",
+          "die Dokumenttyp-Deklaration.",
+          "die Titelleiste des Webbrowserfensters."
         ],
-        "correct": 5
-      },
-      {
-        "text": "Welches Attribut dient zur Angabe des Standorts einer externen Ressource?",
-        "input": "radio",
-        "encode": true,
-        "answers": [
-          "body",
-          "charset",
-          "head",
-          "height",
-          "html",
-          "href",
-          "src",
-          "title",
-          "width"
-        ],
-        "correct": 6
-      },
-      {
-        "text": "Welches Attribut dient zur Festlegung einer Breite?",
-        "input": "radio",
-        "encode": true,
-        "answers": [
-          "body",
-          "charset",
-          "head",
-          "height",
-          "html",
-          "href",
-          "src",
-          "title",
-          "width"
-        ],
-        "correct": 8
-      },
-      {
-        "text": "Welches Attribut dient zur Festlegung einer Höhe?",
-        "input": "radio",
-        "encode": true,
-        "answers": [
-          "body",
-          "charset",
-          "head",
-          "height",
-          "html",
-          "href",
-          "src",
-          "title",
-          "width"
-        ],
-        "correct": 3
+        "correct": 2
       }
     ]
   }
