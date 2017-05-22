@@ -90,6 +90,23 @@
         "correct": 6
       },
       {
+        "text": "Was ist ein Hyperlink und wofür setzt man ihn ein?",
+        "description": "Ein Hyperlink ist...",
+        "input": "radio",
+        "answers": [
+          "der Künstername des Erfinders des Web.",
+          "ein Dateiformat für digitale Dokumente.",
+          "ein Gremium zur Ausarbeitung von Web-Standards.",
+          "ein Querverweis zum Springen an andere Textstellen in Hypertexten.",
+          "ein Modewort zur Vermarktung des Web.",
+          "ein Portal in das digitale Zeitalter.",
+          "ein Web-Standard zur einheitlichen Verbreitung von Informationen.",
+          "eine Arbeitsgruppe zur Weiterentwicklung von HTML.",
+          "eine Markierung zum Hervorheben interessanter Textstellen."
+        ],
+        "correct": 3
+      },
+      {
         "text": "Wer hat HTML erfunden?",
         "input": "radio",
         "answers": [
