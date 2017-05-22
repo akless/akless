@@ -333,8 +333,8 @@
             "comment": "HTML-Tags beschreiben die Struktur und Semantik der Inhalte eines digitalen Dokuments."
           },
           {
-            "text": "Zum Hinzufügen weiterer Inhalte, die über Text hinausgehen",
-            "comment": "Über HTML-Tags können beispielsweise weitere Inhalte wie Bilder, Audios und Videos in die Webseite integriert werden."
+            "text": "Zur Einbettung weiterer Inhalte, die über Text hinausgehen",
+            "comment": "Über HTML-Tags können beispielsweise weitere Inhalte wie Bilder, Audios und Videos in die Webseite eingebettet werden."
           },
           {
             "text": "Zum Markieren von Feiertagen",
