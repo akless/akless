@@ -32,7 +32,7 @@
     <a href="https://de.wikipedia.org/wiki/Download">Downloads</a> kennen.
 
     <!-- Voraussetzungen -->
-    Voraussetzung ist, dass Sie bereits mit HTML-Tags und dem HTML-Grundgerüst einer Webseite vertraut sind.
+    Voraussetzung ist, dass Sie bereits wissen, was ein HTML-Tag ist, wofür man ihn nutzt und wie man ihn einsetzt.
   </p>
 
   <ccm-le-audio src="../audio/LE05_Motivation.mp3"></ccm-le-audio>
@@ -47,19 +47,16 @@
       <li>zur Angabe eines Tooltips und
       <li>zur Markierung eines Downloads
     </ul>
-    und bin in der Lage diesen HTML-Tag und diese Attribute einzusetzen.
-    <li>Ich weiß, was ein URL ist und wofür man ihn nutzt.
-    <li>Ich kenne den Unterschied zwischen absoluten und relativen Pfaden.
+    und bin in der Lage für diesen HTML-Tag diese Attribute einzusetzen.
   </ul>
 
   <h3>1.2 Voraussetzungen</h3>
 
   <ul>
-    <li>Ich weiß grob, was ein Webbrowser und was eine Webseite ist.
+    <li>Ich weiß grob, was ein Webbrowser, eine Webseite und eine <a href="https://de.wikipedia.org/wiki/Webadresse">Webadresse</a> ist.
+    <li>Ich weiß grob, was ein Hyperlink, ein Download und ein Tooltip ist.
     <li>Ich weiß, was HTML ist und wofür es eingesetzt wird.
-    <li>Ich weiß, was ein Hyperlink, ein Download und ein Tooltip ist.
     <li>Ich weiß, was ein HTML-Tag ist, wofür man ihn nutzt und wie man ihn einsetzt.
-    <li>Ich kenne das HTML-Grundgerüst einer Webseite und die Bedeutung deren einzelner Bestandteile.
   </ul>
 
   <h2>2. Inhalt: <ccm-le-topic></ccm-le-topic></h2>
@@ -69,8 +66,8 @@
   <h3>2.1 Was ist ein HTML-Attribut?</h3>
 
   <p>
-    In HTML können Tags auch Attribute aufweisen. Bei einem Attribut handelt es sich um eine Eigenschaft, die einem
-    HTML-Tag zugewiesen werden kann, meist zusammen mit einem konkreten Wert. Über Attribute können einem HTML-Tag
+    In HTML können Tags auch Attribute aufweisen. Bei einem Attribut handelt es sich um eine Eigenschaft, mit der ein
+    HTML-Tag angereichert werden kann, meist zusammen mit einem konkreten Wert. Über Attribute können einem HTML-Tag
     somit zusätzliche Informationen mitgegeben werden, die dann Beeinflussen, wie der durch den HTML-Tag markierte
     Inhalt vom Webbrowser interpretiert und in der Webseite dargestellt wird.
   </p>
@@ -80,9 +77,12 @@
   <h3>2.2 HTML-Tag für Hyperlinks</h3>
 
   <p>
-    Betrachten wir die Nutzung von HTML-Attributen konkret am Beispiel eines Hyperlinks. Hierzu führen wir zunächst
-    einmal den HTML-Tag zur Markierung von Hyperlinks ein. Hierzu dient in HTML der &lt;a>-Tag. Mit einem &lt;a>-Tag
-    markierte Textstellen sind von einem Webseitennutzer anklickbar.
+    Betrachten wir die Nutzung von HTML-Attributen konkret am Beispiel eines Hyperlinks. Zu diesem Zweck führen wir
+    zunächst einmal den HTML-Tag zur Markierung von Hyperlinks ein. Hierzu dient in HTML der
+    <a href="hhttps://wiki.selfhtml.org/wiki/HTML/Textauszeichnung/a">&lt;a></a>-Tag. Das "a" steht dabei für "anchor
+    element", was ins deutsche übersetzt "Ankerelement" bedeutet. Der Begriff "Anker" steht symbolisch für das
+    Verweisziel, also die Stelle, an die der Webseitennutzer, durch einen Klick auf die als Hyperlink markierte
+    Textstelle, gelangt.
   </p>
 
   <ccm-le-img src="../image/LE05_Inhalt.002.jpg"></ccm-le-img>
@@ -90,30 +90,55 @@
   <h3>2.3 Festlegung des Verweisziels</h3>
 
   <p>
-    ...
+    Damit ein Hyperlink funktioniert, muss für den &lt;a>-Tag über das HTML-Attribut
+    "<a href="https://wiki.selfhtml.org/wiki/HTML/Textauszeichnung/a#href">href</a>" das Verweisziel angegeben werden.
+    Bei dem Verweisziel handelt es sich im einfachsten Fall um die Webadresse einer Webseite, die dann durch einen
+    Klick auf den Hyperlink aufgerufen wird.
   </p>
 
   <ccm-le-img src="../image/LE05_Inhalt.003.jpg"></ccm-le-img>
 
-  <h3>2.4 Unbesuchte, markierte und besuchte Hyperlinks</h3>
+  <h3>2.4 Syntax eines HTML-Attributs</h3>
 
   <p>
-    ...
+    Ein HTML-Attribut beginnt, getrennt mit einem Leerzeichen vom Namen des HTML-Tags, mit dem Namen des Attributs.
+    Wird dem Attibut auch ein konkreter Wert zugewiesen, folgt nach dem Attributnamen dann ein "="-Zeichen, gefolgt von
+    zwei doppelten Anführungszeichen, zwischen denen dann der konkrete Wert steht. Statt den Doppelten
+    können in HTML auch einfache Anführungszeichen verwendet werden, üblich sind aber die Doppelten. Die
+    Anführungszeichen können in HTML5 auch ganz weggelassen werden, was aber unter Umständen zu Problemen führen kann
+    und deshalb eher davon abzuraten ist.
   </p>
 
   <h3>2.5 Tooltip für den Hyperlink</h3>
 
   <p>
-    ...
+    Ein HTML-Tag kann beliebig viele Attribute aufweisen. Weitere Attribute werden dann mit einem Leerzeichen getrennt
+    notiert. Beispielsweise kann über ein weiteres Attribut
+    "<a href="https://wiki.selfhtml.org/wiki/HTML/Universalattribute#title">title</a>" ein Tooltip definiert werden,
+    der erscheint, wenn der Mauszeiger etwas länger über dem vom HTML-Tag markierten Inhalt positioniert wird.
   </p>
 
-  <h3>2.6 Download des Verweisziels</h3>
+  <ccm-le-img src="../image/LE05_Inhalt.006.jpg"></ccm-le-img>
+
+  <h3>2.6 Globale Attribute</h3>
 
   <p>
-    ...
+    Anders als bei "href" handelt es sich bei "title" um ein
+    <a href="https://wiki.selfhtml.org/wiki/HTML/Universalattribute">globales Attribut</a>. Das bedeutet, dass es für
+    fast jeden HTML-Tag gesetzt werden kann. Das "href"-Attribut hingegen ist ein Attribut, das nur speziell vom
+    &lt;a>-Tag unterstützt wird.
   </p>
 
-  <ccm-le-img src="../image/LE05_Inhalt.003.jpg"></ccm-le-img>
+  <h3>2.7 Download des Verweisziels</h3>
+
+  <p>
+    In HTML gibt es auch einige wenige Attribute, die keine Zuweisung eines konkreten Wertes benötigen. Als Beispiel
+    kann für den Hyperlink noch das Attribut "download" gesetzt werden. Das Attribut bewirkt, dass bei einem Klick auf
+    den Hyperlink das Verweisziel nicht geöffnet, sondern heruntergeladen wird. Verweist der Hyperlink also auf ein
+    Bild, kann man dieses dann über den Hyperlink bequem downloaden.
+  </p>
+
+  <ccm-le-img src="../image/LE05_Inhalt.008.jpg"></ccm-le-img>
 
   <h2>3. Selbsttest</h2>
 
