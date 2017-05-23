@@ -614,5 +614,185 @@
         "correct": 2
       }
     ]
+  },
+  "le05": {
+    "css_layout": [ "ccm.load", "../css/quiz.css" ],
+    "feedback": true,
+    "start_button": true,
+    "navigation": true,
+    "anytime_finish": true,
+    "random": true,
+    "onfinish": { "restart": true },
+    "placeholder": {
+      "start": "Quiz starten",
+      "question": "Frage",
+      "prev": "Zurück",
+      "submit": "Auflösung",
+      "next": "Nächste Frage",
+      "finish": "Beenden"
+    },
+    "questions": [
+      {
+        "text": "Was ist ein HTML-Attribut?",
+        "description": "Wählen Sie unter den folgenden Antworten die richtige Antwort aus.",
+        "input": "radio",
+        "answers": [
+          "ein Auszeichnungselement",
+          "ein Befehl",
+          "ein Feiertag",
+          "ein Platzhalter",
+          "ein Sonderzeichen",
+          "eine Anweisung",
+          "eine Eigenschaft",
+          "eine Instruktion",
+          "eine Variable"
+        ],
+        "correct": 6
+      },
+      {
+        "text": "Wofür nutzt man ein HTML-Attribut?",
+        "input": "radio",
+        "answers": [
+          {
+            "text": "für den Aufruf von Webseiten",
+            "comment": "Zum Aufrufen von Webseiten nutzt man einen <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Webbrowser\">Webbrowser</a>."
+          },
+          {
+            "text": "für die dynamische Manipulation von Webseiten",
+            "comment": "Zur dynamischen Manipulation von Webseiten nutzt man <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/JavaScript\">JavaScript</a>."
+          },
+          {
+            "text": "für die elektronische Datenverwaltung",
+            "comment": "Zur elektronischen Datenverwaltung nutzt man <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Datenbank\">Datenbanken</a>."
+          },
+          {
+            "text": "für die Gestaltung von Layout und Design von Webseiten",
+            "comment": "Zur Gestaltung von Layout und Design einer Webseite nutzt man <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Cascading_Style_Sheets\">Cascading Style Sheets (CSS)</a>."
+          },
+          {
+            "text": "für die Programmierung von Webseiten",
+            "comment": "HTML ist eine reine <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Auszeichnungssprache\">Auszeichnungssprache</a>. Das Einsetzen von HTML-Tags und Attributen ist kein Programmieren."
+          },
+          {
+            "text": "für die Strukturierung digitaler Dokumente",
+            "comment": "Für die Strukturierung digitaler Dokumente nutzt man <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Hypertext_Markup_Language\">HTML</a>."
+          },
+          {
+            "text": "für die Übertragung von Daten im Internet",
+            "comment": "Im Internet nutzt man zur Übertragung von Daten üblicherweise das <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol\">Hypertext Transfer Protocol (HTTP)</a>."
+          },
+          "um morgens aus dem Bett zu kommen",
+          {
+            "text": "zur Beschreibung zusätzlicher Eigenschaften von HTML-Tags",
+            "comment": "Ein HTML-Attribut ist eine Eigenschaft, die einem HTML-Tag zur Angabe zusätzlicher Informationen zuordenbar ist."
+          }
+        ],
+        "correct": 8
+      },
+      {
+        "text": "Welcher HTML-Tag dient zum Markieren von Hyperlinks?",
+        "input": "radio",
+        "encode": true,
+        "answers": [
+          "<a>",
+          "<body>",
+          "<br>",
+          "<head>",
+          "<html>",
+          "<img>",
+          "<meta>",
+          "<p>",
+          "<title>"
+        ],
+        "correct": 0
+      },
+      {
+        "text": "Welches HTML-Attribut dient zur Angabe eines Verweisziels?",
+        "input": "radio",
+        "encode": true,
+        "answers": [
+          "alt",
+          "download",
+          "href",
+          "link",
+          "source",
+          "src",
+          "target",
+          "title",
+          "tooltip"
+        ],
+        "correct": 2
+      },
+      {
+        "text": "Welches HTML-Attribut dient zur Angabe eines Tooltips?",
+        "input": "radio",
+        "encode": true,
+        "answers": [
+          "alt",
+          "download",
+          "href",
+          "link",
+          "source",
+          "src",
+          "target",
+          "title",
+          "tooltip"
+        ],
+        "correct": 7
+      },
+      {
+        "text": "Welches HTML-Attribut dient zur Markierung eines Downloads?",
+        "input": "radio",
+        "encode": true,
+        "answers": [
+          "alt",
+          "download",
+          "href",
+          "link",
+          "source",
+          "src",
+          "target",
+          "title",
+          "tooltip"
+        ],
+        "correct": 1
+      },
+      {
+        "text": "Wie setzt man ein HTML-Attribut ein?",
+        "description": "Geben Sie für die folgenden HTML-Codes an, in welchen davon die enthaltenen HTML-Attribute korrekt eingesetzt werden.<br><br><b style='color: orangered;'>Mehrfachauswahl möglich</b>",
+        "input": "checkbox",
+        "encode": true,
+        "answers": [
+          {
+            "text": "<a href='https://www.google.de'>Klick</a>",
+            "comment": "In HTML-Attributen können auch einfache statt doppelte Anführungszeichen verwendet werden. Üblich sind Doppelte."
+          },
+          "<a href=\"https://www.google.de\">Klick</a>",
+          "<a href=\"https://www.google.de\" title=\"Hier klicken\">Klick</a>",
+          "<a href=\"https://www.google.de\" download>Klick</a>",
+          {
+            "text": "<a href=\"https://www.google.de\", download>Klick</a>",
+            "comment": "Mehrere Attribute eines HTML-Tags werden nur mit einem Leerzeichen voneinander getrennt."
+          },
+          {
+            "text": "<a href:\"https://www.google.de\"></a>",
+            "comment": "Für die Zuweisung eines Wertes wird bei einem HTML-Attribut ein \"=\"-Zeichen und kein Doppelpunkt verwendet."
+          },
+          {
+            "text": "<a href=https://www.google.de>Klick</a>",
+            "comment": "Bei HTML5-Attributen kann man doppelte Anführungszeichen auch weglassen, was aber zu Problemen führen kann."
+          },
+          {
+            "text": "<a src=\"https://www.google.de\">Klick</a>",
+            "comment": "Für <a>-Tags gibt es kein \"src\"-Attribut."
+          },
+          {
+            "text": "<a title=\"Herunterladen\" download>Klick</a>",
+            "comment": "Hier fehlt das nicht optionale \"href\"-Attribut zur Angabe des Verweisziels."
+          }
+        ],
+        "correct": [ true, true, true, true, false, false, true, false, false ]
+      }
+    ]
   }
 }
