@@ -7,7 +7,7 @@
 ( function () {
 
   var ccm_version = '8.0.0';
-  var ccm_url     = '../js/ccm.js';
+  var ccm_url     = 'https://akless.github.io/ccm/version/ccm-8.0.0.min.js';
 
   var component_name = 'le';
   var component_obj  = {
@@ -18,7 +18,7 @@
       css_file: '../css/le.css',
       logo_file: '../image/logo.png',
       poster_file: '../image/poster.jpg',
-      content: [ 'ccm.component', '../js/ccm.content.js' ],
+      content: [ 'ccm.component', 'https://akless.github.io/ccm-components/content/ccm.content.min.js' ],
       topic_prefix: 'Lerneinheit:',
       link_prefix: 'Link: ',
       author: 'André Kless'
