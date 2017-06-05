@@ -3,7 +3,7 @@
   "license": "The MIT License (MIT)",
 
   "le01": {
-    "css_layout": [ "ccm.load", "../css/quiz.css" ],
+    "css_layout": [ "ccm.load", "https://akless.github.io/akless/we/css/quiz.css" ],
     "feedback": true,
     "start_button": true,
     "navigation": true,
@@ -201,7 +201,7 @@
     ]
   },
   "le02": {
-    "css_layout": [ "ccm.load", "../css/quiz.css" ],
+    "css_layout": [ "ccm.load", "https://akless.github.io/akless/we/css/quiz.css" ],
     "feedback": true,
     "start_button": true,
     "navigation": true,
@@ -296,7 +296,7 @@
     ]
   },
   "le03": {
-    "css_layout": [ "ccm.load", "../css/quiz.css" ],
+    "css_layout": [ "ccm.load", "https://akless.github.io/akless/we/css/quiz.css" ],
     "feedback": true,
     "start_button": true,
     "navigation": true,
@@ -504,7 +504,7 @@
     ]
   },
   "le04": {
-    "css_layout": [ "ccm.load", "../css/quiz.css" ],
+    "css_layout": [ "ccm.load", "https://akless.github.io/akless/we/css/quiz.css" ],
     "feedback": true,
     "start_button": true,
     "navigation": true,
@@ -616,7 +616,7 @@
     ]
   },
   "le05": {
-    "css_layout": [ "ccm.load", "../css/quiz.css" ],
+    "css_layout": [ "ccm.load", "https://akless.github.io/akless/we/css/quiz.css" ],
     "feedback": true,
     "start_button": true,
     "navigation": true,
