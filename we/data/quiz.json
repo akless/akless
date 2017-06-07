@@ -795,5 +795,108 @@
         "correct": [ true, true, true, true, false, false, true, false, false ]
       }
     ]
+  },
+  "le06": {
+    "css_layout": [ "ccm.load", "https://akless.github.io/akless/we/css/quiz.css" ],
+    "feedback": true,
+    "start_button": true,
+    "navigation": true,
+    "anytime_finish": true,
+    "encode": true,
+    "random": true,
+    "onfinish": { "restart": true },
+    "placeholder": {
+      "start": "Quiz starten",
+      "question": "Frage",
+      "prev": "Zurück",
+      "submit": "Auflösung",
+      "next": "Nächste Frage",
+      "finish": "Beenden"
+    },
+    "questions": [
+      {
+        "text": "Welcher der folgenden HTML-Tags dient zur Einbettung von Audios?",
+        "description": "Wählen Sie unter den folgenden Antworten die richtige Antwort aus.",
+        "input": "radio",
+        "answers": [
+          "<audio>",
+          "<img>",
+          "<li>",
+          "<ol>",
+          "<table>",
+          "<td>",
+          "<tr>",
+          "<ul>",
+          "<video>"
+        ],
+        "correct": 0
+      },
+      {
+        "text": "Welcher der folgenden HTML-Tags dient zur Einbettung von Bildern?",
+        "input": "radio",
+        "answers": [
+          "<audio>",
+          "<img>",
+          "<li>",
+          "<ol>",
+          "<table>",
+          "<td>",
+          "<tr>",
+          "<ul>",
+          "<video>"
+        ],
+        "correct": 1
+      },
+      {
+        "text": "Welche der folgenden HTML-Tags dienen zur Darstellung von Listen?",
+        "description": "<b style='color: orangered;'>Mehrfachauswahl möglich</b>",
+        "input": "checkbox",
+        "answers": [
+          "<audio>",
+          "<img>",
+          "<li>",
+          "<ol>",
+          "<table>",
+          "<td>",
+          "<tr>",
+          "<ul>",
+          "<video>"
+        ],
+        "correct": [ 2, 3, 7 ]
+      },
+      {
+        "text": "Welche der folgenden HTML-Tags dienen zur Darstellung von Tabellen?",
+        "description": "<b style='color: orangered;'>Mehrfachauswahl möglich</b>",
+        "input": "checkbox",
+        "answers": [
+          "<audio>",
+          "<img>",
+          "<li>",
+          "<ol>",
+          "<table>",
+          "<td>",
+          "<tr>",
+          "<ul>",
+          "<video>"
+        ],
+        "correct": [ 4, 5, 6 ]
+      },
+      {
+        "text": "Welcher der folgenden HTML-Tags dient zur Einbettung eines Videos?",
+        "input": "radio",
+        "answers": [
+          "<audio>",
+          "<img>",
+          "<li>",
+          "<ol>",
+          "<table>",
+          "<td>",
+          "<tr>",
+          "<ul>",
+          "<video>"
+        ],
+        "correct": 8
+      }
+    ]
   }
 }
