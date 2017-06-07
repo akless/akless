@@ -815,7 +815,7 @@
     },
     "questions": [
       {
-        "text": "Welcher der folgenden HTML-Tags dient zur Einbettung von Audios?",
+        "text": "Welcher der HTML-Tags dient zur Einbettung von Audios?",
         "description": "Wählen Sie unter den folgenden Antworten die richtige Antwort aus.",
         "input": "radio",
         "answers": [
@@ -832,7 +832,7 @@
         "correct": 0
       },
       {
-        "text": "Welcher der folgenden HTML-Tags dient zur Einbettung von Bildern?",
+        "text": "Welcher der HTML-Tags dient zur Einbettung von Bildern?",
         "input": "radio",
         "answers": [
           "<audio>",
@@ -848,7 +848,7 @@
         "correct": 1
       },
       {
-        "text": "Welche der folgenden HTML-Tags dienen zur Darstellung von Listen?",
+        "text": "Welche der HTML-Tags dienen zur Darstellung von Listen?",
         "description": "<b style='color: orangered;'>Mehrfachauswahl möglich</b>",
         "input": "checkbox",
         "answers": [
@@ -865,7 +865,7 @@
         "correct": [ 2, 3, 7 ]
       },
       {
-        "text": "Welche der folgenden HTML-Tags dienen zur Darstellung von Tabellen?",
+        "text": "Welche der HTML-Tags dienen zur Darstellung von Tabellen?",
         "description": "<b style='color: orangered;'>Mehrfachauswahl möglich</b>",
         "input": "checkbox",
         "answers": [
@@ -882,7 +882,7 @@
         "correct": [ 4, 5, 6 ]
       },
       {
-        "text": "Welcher der folgenden HTML-Tags dient zur Einbettung eines Videos?",
+        "text": "Welcher der HTML-Tags dient zur Einbettung eines Videos?",
         "input": "radio",
         "answers": [
           "<audio>",
