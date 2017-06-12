@@ -1,8 +1,9 @@
-{
-  "overview": "configurations for rendering a quiz",
-  "author": "André Kless <andre.kless@web.de> 2017",
-  "license": "The MIT License (MIT)",
-
+/**
+ * @overview configurations for rendering a quiz
+ * @author André Kless <andre.kless@web.de> 2017
+ * @license The MIT License (MIT)
+ */
+ccm.files[ "quiz.js" ] = {
   "le01": {
     "css_layout": [ "ccm.load", "https://akless.github.io/akless/we/css/quiz.css" ],
     "feedback": true,
@@ -899,4 +900,4 @@
       }
     ]
   }
-}
+};
