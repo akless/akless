@@ -7,7 +7,7 @@
 <meta charset="utf-8">
 <style>body { margin: 0; background-color: #00709B; }</style>
 <link rel="stylesheet" type="text/css" href="../css/font.css">
-<script src="https://akless.github.io/ccm-components/le/ccm.le.min.js"></script>
+<script src="../../../ccm-components/le/ccm.le.js"></script>
 
 <ccm-le topic="HTML-Tags und Attribute">
   <script src="https://akless.github.io/ccm-components/quiz/ccm.quiz.min.js"></script>
@@ -123,9 +123,93 @@
 
   <ccm-quiz key='["ccm.get","../data/quiz.json","le06"]'></ccm-quiz>
 
-  <h3>3.2 Lückentext</h3>
+  <!--
+  <h3>3.2 Lückentext: Einbettung von Audios</h3>
 
-  <!--<ccm-cloze key='["ccm.get","../data/cloze.json","le06"]'></ccm-cloze>-->
+  <ccm-cloze key='["ccm.get","../data/cloze.json","le06_1"]'></ccm-cloze>
+  <ccm-cloze key='["ccm.get","../data/cloze.json","le06_1"]'>
+    <p>
+      Der Lückentext unterstützt Sie dabei selbst einzuschätzen, ob Sie in der Lage sind in HTML ein Audio einzubetten.
+      Ergänzen Sie hiezu im Lückentext die Namen der fehlenden HTML-Tags und Attribute, so dass das Audio mit der
+      Webadresse <a target="_blank" href="https://akless.github.io/akless/we/audio/LE06_Motivation.mp3">
+      https://akless.github.io/akless/we/audio/LE06_Motivation.mp3</a> eingebettet wird und der Webnutzer das Audio
+      über Buttons wie "Play" und "Stop" selbst steuern kann.
+    </p>
+    <code>
+      &lt;!DOCTYPE html><br>
+      Audio:<br>
+      &lt;[[audio]] [[controls]]><br>
+      &nbsp;&nbsp;&lt;[[source]] [[src]]="https://akless.github.io/akless/we/audio/LE06_Motivation.mp3"><br>
+      &lt;/[[audio]]>
+    </code>
+    <p>
+      Klicken Sie, wenn Sie fertig, sind auf "Abschicken".<br>
+      Sie erhalten dann oben im Lückentext ein unmittelbares Feedback.
+    </p>
+  </ccm-cloze>
+
+  <h3>3.3 Lückentext: Einbettung von Bildern</h3>
+
+  <ccm-cloze key='["ccm.get","../data/cloze.json","le06_1"]'>
+    <code>
+      &lt;!DOCTYPE html><br>
+      Bild: &lt;img src="smiley.gif" alt="Smiley face" height="42" width="42">
+    </code>
+  </ccm-cloze>
+
+  <h3>3.4 Lückentext: Einbettung von Listen</h3>
+
+  <ccm-cloze key='["ccm.get","../data/cloze.json","le06_1"]'>
+    <code>
+      &lt;!DOCTYPE html><br>
+      Nummerierte Liste:<br>
+      &lt;ol><br>
+      &nbsp;&nbsp;&lt;li>Coffee<br>
+      &nbsp;&nbsp;&lt;li>Tea<br>
+      &nbsp;&nbsp;&lt;li>Milk<br>
+      &lt;/ol><br>
+      Puntliste:<br>
+      &lt;ul><br>
+      &nbsp;&nbsp;&lt;li>Coffee<br>
+      &nbsp;&nbsp;&lt;li>Tea<br>
+      &nbsp;&nbsp;&lt;li>Milk<br>
+      &lt;/ul>
+    </code>
+  </ccm-cloze>
+
+  <h3>3.4 Lückentext: Einbettung von Tabellen</h3>
+
+  <ccm-cloze key='["ccm.get","../data/cloze.json","le06_1"]'>
+    <code>
+      &lt;!DOCTYPE html><br>
+      Tabelle:<br>
+      &lt;table><br>
+      &nbsp;&nbsp;&lt;tr><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;th>Month&lt;/th><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;th>Savings&lt;/th><br>
+      &nbsp;&nbsp;&lt;/tr><br>
+      &nbsp;&nbsp;&lt;tr><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;td>January&lt;/td><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;td>$100&lt;/td><br>
+      &nbsp;&nbsp;&lt;/tr><br>
+      &lt;/table>
+    </code>
+  </ccm-cloze>
+
+  <h3>3.5 Lückentext: Einbettung von Videos</h3>
+
+  <ccm-cloze key='["ccm.get","../data/cloze.json","le06_1"]'>
+    <code>
+      &lt;!DOCTYPE html><br>
+      Video:<br>
+      &lt;video width="320" height="240" controls><br>
+      &nbsp;&nbsp;&lt;source src="movie.mp4" type="video/mp4"><br>
+      &nbsp;&nbsp;&lt;source src="movie.ogg" type="video/ogg"><br>
+      &nbsp;&nbsp;Your browser does not support the video tag.<br>
+      &lt;/video>
+    </code>
+  </ccm-cloze>
+  -->
 
   <h2>4. Alternative Materialien</h2>
 
