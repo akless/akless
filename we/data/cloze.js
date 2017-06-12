@@ -3,7 +3,7 @@
  * @author André Kless <andre.kless@web.de> 2017
  * @license The MIT License (MIT)
  */
-ccm.files[ "cloze.js" ] = {
+ccm.files[ "cloze.min.js" ] = {
   "le03": {
     "css_layout": [ "ccm.load", "https://akless.github.io/akless/we/css/cloze.css" ],
     "start_button": true,
