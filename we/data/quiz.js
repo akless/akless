@@ -972,7 +972,7 @@ ccm.files[ "quiz.min.js" ] = {
         "correct": 4
       },
       {
-        "text": "Was bringt das Grundprinzip der Trennung von Inhalt und Design?",
+        "text": "Was ist das Grundprinzip der Trennung von Inhalt und Design?",
         "description": "Durch die Trennung von Inhalt und Design...",
         "input": "radio",
         "answers": [
