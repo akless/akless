@@ -972,80 +972,21 @@ ccm.files[ "quiz.min.js" ] = {
         "correct": 4
       },
       {
-        "text": "Was síst das Grundprinzip der Trennung von Layout und Design?",
-        "description": "Ein Hyperlink ist...",
+        "text": "Was bringt das Grundprinzip der Trennung von Inhalt und Design?",
+        "description": "Durch die Trennung von Inhalt und Design...",
         "input": "radio",
         "answers": [
-          "der Künstername des Erfinders des Web.",
-          "ein Dateiformat für digitale Dokumente.",
-          "ein Gremium zur Ausarbeitung von Web-Standards.",
-          "ein Querverweis zum Springen an andere Textstellen in Hypertexten.",
-          "ein Modewort zur Vermarktung des Web.",
-          "ein Portal in das digitale Zeitalter.",
-          "ein Web-Standard zur einheitlichen Verbreitung von Informationen.",
-          "eine Arbeitsgruppe zur Weiterentwicklung von HTML.",
-          "eine Markierung zum Hervorheben interessanter Textstellen."
+          "ist das Layout einer Webseite austauschbar.",
+          "ist die Webseite besser vor Angriffen geschützt.",
+          "kann eine Webseite schneller geladen werden.",
+          "können mehr Menschen gleichzeitig auf die Webseite zugreifen.",
+          "können Webseiten einfacher veröffentlicht werden.",
+          "lassen sich Webseiten mit weniger Aufwand pflegen.",
+          "sind Webseiten leichter von Suchmaschinen auffindbar.",
+          "werden gesetzliche Vorgaben erfüllt.",
+          "wird der Webbrowser austauschbar."
         ],
         "correct": 3
-      },
-      {
-        "text": "Wer hat HTML erfunden?",
-        "input": "radio",
-        "answers": [
-          {
-            "text": "Bill Gates",
-            "comment": "Bill Gates ist der Gründer von Microsoft."
-          },
-          {
-            "text": "Fred Feuerstein",
-            "comment": "Fred Feuerstein ist der Vater in der Familie Feuerstein aus der gleichnamigen Zeichentrickserie."
-          },
-          {
-            "text": "Jeff Bezos",
-            "comment": "Jeff Bezos ist der Gründer von Amazon."
-          },
-          {
-            "text": "Larry Page",
-            "comment": "Larry Page ist einer der Google-Gründer."
-          },
-          {
-            "text": "Mark Zuckerberg",
-            "comment": "Mark Zuckerberg ist der Gründer von Facebook."
-          },
-          {
-            "text": "Mike Sandel",
-            "comment": "Mike Sandel war der Chef von Tim Berners-Lee."
-          },
-          {
-            "text": "Robert Cailliau",
-            "comment": "Robert Cailliau ist der erste Web-Surfer und Freund von Tim-Berners-Lee."
-          },
-          {
-            "text": "Steve Jobs",
-            "comment": "Steve Jobs ist der Gründer von Apple."
-          },
-          {
-            "text": "Tim Berners-Lee",
-            "comment": "Tim Berners-Lee ist der Erfinder von HTML und der Begründer des World Wide Web (WWW)."
-          }
-        ],
-        "correct": 8
-      },
-      {
-        "text": "Zu welchem ursprünglichen Zweck wurde HTML erfunden?",
-        "input": "radio",
-        "answers": [
-          "für das Sammeln von Daten",
-          "für das Streamen von Filmen",
-          "für den Aufbau sozialer Netze",
-          "für den Aufbau von Tauschbörsen im Internet",
-          "für den Austausch wissenschaftlicher Publikationen",
-          "für die digitalen Lehre",
-          "für die Stärkung von Demokratie",
-          "für die Verbreitung von Unterhaltungselektronik",
-          "für militärische Zwecke"
-        ],
-        "correct": 4
       },
       {
         "text": "Wer arbeitet alles an der Weiterentwicklung von CSS?",
