@@ -974,7 +974,7 @@ ccm.files[ "quiz.min.js" ] = {
       {
         "text": "Was ist das Grundprinzip der Trennung von Inhalt und Design?",
         "description": "Durch die Trennung von Inhalt und Design...",
-        "input": "radio",
+        "input": "checkbox",
         "answers": [
           "ist das Layout einer Webseite austauschbar.",
           "ist die Webseite besser vor Angriffen geschützt.",
@@ -986,7 +986,7 @@ ccm.files[ "quiz.min.js" ] = {
           "werden gesetzliche Vorgaben erfüllt.",
           "wird der Webbrowser austauschbar."
         ],
-        "correct": 3
+        "correct": [ 0, 5 ]
       },
       {
         "text": "Wer arbeitet alles an der Weiterentwicklung von CSS?",
