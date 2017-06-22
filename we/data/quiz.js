@@ -957,7 +957,7 @@ ccm.files[ "quiz.min.js" ] = {
           "für die Gestaltung von Layout und Design von Webseiten",
           {
             "text": "für die Programmierung von Webseiten",
-            "comment": "HTML ist keine Programmiersprache, sondern eine reine <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Auszeichnungssprache\">Auszeichnungssprache</a>."
+            "comment": "CSS ist keine Programmiersprache, sondern eine reine <a target=\"_blank\" href=\"https://de.wikipedia.org/wiki/Stylesheet-Sprache\">Stylesheet-Sprache</a>."
           },
           {
             "text": "für die Strukturierung digitaler Dokumente",
