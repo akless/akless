@@ -973,7 +973,7 @@ ccm.files[ "quiz.min.js" ] = {
       },
       {
         "text": "Was ist das Grundprinzip der Trennung von Inhalt und Design?",
-        "description": "Durch die Trennung von Inhalt und Design...",
+        "description": "<b style='color: orangered;'>Mehrfachauswahl möglich</b><br><br>Durch die Trennung von Inhalt und Design...",
         "input": "checkbox",
         "answers": [
           "ist das Layout einer Webseite austauschbar.",
