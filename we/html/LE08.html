@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--
+@author  André Kless <andre.kless@web.de> 2017
+@license The MIT License (MIT)
+-->
+<title>Lerneinheit: Einsatz von CSS</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="https://akless.github.io/akless/we/css/font.css">
+<style>body { margin: 0; background-color: #00709B; }</style>
+<script src="https://akless.github.io/ccm-components/le/ccm.le.min.js"></script>
+
+<ccm-le topic="Einsatz von CSS">
+  <script src="https://akless.github.io/ccm-components/quiz/ccm.quiz.min.js"></script>
+
+  <h2>1. Motivation, Lernziele und Voraussetzungen</h2>
+
+  <p>
+    Wenn Sie bereits mit HTML vertraut sind und Wissen was CSS ist, erfahren Sie in dieser Lerneinheit, wie Sie nun CSS
+    zur Gestaltung von Layout und Design einer Webseite konkret einsetzen können. Hierzu lernen Sie die sogenannten
+    CSS-Regeln und deren Aufbau kennen und auf welchen Wegen Sie diese in die Webseite integrieren können.
+  </p>
+
+  <ccm-le-audio src="https://akless.github.io/akless/we/audio/LE08.mp3"></ccm-le-audio>
+
+  <h3>1.1 Lernziele</h3>
+
+  <ul>
+    <li>Ich weiß, was eine CSS-Regel ist und kenne deren Aufbau und Bestandteile.
+    <li>Ich weiß, wo ich eine Liste aller CSS-Selektoren und CSS-Eigenschaften finde.
+    <li>Ich weiß, wie ich CSS-Regeln innerhalb eines HTML-Dokuments angeben kann.
+    <li>Ich weiß, wie ich CSS-Regeln über eine separate CSS-Datei angeben und in ein HTML-Dokument einbinden kann.
+    <li>Ich bin in der Lage, eine CSS-Regel zur Gestaltung einer Webseite einzusetzen.
+  </ul>
+
+  <h3>1.2 Voraussetzungen</h3>
+
+  <ul>
+    <li>Ich weiß grob, was eine Webseite ist.
+    <li>Ich weiß, was HTML ist und wofür es eingesetzt wird.
+    <li>Ich weiß, was HTML-Tags und HTML-Attribute sind, wofür man sie nutzt und wie man sie einsetzt.
+    <li>Ich weiß, wie ich mich über einen mir unbekannten HTML-Tag und dessen Attribute selbstständig informieren kann.
+  </ul>
+
+  <h2>2. Inhalt: <ccm-le-topic></ccm-le-topic></h2>
+
+  <ccm-le-video src="https://akless.github.io/akless/we/video/LE08.mp4"></ccm-le-video>
+
+  <h3>2.1 Beispiel für eine CSS-Regel</h3>
+
+  <p>
+    Beginnen wir direkt mit einem einfachen Beispiel. Angenommen wir wollen über CSS festlegen, dass die Schrift
+    innerhalb von Paragraphen rot dargestellt werden soll. Dies erreichen wir durch die Angabe einer CSS-Regel.
+    CSS-Regeln können beispielsweise innerhalb eines &lt;style>-Tags angegeben werden. Für unser Beispiel würde dies
+    nun konkret wie folgt aussehen:
+  </p>
+
+  <ccm-le-img src="https://akless.github.io/akless/we/image/LE08_01.jpg"></ccm-le-img>
+
+  <h3>2.2 CSS-Selektoren</h3>
+
+  <p>
+    Jede CSS-Regel beginnt immer mit dem sogenannten <strong>Selektor</strong>. Über den Selektor geben wir an, welche
+    HTML-Tags wir gestalten wollen. Wir können also über den Selektor sozusagen HTML-Tags auswählen bzw. selektieren.
+    In unserem Fall sind das die Paragraphen, also alle &lt;p>-Tags. Für unser Beispiel geben wir hier also lediglich
+    den Namen des HTML-Tags an, also ohne die spitzen Klammern.
+  </p>
+
+  <ccm-le-img src="https://akless.github.io/akless/we/image/LE08_02.jpg"></ccm-le-img>
+
+  <h3>2.3 Liste aller CSS-Selektoren</h3>
+
+  <p>
+    In CSS, insbesondere seit CSS3, gibt es eine Vielzahl verschiedener Selektoren. Eine komplette Liste finden Sie bei
+    W3Schools unter der folgenden Webadresse:
+  </p>
+
+  <a href="https://www.w3schools.com/cssref/css_selectors.asp"></a>
+
+  <p>
+    Nehmen Sie sich die Zeit sich im Anschluss an diese Lerneinheit mit den verschiedenen Selektoren vertraut zu machen
+    und diese selbst auszuprobieren, damit Sie in der Lage sind, diese auch einzusetzen.
+  </p>
+
+  <ccm-le-img src="https://akless.github.io/akless/we/image/LE08_03.jpg"></ccm-le-img>
+
+  <h3>2.4 CSS-Anweisung</h3>
+
+  <p>
+    Nach dem Selektor folgt dann eine öffnende und schließende geschweifte Klammer. Innerhalb der geschweiften Klammern
+    können wir nun angeben, wie wir die selektierten HTML-Tags, also hier die Paragraphen, gestalten wollen. Die Angabe
+    erfolgt über sogenannte <strong>CSS-Anweisungen</strong>. Eine solche Anweisung beginnt immer mit der Angabe einer
+    <strong>CSS-Eigenschaft</strong>. In unserem Fall wäre das die Eigenschaft "color" für die Schriftfarbe. Es folgt
+    nun üblicherweise ein Doppelpunkt gefolgt von einem Leerzeichen. Nach dem Leerzeichen kann ein gültiger <strong>
+    CSS-Wert</strong> für die Eigenschaft angegeben werden. Für unser Beispiel wäre das "red" für die Schriftfarbe rot.
+    Jede CSS-Anweisung endet schließlich mit einem Semikolon. Zwischen den geschweiften Klammern können beliebig viele
+    CSS-Anweisungen stehen, wobei jede Anweisung üblicherweise eingerückt in eine neue Zeile geschrieben wird. Über
+    eine CSS-Anweisung können wir also kurz gesagt für eine bestimmte CSS-Eigenschaft einen konkreten erlaubten
+    CSS-Wert setzen.
+  </p>
+
+  <ccm-le-img src="https://akless.github.io/akless/we/image/LE08_04.jpg"></ccm-le-img>
+
+  <h3>2.5 Liste aller CSS-Eigenschaften</h3>
+
+  <p>
+    Eine Liste aller CSS-Eigenschaften, die über eine CSS-Anweisung gesetzt werden können, finden Sie bei W3Schools
+    unter der folgenden Webadresse:
+  </p>
+
+  <a href="https://www.w3schools.com/cssref/"></a>
+
+  <p>
+    Dort finden Sie zu jeder CSS-Eigenschaft auch die erlaubten CSS-Werte, die dafür gesetzt werden können. Nehmen Sie
+    sich auch hier im Anschluss an die Lerneinheit die Zeit sich mit den verschiedenen CSS-Eigenschaften und CSS-Werten
+    vertraut zu machen, sie selbst auszuprobieren und eigene CSS-Anweisungen zu schreiben.
+  </p>
+
+  <ccm-le-img src="https://akless.github.io/akless/we/image/LE08_05.jpg"></ccm-le-img>
+
+  <h3>2.6 Separate CSS-Dateien</h3>
+
+  <p>
+    Neben dem erwähnten &lt;style>-Tag können CSS-Regeln auch in einer separaten CSS-Datei hinterlegt und dann über
+    einen &lt;link>-Tag wie wie folgt in eine Webseite eingebunden werden:
+  </p>
+
+  <ccm-le-img src="https://akless.github.io/akless/we/image/LE08_06.jpg"></ccm-le-img>
+
+  <p>
+    Über das "href"-Attribut wird, ähnlich wie bei Hyperlinks, das Verweisziel angegeben, also wo sich die CSS-Datei
+    genau befindet. Achten Sie beim Erstellen einer eigenen CSS-Datei darauf, dass diese die Dateiendung ".css" hat.
+    Die CSS-Datei repräsentiert dann sozusagen das Layout und Design einer Webseite, das durch die Separierung in einer
+    eigenen Datei auch in anderen Webseiten eingebunden werden kann und somit auf andere Webseiten übertragbar ist.
+    Durch die Einbindung einer anderen CSS-Datei können Sie das Layout und Design einer Webseite auch austauschen.
+  </p>
+
+  <h3>2.7 Aufruf zur Tat</h3>
+
+  <p>
+    Durch das Schreiben eigener CSS-Regeln eröffnen sich Ihnen enorm viele Möglichkeiten Ihre Webseite zu gestalten.
+    Sie haben nun alle Informationen, die Sie benötigen, um sich die Vielzahl an CSS-Selektoren, CSS-Eigenschaften und
+    deren erlaubte CSS-Werte anzueigenen. Nehmen Sie sich die Zeit sich mit den Möglichkeiten, die diese Ihnen bieten,
+    zu beschäftigen und diese auch selbst auszuprobieren.
+  </p>
+
+  <h2>3. Selbsttest</h2>
+
+  ...
+
+  <h2>4. Alternative Materialien</h2>
+
+  <h3>4.1 ... | ...</h3>
+
+  <p>...</p>
+
+  <ccm-le-link href="..."></ccm-le-link>
+
+</ccm-le>
