@@ -5,7 +5,7 @@
 -->
 <title>Lerneinheit: Einsatz von CSS</title>
 <meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="https://akless.github.io/akless/we/css/font.css">
+<link rel="stylesheet" href="https://akless.github.io/akless/we/css/font.css">
 <style>body { margin: 0; background-color: #00709B; }</style>
 <script src="https://akless.github.io/ccm-components/le/ccm.le.min.js"></script>
 
@@ -65,7 +65,11 @@
     unser Beispiel würde dies wie folgt aussehen:
   </p>
 
-  <ccm-le-img src="https://akless.github.io/akless/we/image/LE08_01.jpg"></ccm-le-img>
+  <ccm-le-img src="https://akless.github.io/akless/we/image/LE08_01-1.jpg"></ccm-le-img>
+
+  <p>Über diese CSS-Regel hinaus können beliebig weitere CSS-Regeln angegeben werden.</p>
+
+  <ccm-le-img src="https://akless.github.io/akless/we/image/LE08_01-2.jpg"></ccm-le-img>
 
   <h3>2.2 CSS-Selektoren</h3>
 
@@ -104,13 +108,18 @@
     <strong>CSS-Eigenschaft</strong>. In unserem Fall wäre das die Eigenschaft "color" für die Schriftfarbe. Es folgt
     nun üblicherweise ein Doppelpunkt gefolgt von einem Leerzeichen. Nach dem Leerzeichen kann ein gültiger <strong>
     CSS-Wert</strong> für die Eigenschaft angegeben werden. Für unser Beispiel wäre das "red" für die Schriftfarbe rot.
+  </p>
+
+  <ccm-le-img src="https://akless.github.io/akless/we/image/LE08_04-1.jpg"></ccm-le-img>
+
+  <p>
     Jede CSS-Anweisung endet schließlich mit einem Semikolon. Zwischen den geschweiften Klammern können beliebig viele
     CSS-Anweisungen stehen, wobei jede Anweisung üblicherweise eingerückt in eine neue Zeile geschrieben wird. Über
     eine CSS-Anweisung können wir also kurz gesagt für eine bestimmte CSS-Eigenschaft einen konkreten erlaubten
     CSS-Wert setzen.
   </p>
 
-  <ccm-le-img src="https://akless.github.io/akless/we/image/LE08_04.jpg"></ccm-le-img>
+  <ccm-le-img src="https://akless.github.io/akless/we/image/LE08_04-2.jpg"></ccm-le-img>
 
   <h3>2.5 Liste aller CSS-Eigenschaften</h3>
 
@@ -121,23 +130,26 @@
 
   <a href="https://www.w3schools.com/cssref/"></a>
 
+  <ccm-le-img src="https://akless.github.io/akless/we/image/LE08_05.jpg"></ccm-le-img>
+
   <p>
     Dort finden Sie zu jeder CSS-Eigenschaft auch die erlaubten CSS-Werte, die dafür gesetzt werden können. Nehmen Sie
     sich auch hier im Anschluss an die Lerneinheit die Zeit sich mit den verschiedenen CSS-Eigenschaften und CSS-Werten
     vertraut zu machen, sie selbst auszuprobieren und eigene CSS-Anweisungen zu schreiben.
   </p>
 
-  <ccm-le-img src="https://akless.github.io/akless/we/image/LE08_05.jpg"></ccm-le-img>
-
   <h3>2.6 Separate CSS-Dateien</h3>
 
+  <p>Neben dem erwähnten &lt;style>-Tag können CSS-Regeln auch innerhalb einer separaten Datei hinterlegt werden.</p>
+
+  <ccm-le-img src="https://akless.github.io/akless/we/image/LE08_06-1.jpg"></ccm-le-img>
+
   <p>
-    Neben dem erwähnten &lt;style>-Tag können CSS-Regeln auch innerhalb einer separaten CSS-Datei hinterlegt und dann
-    über einen <a href="https://www.w3schools.com/tags/tag_link.asp">&lt;link></a>-Tag wie folgt in eine Webseite
-    eingebunden werden:
+    Über einen <a href="https://www.w3schools.com/tags/tag_link.asp">&lt;link></a>-Tag kann diese CSS-Datei dann wie
+    folgt in eine Webseite eingebunden werden:
   </p>
 
-  <ccm-le-img src="https://akless.github.io/akless/we/image/LE08_06.jpg"></ccm-le-img>
+  <ccm-le-img src="https://akless.github.io/akless/we/image/LE08_06-2.jpg"></ccm-le-img>
 
   <p>
     Über das "href"-Attribut wird, ähnlich wie bei Hyperlinks, das Verweisziel angegeben, also wo sich die CSS-Datei
