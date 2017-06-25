@@ -15,9 +15,17 @@
   <h2>1. Motivation, Lernziele und Voraussetzungen</h2>
 
   <p>
-    Wenn Sie bereits mit HTML vertraut sind und Wissen was CSS ist, erfahren Sie in dieser Lerneinheit, wie Sie nun CSS
-    zur Gestaltung von Layout und Design einer Webseite konkret einsetzen können. Hierzu lernen Sie die sogenannten
-    CSS-Regeln und deren Aufbau kennen und auf welchen Wegen Sie diese in die Webseite integrieren können.
+    Wenn Sie bereits mit <a href="https://de.wikipedia.org/wiki/Hypertext_Markup_Language">HTML</a> vertraut sind und
+    Wissen was <a href="https://de.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a> ist, erfahren Sie in dieser
+    Lerneinheit, wie Sie nun CSS zur Gestaltung von Layout und Design einer
+    <a href="https://de.wikipedia.org/wiki/Webseite">Webseite</a> konkret einsetzen können. Hierzu lernen Sie die
+    sogenannten CSS-Regeln kennen. Sie lernen, wie eine CSS-Regel aufgebaut ist und welche Bestandteile sie hat. Zudem
+    erfahren Sie auch, wo Sie sich im <a href="https://de.wikipedia.org/wiki/World_Wide_Web">Web</a> über die
+    verschiedenen Möglichkeiten informieren können, die Sie bei der Angabe der einzelnen Bestandteile einer CSS-Regel
+    haben und was diese bewirken. Sie erfahren darüber hinaus wie CSS-Regeln zum einen direkt innerhalb eines
+    HTML-Dokuments angeben und zum anderen über eine separate <a href="https://de.wikipedia.org/wiki/Datei">Datei</a>
+    integriert werden können. Wenn Sie die hier erworbenen Kenntnisse dann auch selbst ausprobieren und damit
+    experimientieren, sind Sie in der Lage nach dieser Lerneinheit CSS-Regeln zur Gestaltung von Webseiten einzusetzen.
   </p>
 
   <ccm-le-audio src="https://akless.github.io/akless/we/audio/LE08.mp3"></ccm-le-audio>
@@ -25,20 +33,22 @@
   <h3>1.1 Lernziele</h3>
 
   <ul>
-    <li>Ich weiß, was eine CSS-Regel ist und kenne deren Aufbau und Bestandteile.
-    <li>Ich weiß, wo ich eine Liste aller CSS-Selektoren und CSS-Eigenschaften finde.
-    <li>Ich weiß, wie ich CSS-Regeln innerhalb eines HTML-Dokuments angeben kann.
-    <li>Ich weiß, wie ich CSS-Regeln über eine separate CSS-Datei angeben und in ein HTML-Dokument einbinden kann.
-    <li>Ich bin in der Lage, eine CSS-Regel zur Gestaltung einer Webseite einzusetzen.
+    <li>Ich weiß, wofür CSS-Regeln eingesetzt werden und kenne deren Aufbau.
+    <li>Ich kenne die Bestandteile einer CSS-Regel und weiß, wofür man sie einsetzt.
+    <li>Ich bin in der Lage, mich selbstständig über die Möglichkeiten zu informieren, die ich bei der Angabe der einzelnen Bestandteile einer CSS-Regel habe.
+    <li>Ich weiß, wie ich CSS-Regeln zum einen innerhalb eines HTML-Dokuments angeben und zum anderen wie ich sie über eine separate Datei einbinden kann.
+    <li>Ich bin in der Lage, CSS-Regeln zur Gestaltung einer Webseite einzusetzen.
   </ul>
 
   <h3>1.2 Voraussetzungen</h3>
 
   <ul>
-    <li>Ich weiß grob, was eine Webseite ist.
-    <li>Ich weiß, was HTML ist und wofür es eingesetzt wird.
-    <li>Ich weiß, was HTML-Tags und HTML-Attribute sind, wofür man sie nutzt und wie man sie einsetzt.
-    <li>Ich weiß, wie ich mich über einen mir unbekannten HTML-Tag und dessen Attribute selbstständig informieren kann.
+    <li>Ich weiß, was HTML und CSS ist und wofür es eingesetzt wird.
+    <li>Ich weiß, was HTML-Tags und HTML-Attribute sind, wofür man sie nutzt und bin in der Lage sie einzusetzen.
+    <li>Ich weiß, wie ich über eine Webadresse eine Webseite aufrufen kann.
+    <li>Ich bin in der Lage mich über einen mir bisher noch unbekannten HTML-Tag und dessen Attribute selbstständig zu informieren.
+    <li>Ich kenne den HTML-Tag für Hyperlinks und dessen Attribut für das Verweisziel.
+    <li>Ich weiß, wie man eine Datei erstellt, umbenennt und die Dateiendung festlegt.
   </ul>
 
   <h2>2. Inhalt: <ccm-le-topic></ccm-le-topic></h2>
@@ -48,10 +58,11 @@
   <h3>2.1 Beispiel für eine CSS-Regel</h3>
 
   <p>
-    Beginnen wir direkt mit einem einfachen Beispiel. Angenommen wir wollen über CSS festlegen, dass die Schrift
-    innerhalb von Paragraphen rot dargestellt werden soll. Dies erreichen wir durch die Angabe einer CSS-Regel.
-    CSS-Regeln können beispielsweise innerhalb eines &lt;style>-Tags angegeben werden. Für unser Beispiel würde dies
-    nun konkret wie folgt aussehen:
+    In CSS kann über CSS-Regeln das Layout und Design einer Webseite gestaltet werden. Beginnen wir mit einem
+    einfachen Beispiel. Angenommen wir wollen über CSS festlegen, dass die Schrift innerhalb von Paragraphen rot
+    dargestellt werden soll. Dies erreichen wir durch die Angabe einer CSS-Regel. CSS-Regeln können beispielsweise
+    innerhalb eines <a href="https://www.w3schools.com/tags/tag_style.asp">&lt;style></a>-Tags angegeben werden. Für
+    unser Beispiel würde dies wie folgt aussehen:
   </p>
 
   <ccm-le-img src="https://akless.github.io/akless/we/image/LE08_01.jpg"></ccm-le-img>
@@ -61,8 +72,9 @@
   <p>
     Jede CSS-Regel beginnt immer mit dem sogenannten <strong>Selektor</strong>. Über den Selektor geben wir an, welche
     HTML-Tags wir gestalten wollen. Wir können also über den Selektor sozusagen HTML-Tags auswählen bzw. selektieren.
-    In unserem Fall sind das die Paragraphen, also alle &lt;p>-Tags. Für unser Beispiel geben wir hier also lediglich
-    den Namen des HTML-Tags an, also ohne die spitzen Klammern.
+    In unserem Fall sind das die Paragraphen, also alle
+    <a href="https://www.w3schools.com/tags/tag_p.asp">&lt;p></a>-Tags. Für unser Beispiel geben wir hier also
+    lediglich den Namen des HTML-Tags an, also ohne die spitzen Klammern.
   </p>
 
   <ccm-le-img src="https://akless.github.io/akless/we/image/LE08_02.jpg"></ccm-le-img>
@@ -70,8 +82,8 @@
   <h3>2.3 Liste aller CSS-Selektoren</h3>
 
   <p>
-    In CSS, insbesondere seit CSS3, gibt es eine Vielzahl verschiedener Selektoren. Eine komplette Liste finden Sie bei
-    W3Schools unter der folgenden Webadresse:
+    In CSS gibt es eine Vielzahl verschiedener Selektoren. Eine komplette Liste finden Sie bei
+    <a href="https://www.w3schools.com">W3Schools</a> unter der folgenden Webadresse:
   </p>
 
   <a href="https://www.w3schools.com/cssref/css_selectors.asp"></a>
@@ -120,27 +132,32 @@
   <h3>2.6 Separate CSS-Dateien</h3>
 
   <p>
-    Neben dem erwähnten &lt;style>-Tag können CSS-Regeln auch in einer separaten CSS-Datei hinterlegt und dann über
-    einen &lt;link>-Tag wie wie folgt in eine Webseite eingebunden werden:
+    Neben dem erwähnten &lt;style>-Tag können CSS-Regeln auch innerhalb einer separaten CSS-Datei hinterlegt und dann
+    über einen <a href="https://www.w3schools.com/tags/tag_link.asp">&lt;link></a>-Tag wie folgt in eine Webseite
+    eingebunden werden:
   </p>
 
   <ccm-le-img src="https://akless.github.io/akless/we/image/LE08_06.jpg"></ccm-le-img>
 
   <p>
     Über das "href"-Attribut wird, ähnlich wie bei Hyperlinks, das Verweisziel angegeben, also wo sich die CSS-Datei
-    genau befindet. Achten Sie beim Erstellen einer eigenen CSS-Datei darauf, dass diese die Dateiendung ".css" hat.
-    Die CSS-Datei repräsentiert dann sozusagen das Layout und Design einer Webseite, das durch die Separierung in einer
+    genau befindet.
+  </p>
+
+  <p>
+    Achten Sie beim Erstellen einer CSS-Datei darauf, dass sie die Dateiendung ".css" hat. Die
+    CSS-Datei repräsentiert dann sozusagen das Layout und Design einer Webseite, das durch die Separierung in einer
     eigenen Datei auch in anderen Webseiten eingebunden werden kann und somit auf andere Webseiten übertragbar ist.
-    Durch die Einbindung einer anderen CSS-Datei können Sie das Layout und Design einer Webseite auch austauschen.
+    Durch die Einbindung einer anderen CSS-Datei ist das Layout und Design einer Webseite auch austauschbar.
   </p>
 
   <h3>2.7 Aufruf zur Tat</h3>
 
   <p>
     Durch das Schreiben eigener CSS-Regeln eröffnen sich Ihnen enorm viele Möglichkeiten Ihre Webseite zu gestalten.
-    Sie haben nun alle Informationen, die Sie benötigen, um sich die Vielzahl an CSS-Selektoren, CSS-Eigenschaften und
-    deren erlaubte CSS-Werte anzueigenen. Nehmen Sie sich die Zeit sich mit den Möglichkeiten, die diese Ihnen bieten,
-    zu beschäftigen und diese auch selbst auszuprobieren.
+    Sie haben nun alle Informationen, die Sie benötigen, um sich die verschiedenen CSS-Selektoren, CSS-Eigenschaften und
+    deren erlaubte CSS-Werte anzueigenen. Nehmen Sie sich Zeit sich mit den Möglichkeiten, die diese Ihnen bieten,
+    zu beschäftigen und auszuprobieren, um in der Lage zu sein, sie einsetzen zu können.
   </p>
 
   <h2>3. Selbsttest</h2>
