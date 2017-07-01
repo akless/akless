@@ -1,0 +1,61 @@
+<!--
+ @overview Vorlage für ein Vollbild-Layout einer Webseite
+ @author André Kless <andre.kless@.h-brs.de> 2017
+ @author Tea Kless <tea.kless@.h-brs.de> 2017
+ @license The MIT License (MIT)
+*-->
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+<meta name="apple-mobile-web-app-title" content="Flay"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+
+<title>Vollbild-Layout mit Flexbox</title>
+
+<style>
+
+  header, nav, article, aside, footer {
+    border: 2px solid #dddddd;
+    padding: 0.25em;
+    margin: 0.25em;
+    border-radius: 0.25em;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  article {
+    flex: 5;
+  }
+
+  nav, aside {
+    flex: 1;
+  }
+
+</style>
+<header>Header</header>
+  <main>
+    <nav>Nav</nav>
+    <article>Article</article>
+    <aside>Aside</aside>
+  </main>
+</section>
+<footer>Footer</footer>
