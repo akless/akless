@@ -15,7 +15,7 @@
 
 <style>
 
-  header, nav, article, aside, footer {
+  header, nav, article, aside, footer, div {
     border: 2px solid #dddddd;
     padding: 0.25em;
     margin: 0.25em;
@@ -50,13 +50,34 @@
     flex: 1;
   }
 
+  label {
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  input, article {
+    display: none;
+  }
+
+  input:checked + article {
+    display: block;
+  }
+
 </style>
 
 <header>Header</header>
-  <main>
-    <nav>Nav</nav>
-    <article>Article</article>
-    <aside>Aside</aside>
-  </main>
-</section>
+<main>
+  <nav>
+    <div><label for="article-1">Menüpunkt 1</label></div>
+    <div><label for="article-2">Menüpunkt 2</label></div>
+    <div><label for="article-3">Menüpunkt 3</label></div>
+  </nav>
+  <input type="radio" name="article" id="article-1" checked>
+  <article>Article 1</article>
+  <input type="radio" name="article" id="article-2">
+  <article>Article 2</article>
+  <input type="radio" name="article" id="article-3">
+  <article>Article 3</article>
+  <aside>Aside</aside>
+</main>
 <footer>Footer</footer>
