@@ -10,6 +10,11 @@
 <meta name="apple-mobile-web-app-title" content="Mobile Web-App"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 
+<link rel="stylesheet" href="https://akless.github.io/ccm-components/libs/weblysleekui/font.css">
+
+<script src="https://akless.github.io/ccm-components/quiz/ccm.quiz.min.js"></script>
+<script src="https://akless.github.io/ccm-components/le/ccm.le.min.js"></script>
+
 <title>Vollbild-Layout mit Flexbox</title>
 
 <style>
@@ -77,10 +82,16 @@
   <article>Article 1</article>
 
   <input type="radio" name="article" id="article-2">
-  <article>Article 2</article>
+  <article>
+    Article 2
+    <ccm-le key='["ccm.get","https://akless.github.io/akless/we/was-ist-html/configs.min.js","le"]'></ccm-le>
+  </article>
 
   <input type="radio" name="article" id="article-3">
-  <article>Article 3</article>
+  <article>
+    Article 3
+    <ccm-quiz key='["ccm.get","https://akless.github.io/akless/we/was-ist-html/configs.min.js","quiz"]'></ccm-quiz>
+  </article>
 
   <aside>Aside</aside>
 </main>
