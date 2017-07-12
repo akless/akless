@@ -121,7 +121,7 @@ ccm.files[ "configs.min.js" ] = {
     ]
   },
   "cloze": {
-    "css_layout": [ "ccm.load", "https://akless.github.io/ccm-components/cloze/layouts/weblysleek.css" ],
+    "css_layout": [ "ccm.load", "https://akless.github.io/ccm-components/cloze/resources/weblysleek.css" ],
     "start_button": true,
     "feedback": true,
     "text": "<p>Der Lückentext unterstützt Sie dabei selbst einzuschätzen, ob Sie nun das HTML-Grundgerüst kennen und in der Lage sind darin den Titel und die Zeichenkodierung einer Webseite festzulegen. Ergänzen Sie hierzu die fehlenden HTML-Tags.</p><code>[[<!DOCTYPE html>]]<br>[[<html>]]<br>&nbsp;&nbsp;[[<head>]]<br>&nbsp;&nbsp;&nbsp;&nbsp;[[<title>]]Titel der Webseite[[</title>]]<br>&nbsp;&nbsp;&nbsp;&nbsp;[[<meta charset=\"UTF-8\">]]<br>&nbsp;&nbsp;[[</head>]]<br>&nbsp;&nbsp;[[<body>]]<br>&nbsp;&nbsp;&nbsp;&nbsp;Hallo Welt!<br>&nbsp;&nbsp;[[</body>]]<br>[[</html>]]</code><p>Klicken Sie, wenn Sie fertig sind, auf \"Abschicken\".<br>Sie erhalten dann oben im Lückentext ein unmittelbares Feedback.</p>",

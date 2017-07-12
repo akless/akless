@@ -112,7 +112,7 @@ ccm.files[ "configs.min.js" ] = {
     ]
   },
   "cloze-audio": {
-    "css_layout": [ "ccm.load", "https://akless.github.io/ccm-components/cloze/layouts/weblysleek.css" ],
+    "css_layout": [ "ccm.load", "https://akless.github.io/ccm-components/cloze/resources/weblysleek.css" ],
     "start_button": true,
     "feedback": true,
     "text": "<p>Der Lückentext unterstützt Sie dabei selbst einzuschätzen, ob Sie in der Lage sind in HTML ein Audio einzubetten. Ergänzen Sie hiezu im Lückentext die Namen der fehlenden HTML-Tags und Attribute, so dass das Audio mit der Webadresse <a href=https://akless.github.io/akless/we/audio/LE06.mp3 target=_blank>https://akless.github.io/akless/we/audio/LE06.mp3</a> eingebettet wird und der Webnutzer das Audio über Buttons wie \"Play\" und \"Pause\" selbst steuern kann.</p><code>&lt;!DOCTYPE html><br>Audio:<br>&lt;[[audio]] [[controls]]><br>  &lt;[[source]] [[src]]=\"https://akless.github.io/akless/we/audio/LE06.mp3\"><br>&lt;/[[audio]]></code><p>Klicken Sie, wenn Sie fertig, sind auf \"Abschicken\".<br>Sie erhalten dann oben im Lückentext ein unmittelbares Feedback.",
@@ -125,7 +125,7 @@ ccm.files[ "configs.min.js" ] = {
     }
   },
   "cloze-image": {
-    "css_layout": [ "ccm.load", "https://akless.github.io/ccm-components/cloze/layouts/weblysleek.css" ],
+    "css_layout": [ "ccm.load", "https://akless.github.io/ccm-components/cloze/resources/weblysleek.css" ],
     "start_button": true,
     "feedback": true,
     "text": "<p>Der Lückentext unterstützt Sie dabei selbst einzuschätzen, ob Sie in der Lage sind in HTML ein Bild einzubetten. Ergänzen Sie hiezu im Lückentext die Namen der fehlenden HTML-Tags und Attribute, so dass das Bild mit der Webadresse <a href=https://akless.github.io/akless/we/image/poster.jpg target=_blank>https://akless.github.io/akless/we/image/poster.jpg</a> mit einer Breite von 320 und einer Höhe von 180 eingebettet wird.</p><code>&lt;!DOCTYPE html><br>Bild: &lt;[[img]] [[src]]=\"https://akless.github.io/akless/we/image/poster.jpg\" [[width]]=\"320\" [[height]]=\"180\"></code><p>Klicken Sie, wenn Sie fertig, sind auf \"Abschicken\".<br>Sie erhalten dann oben im Lückentext ein unmittelbares Feedback.",
@@ -138,7 +138,7 @@ ccm.files[ "configs.min.js" ] = {
     }
   },
   "cloze-list": {
-    "css_layout": [ "ccm.load", "https://akless.github.io/ccm-components/cloze/layouts/weblysleek.css" ],
+    "css_layout": [ "ccm.load", "https://akless.github.io/ccm-components/cloze/resources/weblysleek.css" ],
     "start_button": true,
     "feedback": true,
     "text": "<p>Der Lückentext unterstützt Sie dabei selbst einzuschätzen, ob Sie in der Lage sind in HTML Listen umzusetzen. Ergänzen Sie hiezu im Lückentext die Namen der fehlenden HTML-Tags, so dass erst eine ungeordnete, dann eine geornete Liste umgesetzt wird.</p><code>&lt;!DOCTYPE html><br>Ungeordnete Liste:<br>&lt;[[ul]]><br>  &lt;[[li]]>Apfel<br>  &lt;[[li]]>Birne<br>  &lt;[[li]]>Orange<br>&lt;/[[ul]]><br><br>Geordnete Liste:<br>&lt;[[ol]]><br>  &lt;[[li]]>Einschalten<br>  &lt;[[li]]>Benutzen<br>  &lt;[[li]]>Ausschalten<br>&lt;/[[ol]]></code><p>Klicken Sie, wenn Sie fertig, sind auf \"Abschicken\".<br>Sie erhalten dann oben im Lückentext ein unmittelbares Feedback.",
@@ -151,7 +151,7 @@ ccm.files[ "configs.min.js" ] = {
     }
   },
   "cloze-table": {
-    "css_layout": [ "ccm.load", "https://akless.github.io/ccm-components/cloze/layouts/weblysleek.css" ],
+    "css_layout": [ "ccm.load", "https://akless.github.io/ccm-components/cloze/resources/weblysleek.css" ],
     "start_button": true,
     "feedback": true,
     "text": "<p>Der Lückentext unterstützt Sie dabei selbst einzuschätzen, ob Sie in der Lage sind in HTML Tabellen umzusetzen. Ergänzen Sie hiezu im Lückentext die Namen der fehlenden HTML-Tags, so dass eine Tabelle mit 2 Zeilen und 2 Spalten umgesetzt wird, wobei die erste Zeile die Überschrift für jede Spalte enthält.</p><code>&lt;!DOCTYPE html><br>Tabelle:<br>&lt;[[table]]><br>  &lt;[[tr]]><br>    &lt;[[th]]>Obst&lt;/[[th]]><br>    &lt;[[th]]>Preis pro Stück&lt;/[[th]]><br>  &lt;/[[tr]]><br>  &lt;[[tr]]><br>    &lt;[[td]]>Apfel&lt;/[[td]]><br>    &lt;[[td]]>60 Cent&lt;/[[td]]><br>  &lt;/[[tr]]><br>&lt;/[[table]]></code><p>Klicken Sie, wenn Sie fertig, sind auf \"Abschicken\".<br>Sie erhalten dann oben im Lückentext ein unmittelbares Feedback.",
@@ -164,7 +164,7 @@ ccm.files[ "configs.min.js" ] = {
     }
   },
   "cloze-video": {
-    "css_layout": [ "ccm.load", "https://akless.github.io/ccm-components/cloze/layouts/weblysleek.css" ],
+    "css_layout": [ "ccm.load", "https://akless.github.io/ccm-components/cloze/resources/weblysleek.css" ],
     "start_button": true,
     "feedback": true,
     "text": "<p>Der Lückentext unterstützt Sie dabei selbst einzuschätzen, ob Sie in der Lage sind in HTML ein Video einzubetten. Ergänzen Sie hiezu im Lückentext die Namen der fehlenden HTML-Tags und Attribute, so dass das Video mit der Webadresse <a href=https://akless.github.io/akless/we/video/LE06.mp4 target=_blank>https://akless.github.io/akless/we/video/LE06.mp4</a> mit einer Breite von 640 eingebettet wird und der Webnutzer das Video über Buttons wie \"Play\" und \"Pause\" selbst steuern kann.</p><code>&lt;!DOCTYPE html><br>Video:<br>&lt;[[video]] [[width]]=\"640\" [[controls]]><br>  &lt;[[source]] [[src]]=\"https://akless.github.io/akless/we/video/LE06.mp4\"><br>&lt;/[[video]]></code><p>Klicken Sie, wenn Sie fertig, sind auf \"Abschicken\".<br>Sie erhalten dann oben im Lückentext ein unmittelbares Feedback.",

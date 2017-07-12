@@ -189,7 +189,7 @@ ccm.files[ "configs.min.js" ] = {
     ]
   },
   "cloze": {
-    "css_layout": [ "ccm.load", "https://akless.github.io/ccm-components/cloze/layouts/weblysleek.css" ],
+    "css_layout": [ "ccm.load", "https://akless.github.io/ccm-components/cloze/resources/weblysleek.css" ],
     "start_button": true,
     "feedback": true,
     "text": "<p>Der Lückentext unterstützt Sie dabei selbst einzuschätzen, ob Sie in der Lage sind in HTML für einen Hyperlink ein Verweisziel, einen Tooltip und ein Download festzulegen. Ergänzen Sie hiezu im Lückentext für den Hyperlink über die Eingabefelder die entsprechenden Attribute und Zeichen, so dass der Hyperlink auf das Bild mit der Webadresse \"https://akless.github.io/akless/we/image/logo.png\" verweist, über einen Tooltip mit dem Inhalt \"Bild herunterladen\" verfügt und das über den Hyperlink das Bild nicht geöffnet, sondern heruntergeladen wird.</p><code>&lt;!DOCTYPE html><br>Hyperlink: &lt;a [[href=]]\"https://akless.github.io/akless/we/image/logo.png\" [[title=]]\"Bild herunterladen\" [[download]]>Projektlogo&lt;/a></code><p>Klicken Sie, wenn Sie fertig, sind auf \"Abschicken\".<br>Sie erhalten dann oben im Lückentext ein unmittelbares Feedback.",
