@@ -13,29 +13,17 @@
   <h2>1. Motivation, Learning Goals und Requirements</h2>
 
   <p>
-    <!-- Motivation -->
-    The up coming modular web is a big game changer. Instead of building monolithic web applications, you compose web
-    apps together from already existing web components, like the Lego way. Each web component that is published under a
-    free software license increases the functionality of the hole web, not only of a specific platform. The browser is
-    the platform. So if you build a component-based web app, you build it for 3 billion peoples. Such kind of web apps
-    are embeddable in any web-based content and can be used in form of a simple HTML tag. There are no restrictions in
-    complexity and application domain. Here <i>ccm</i> comes in. It allows you to develop such kind of web components.
-
-    <!--
-    For example, if you want to build a learning unit that contains a video and a quiz and the learners should be able
-    to comment and rate the video, than you do not start to reinvent the wheel and start developing quiz or commentary
-    functionality. Instead you looking for already existing professional web components that fits your needs and
-    compose these together.
-    -->
-
-    <!-- Learning Goals -->
-    This learning unit gives you a quick overview what <i>ccm</i> is and what it is used for. Then we see how you can
-    work with <i>ccm</i>-based web components without the need of any programming knowledge.
-
-    <!-- Requirements -->
-    Never the less it's useful to already know the markup language HTML(5) and, if you know JavaScript, that you have
-    already realized that JavaScript has dramatically improved and cross-browser incompatibility is no more a criterion
-    for exclusion.
+    The up coming modular web is a big game changer. Our own implementation of the modular web is our own framework
+    <a href="https://github.com/akless/ccm"><strong>C</strong>lient-side <strong>C</strong>omponent <strong>
+    M</strong>odel</a>, shortly <strong><i>ccm</i></strong>. With <i>ccm</i>, you can compose web apps from already
+    existing web components, just like Lego brick building. Each web component that is published under a free software
+    license increases the functionality of the web as a whole, not a single platform only. In other words: The browser
+    is the platform and web components extend the powerful capabilities of the browser. So if you build web components,
+    you build it for potentially 3 billion people. Such kind of web components are embeddable in any web-based content
+    and can simply be used via a custom HTML tag. There are no restrictions in complexity and application domain. <i>
+    ccm</i> allows to develop such kind of web components. This learning unit gives you a quick overview what <i>
+    ccm</i> is about and what it is used for. Then we see how you can work with <i>ccm</i>-based web components without
+    programming skills.
   </p>
 
   <ccm-le-audio src="https://akless.github.io/akless/ccm/what-is-ccm/motivation.mp3"></ccm-le-audio>
@@ -50,8 +38,10 @@
   <h3>1.2 Requirements</h3>
 
   <ul>
-    <li>It's useful but not mandatory to already know the markup language HTML(5).
-    <li>I know that JavaScript has improved and cross-browser incompatibility is no more a criterion for exclusion.
+    <li>It's useful but not mandatory to already know the markup language <a href="https://en.wikipedia.org/wiki/HTML">
+      HTML</a> and its modern successor <a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a>.
+    <li>It is required to know that <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> has improved and
+      cross-browser incompatibility is no more a reason for exclusion.
   </ul>
 
   <h2>2. Content: <ccm-le-topic></ccm-le-topic></h2>
@@ -61,9 +51,9 @@
   <h3>2.1 Client-side Component Model (<i>ccm</i>)</h3>
 
   <p>
-    <b><i>ccm</i></b> stands for <b>C</b>lient-side <b>C</b>omponent <b>M</b>odel and is a model for composing,
-    embedding and running web components inside the browser. Our implementation consists of a single JavaScript
-    framework <i>ccm</i> and many <i>ccm</i>-based web components.
+    <strong><i>ccm</i></strong> stands for <strong>C</strong>lient-side <strong>C</strong>omponent <strong>
+    C</strong>odel and is a model for composing, embedding and running web components inside the browser. Our
+    implementation consists of a single JavaScript framework <i>ccm</i> and many <i>ccm</i>-based web components.
   </p>
 
   <ccm-le-img src="https://akless.github.io/akless/ccm/what-is-ccm/image-1.jpg"></ccm-le-img>
@@ -71,9 +61,9 @@
   <h3>2.2 Web Component Cloud (W2C)</h3>
 
   <p>
-    Here you see our already developed and ready to use <i>ccm</i>-based web components. We are currently working on
-    places where you can find, publish and rate components and where you can create web apps out of them. These places
-    are the visual interface of that, what we call a Web Component Cloud (W2C).
+    Here you see our ready to use <i>ccm</i>-based web components. We are currently working on places where you can
+    find, publish and rate components and where you can construct and compose web apps from them. We call these places
+    Web Component Cloud (W2C).
   </p>
 
   <ccm-le-img src="https://akless.github.io/akless/ccm/what-is-ccm/image-2.jpg"></ccm-le-img>
@@ -81,8 +71,8 @@
   <h3>2.3 Component Informations</h3>
 
   <p>
-    Choose a component to try out a demo and get informations about it. In the near future you can rate and comment
-    and create apps out of it directly from here.
+    Choose a component to try out a demo and get informations about it. In the near future you can rate and comment and
+    create apps out of it directly.
   </p>
 
   <ccm-le-img src="https://akless.github.io/akless/ccm/what-is-ccm/image-3.jpg"></ccm-le-img>
@@ -90,9 +80,9 @@
   <h3>2.4 Creation of an App</h3>
 
   <p>
-    This is another Component for creating an app out of the component we looked before. Notice that we have a
-    principle of competition here, so there can be a lot of ranked components for the same thing. So different people
-    will find the individual one that fits exactly there needs.
+    This is another Component for creating an app out of the component we looked at before. Notice, that we choose
+    competition as the guiding principle here, so many different ranked components may be offered here for the same
+    thing, so that users can find their best choice according to their needs.
   </p>
 
   <ccm-le-img src="https://akless.github.io/akless/ccm/what-is-ccm/image-4.jpg"></ccm-le-img>
@@ -100,9 +90,11 @@
   <h3>2.5 Using created Apps</h3>
 
   <p>
-    Now we have created an app. So where can I use it? The answer is: Anywhere! As a result we get a HTML-based embed
-    code, which contains only a script tag and a custom tag. This embed code is now usable in any web-based content.
-    Let's show this in a german learning platform.
+    Now we have created an app. So where can we use it? The answer is: Everywhere! As a result we get a HTML-based
+    embed code, which contains only a script tag and a custom tag. This embed code is now usable in any web-based
+    content. You know embed code from Youtube videos. With our embed code we can embed not only videos, but any kind of
+    web component. Let's show this inside the german learning platform <a href="https://en.wikipedia.org/wiki/ILIAS">
+    ILIAS</a>.
   </p>
 
   <ccm-le-img src="https://akless.github.io/akless/ccm/what-is-ccm/image-5.jpg"></ccm-le-img>
@@ -110,29 +102,31 @@
   <h3>2.6 Declarative Creation</h3>
 
   <p>
-    Instead of using a input mask for creation of an app out of a component, you can create an <i>ccm</i>-based app
-    on-the-fly in HTML(5). Here is an example for creating a quiz.
+    Instead of using an input mask for creating an app out of components, you can also create a <i>ccm</i>-based app
+    on-the-fly in HTML. Here is an example for creating a quiz.
   </p>
 
   <ccm-le-img src="https://akless.github.io/akless/ccm/what-is-ccm/image-6.jpg"></ccm-le-img>
 
   <p>
     To use a <i>ccm</i>-based web component, you only have to know the public URL of it's JavaScript file. After that
-    file is loaded, the corresponding custom HTML tag is ready to use. As you see we can now think about HTML-based
-    Domain Specific Language (DSL). For example we have the possibility to define such a DSL for digital learning.
+    file is loaded, the corresponding custom HTML tag is ready to use. As you see we can now create HTML-based
+    <a href="https://en.wikipedia.org/wiki/Domain-specific_language">Domain-specific languages (DSL)</a>. For example
+    we can create such an embedded DSL for digital learning.
   </p>
 
   <h3>2.7 Cross-platform Realtime Collaboration</h3>
 
   <p>
-    Here is another example of a <i>ccm</i>-based app. The different is that this app has collaborative elements. Let's
-    use the same app in another learning platform. As you see, this results in a cross-platform realtime collaboration.
+    Here is another example of a <i>ccm</i>-based app. The difference is that this app has collaborative elements.
+    Let's use the same app in another learning platform. As you see, this results in a cross-platform realtime
+    collaboration.
   </p>
 
   <ccm-le-img src="https://akless.github.io/akless/ccm/what-is-ccm/image-7.jpg"></ccm-le-img>
 
   <p>
-    The point is, that you can use web components inside a platform, even if the platform don't know about it. If you
+    The point is, that you can use web components inside a platform, even if the platform doesn't know about it. If you
     switch to a higher platform version or a different platform the components are working directly without any
     reengineering and migration effort.
   </p>
@@ -140,8 +134,9 @@
   <h3>2.8 More complex Apps</h3>
 
   <p>
-    We also trying out to combine web components to more complex web apps. This is an example of a web app for a complete course,
-    where we have reused components for menu, news, chat, forum and many more like video, quiz and rating.
+    We are experimenting with combining web components into more complex web apps. This is an example of a web app
+    for a complete semester course, where we have reused components for menu, news, chat, forum and many more like
+    video, quiz and rating.
   </p>
 
   <ccm-le-img src="https://akless.github.io/akless/ccm/what-is-ccm/image-8.jpg"></ccm-le-img>
@@ -149,9 +144,9 @@
   <h3>2.9 Provide as a Mobile Web App</h3>
 
   <p>
-    Each <i>ccm</i>-based app can be also simply provided for any mobile devices in form of a mobile web app. This has
-    the advantage that people that uses our course app could access it inside the learning platform, but also quickly
-    via mobile web app. Remember: The collaboration works between all people, no matter of the different access point.
+    Each <i>ccm</i>-based app can also be deployed on any mobile devices as mobile web app. This has the advantage that
+    people that use our course app could access it inside the learning platform, but also as stand-alone mobile web
+    app. Remember: The collaboration works between all instances, no matter from which platform it is accessed.
   </p>
 
   <ccm-le-img src="https://akless.github.io/akless/ccm/what-is-ccm/image-9.jpg"></ccm-le-img>
@@ -160,25 +155,26 @@
 
   <p>
     Let's clarify some terms. In the field of digital learning we distinguish between digital learning content,
-    applications and platforms. In case of <i>ccm</i> the platform is the browser. The applications are made up of the
-    <i>ccm</i>-based web components. But what about the content? We have a content component which allows you to
-    package any web-based content as a <i>ccm</i>-based app. For example: This video is a part of an Open Education
-    Resource (OER).
+    applications and platforms. In case of <i>ccm</i> the platform is the browser. The applications are made up of <i>
+    ccm</i>-based web components. But what about the content? We have a content component which allows for packaging
+    any web-based content into a <i>ccm</i>-based app. For example: This video is a part of an
+    <a href="https://en.wikipedia.org/wiki/Open_educational_resources">Open Education Resource (OER)</a>, packaging
+    both, contents and software as well.
   </p>
 
   <ccm-le-img src="https://akless.github.io/akless/ccm/what-is-ccm/image-10.jpg"></ccm-le-img>
 
   <p>
-    Because the content of this learning unit is packaged as <i>ccm</i>-based app, it now can be reused in any
-    web-based content like already explained before.
+    Because the content of this learning unit is packaged as <i>ccm</i>-based app, it can now be reused in any
+    web-based content.
   </p>
 
   <h3>2.11 icOER and ECL</h3>
 
   <p>
-    Notice that you are able to build interactive and collaborative OERs (icOER) with <i>ccm</i>-based web components.
-    People can use these icOERs from different access points. Together with the aspect of the cross-platform collaboration
-    this leads to what we call Embedded Collaborative Learning (ECL). See our paper to see the definition of ECL.
+    Notice that interactive and collaborative OERs (icOER) can be built with <i>ccm</i>-based web components. These
+    icOERs can be used from any access points. Together with cross-platform collaboration this leads to Embedded
+    Collaborative Learning (ECL), as defined in our paper.
   </p>
 
   <ccm-le-img src="https://akless.github.io/akless/ccm/what-is-ccm/image-11.jpg"></ccm-le-img>
@@ -186,11 +182,10 @@
   <h3>2.12 Ask us</h3>
 
   <p>
-    This short video cannot address all aspects. There is many more to talk about. For example things like data management,
-    user authentication, availability and versioning. We have comprehensive concepts for many things. Please contact us,
-    if you interesting and want more details how this exactly works. Never the less, we want to bring it further and
-    searching for possibilities to finish our research and work. Our project only allows this until the beginning of
-    next year 2018.
+    This short video cannot address all aspects. There is much more to talk about. For example data management, user
+    authentication, availability and versioning. We have comprehensive concepts for all these aspects. Please contact
+    us, if you are interested and want more details. Nevertheless, we want to advance the state of the art of Embedded
+    Collaborative Learning and are searching for support to finish our work.
   </p>
 
   <ccm-le-img src="https://akless.github.io/akless/ccm/what-is-ccm/image-12.jpg"></ccm-le-img>
