@@ -17,7 +17,7 @@ ccm.files[ "configs.min.js" ] = {
     "author": "André Kless"
   },
   "quiz": {
-    "css_layout": [ "ccm.load", "https://akless.github.io/ccm-components/quiz/layouts/weblysleek.css" ],
+    "css_layout": [ "ccm.load", "https://akless.github.io/ccm-components/quiz/resources/weblysleek.css" ],
     "feedback": true,
     "start_button": true,
     "navigation": true,
