@@ -3,47 +3,37 @@
 
 <h1>Bookmarklets</h1>
 
-<h2>OER</h2>
-<ul id="oer"></ul>
+<h2>Lerneinheiten</h2>
+<ul id="le"></ul>
 
 <h2>Quiz</h2>
 <ul id="quiz"></ul>
 
-<h2>Lückentext</h2>
+<h2>Lückentexte</h2>
 <ul id="cloze"></ul>
 
 <script>
-  function addOER( unit, title ) {
+  function add( id, unit, title ) {
     var li = document.createElement( 'li' );
-    li.innerHTML = '<a href="javascript:(function(){var x=document.createElement(\'script\');x.setAttribute(\'src\',\'https://akless.github.io/ccm-components/le/versions/ccm.le-1.0.0.min.js\');document.head.appendChild(x);x=document.createElement(\'link\');x.rel=\'stylesheet\';x.href=\'https://akless.github.io/ccm-components/libs/weblysleekui/font.css\';document.head.appendChild(x);x=document.createElement(\'div\');x.innerHTML=\'<ccm-le-1-0-0 key=[&quot;ccm.get&quot;,&quot;https://akless.github.io/akless/we/'+unit+'/configs.min.js&quot;,&quot;le&quot;]>\';document.body.insertBefore(x,document.body.firstChild);})();">'+title+'</a>';
-    document.body.querySelector('#oer').appendChild( li );
+    li.innerHTML = '<a href="javascript:(function(){var x=document.createElement(\'script\');x.setAttribute(\'src\',\'https://akless.github.io/ccm-components/'+id+'/versions/ccm.'+id+'-1.0.0.min.js\');document.head.appendChild(x);x=document.createElement(\'link\');x.rel=\'stylesheet\';x.href=\'https://akless.github.io/ccm-components/libs/weblysleekui/font.css\';document.head.appendChild(x);x=document.createElement(\'div\');x.innerHTML=\'<ccm-'+id+'-1-0-0 key=[&quot;ccm.get&quot;,&quot;https://akless.github.io/akless/we/'+unit+'/configs.min.js&quot;,&quot;'+id+'&quot;]>\';document.body.insertBefore(x,document.body.firstChild);})();">'+title+'</a>';
+    document.body.querySelector('#'+id).appendChild( li );
   }
-  addOER( 'was-ist-html',      'Lerneinheit: Was ist HTML?' );
-  addOER( 'erste-webseite',    'Lerneinheit: Erste “Hallo Welt!”-Webseite' );
-  addOER( 'html-tag',          'Lerneinheit: Was ist ein HTML-Tag?' );
-  addOER( 'html-grundgeruest', 'Lerneinheit: HTML-Grundgerüst' );
-  addOER( 'html-attribut',     'Lerneinheit: Was ist ein HTML-Attribut?' );
-  addOER( 'tags-attribute',    'Lerneinheit: HTML-Tags und Attribute' );
-  addOER( 'was-ist-css',       'Lerneinheit: Was ist CSS?' );
-  addOER( 'einsatz-von-css',   'Lerneinheit: Einsatz von CSS' );
-  function addQuiz( unit, title ) {
-    var li = document.createElement( 'li' );
-    li.innerHTML = '<a href="javascript:(function(){var x=document.createElement(\'script\');x.setAttribute(\'src\',\'https://akless.github.io/ccm-components/quiz/versions/ccm.quiz-1.0.0.min.js\');document.head.appendChild(x);x=document.createElement(\'link\');x.rel=\'stylesheet\';x.href=\'https://akless.github.io/ccm-components/libs/weblysleekui/font.css\';document.head.appendChild(x);x=document.createElement(\'div\');x.innerHTML=\'<ccm-quiz-1-0-0 key=[&quot;ccm.get&quot;,&quot;https://akless.github.io/akless/we/'+unit+'/configs.min.js&quot;,&quot;quiz&quot;]>\';document.body.insertBefore(x,document.body.firstChild);})();">'+title+'</a>';
-    document.body.querySelector('#quiz').appendChild( li );
-  }
-  addQuiz( 'was-ist-html',      'Quiz zur Lerneinheit: Was ist HTML?' );
-  addQuiz( 'erste-webseite',    'Quiz zur Lerneinheit: Erste “Hallo Welt!”-Webseite' );
-  addQuiz( 'html-tag',          'Quiz zur Lerneinheit: Was ist ein HTML-Tag?' );
-  addQuiz( 'html-grundgeruest', 'Quiz zur Lerneinheit: HTML-Grundgerüst' );
-  addQuiz( 'html-attribut',     'Quiz zur Lerneinheit: Was ist ein HTML-Attribut?' );
-  addQuiz( 'tags-attribute',    'Quiz zur Lerneinheit: HTML-Tags und Attribute' );
-  addQuiz( 'was-ist-css',       'Quiz zur Lerneinheit: Was ist CSS?' );
-  function addCloze( unit, title ) {
-    var li = document.createElement( 'li' );
-    li.innerHTML = '<a href="javascript:(function(){var x=document.createElement(\'script\');x.setAttribute(\'src\',\'https://akless.github.io/ccm-components/cloze/versions/ccm.cloze-1.0.0.min.js\');document.head.appendChild(x);x=document.createElement(\'link\');x.rel=\'stylesheet\';x.href=\'https://akless.github.io/ccm-components/libs/weblysleekui/font.css\';document.head.appendChild(x);x=document.createElement(\'div\');x.innerHTML=\'<ccm-cloze-1-0-0 key=[&quot;ccm.get&quot;,&quot;https://akless.github.io/akless/we/'+unit+'/configs.min.js&quot;,&quot;cloze&quot;]>\';document.body.insertBefore(x,document.body.firstChild);})();">'+title+'</a>';
-    document.body.querySelector('#cloze').appendChild( li );
-  }
-  addCloze( 'html-tag',          'Lückentext zur Lerneinheit: Was ist ein HTML-Tag?' );
-  addCloze( 'html-grundgeruest', 'Lückentext zur Lerneinheit: HTML-Grundgerüst' );
-  addCloze( 'html-attribut',     'Lückentext zur Lerneinheit: Was ist ein HTML-Attribut?' );
+  add( 'le',    'was-ist-html',      'Lerneinheit: Was ist HTML?' );
+  add( 'le',    'erste-webseite',    'Lerneinheit: Erste “Hallo Welt!”-Webseite' );
+  add( 'le',    'html-tag',          'Lerneinheit: Was ist ein HTML-Tag?' );
+  add( 'le',    'html-grundgeruest', 'Lerneinheit: HTML-Grundgerüst' );
+  add( 'le',    'html-attribut',     'Lerneinheit: Was ist ein HTML-Attribut?' );
+  add( 'le',    'tags-attribute',    'Lerneinheit: HTML-Tags und Attribute' );
+  add( 'le',    'was-ist-css',       'Lerneinheit: Was ist CSS?' );
+  add( 'le',    'einsatz-von-css',   'Lerneinheit: Einsatz von CSS' );
+  add( 'quiz',  'was-ist-html',      'Quiz zur Lerneinheit: Was ist HTML?' );
+  add( 'quiz',  'erste-webseite',    'Quiz zur Lerneinheit: Erste “Hallo Welt!”-Webseite' );
+  add( 'quiz',  'html-tag',          'Quiz zur Lerneinheit: Was ist ein HTML-Tag?' );
+  add( 'quiz',  'html-grundgeruest', 'Quiz zur Lerneinheit: HTML-Grundgerüst' );
+  add( 'quiz',  'html-attribut',     'Quiz zur Lerneinheit: Was ist ein HTML-Attribut?' );
+  add( 'quiz',  'tags-attribute',    'Quiz zur Lerneinheit: HTML-Tags und Attribute' );
+  add( 'quiz',  'was-ist-css',       'Quiz zur Lerneinheit: Was ist CSS?' );
+  add( 'cloze', 'html-tag',          'Lückentext zur Lerneinheit: Was ist ein HTML-Tag?' );
+  add( 'cloze', 'html-grundgeruest', 'Lückentext zur Lerneinheit: HTML-Grundgerüst' );
+  add( 'cloze', 'html-attribut',     'Lückentext zur Lerneinheit: Was ist ein HTML-Attribut?' );
 </script>
