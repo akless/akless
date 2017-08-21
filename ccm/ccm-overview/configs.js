@@ -4,7 +4,7 @@
  * @license The MIT License (MIT)
  */
 
-ccm.files[ "configs.js" ] = {
+ccm.files[ "configs.min.js" ] = {
   "le": {
     "css": [ "ccm.load", "https://akless.github.io/ccm-components/le/resources/weblysleek.css", { "context": "head", "url": "https://akless.github.io/ccm-components/libs/weblysleekui/font.css" } ],
     "logo": "https://akless.github.io/akless/we/logo.png",
