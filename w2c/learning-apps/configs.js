@@ -21,7 +21,7 @@ ccm.files[ 'configs.js' ] = {
             "icon_likes": "fa fa-lg fa-chevron-up",
             "icon_dislikes": "fa fa-lg fa-chevron-down",
             "data": { "store": [ "ccm.store", { "store": "voting", "url": "wss://ccm.inf.h-brs.de" } ] },
-            "user": [ "ccm.instance", "https://akless.github.io/ccm-components/user/versions/ccm.user-2.0.0.min.js" ]
+            "user": [ "ccm.instance", "https://akless.github.io/ccm-components/user/versions/ccm.user-2.0.0.min.js", { "sign_on": "demo" } ]
           } ]
       },
       {
