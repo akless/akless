@@ -26,16 +26,20 @@ ccm.files[ 'configs.js' ] = {
         } ]
       },
       {
-        "image": "resources/Folie02.jpg"
+        "image": "resources/Folie02.jpg",
+        "optional_content": [ "ccm.instance", "https://akless.github.io/ccm-components/quiz/versions/ccm.quiz-2.0.0.min.js", [ "ccm.get", "https://akless.github.io/ccm-components/quiz/resources/configs.js", "demo" ] ]
       },
       {
-        "image": "resources/Folie03.jpg"
+        "image": "resources/Folie03.jpg",
+        "optional_content": [ "ccm.instance", "https://akless.github.io/ccm-components/cloze/versions/ccm.cloze-2.0.0.min.js", [ "ccm.get", "https://akless.github.io/ccm-components/cloze/resources/configs.js", "demo" ] ]
       },
       {
         "image": "resources/Folie04.jpg"
+//      "optional_content": [ "ccm.instance", "https://akless.github.io/ccm-components/kanban_board/ccm.kanban_board.min.js", [ "ccm.get", "https://akless.github.io/ccm-components/kanban_board/resources/configs.js", "demo" ] ]
       },
       {
-        "image": "resources/Folie05.jpg"
+        "image": "resources/Folie05.jpg",
+        "optional_content": [ "ccm.instance", "https://akless.github.io/ccm-components/teambuild/versions/ccm.teambuild-1.0.0.min.js", [ "ccm.get", "https://akless.github.io/ccm-components/teambuild/resources/configs.js", "demo" ] ]
       },
       {
         "image": "resources/Folie06.jpg"
