@@ -12,18 +12,20 @@ ccm.files[ 'configs.js' ] = {
         "audio": "resources/jingle.mp3",
         "description": "Zu jeder Folie kann eine Beschreibung mit zusätzlichen Erläuterungen des Lehrenden hinterlegt werden.",
         "optional_content": [ "ccm.instance", "https://tkless.github.io/ccm-components/comment/versions/ccm.comment-1.0.0.min.js", {
+          "comment_template": "expanded",
           "data": {
             "store": [ "ccm.store", { "store": "slidecast_comments", "url": "https://ccm.inf.h-brs.de" } ],
             "key": "learning_apps"
           },
           "user": [ "ccm.instance", "https://akless.github.io/ccm-components/user/versions/ccm.user-2.0.0.min.js", { "sign_on": "demo" } ],
-          "voting": [ "ccm.component", "https://tkless.github.io/ccm-components/voting/versions/ccm.voting-1.0.0.min.js", {
-            "icon_likes": "fa fa-lg fa-chevron-up",
-            "icon_dislikes": "fa fa-lg fa-chevron-down",
-            "data": { "store": [ "ccm.store", { "store": "voting", "url": "wss://ccm.inf.h-brs.de" } ] },
-            "user": [ "ccm.instance", "https://akless.github.io/ccm-components/user/versions/ccm.user-2.0.0.min.js", { "sign_on": "demo" } ]
-          } ]
-        } ]
+          "voting": [ "ccm.component", "https://tkless.github.io/ccm-components/thumb_rating/versions/ccm.thumb_rating-1.0.0.min.js",
+            {
+              "buttons": "true",
+              "data": { "store": [ "ccm.store", { "store": "voting", "url": "wss://ccm.inf.h-brs.de" } ] },
+              "user": [ "ccm.instance", "https://akless.github.io/ccm-components/user/versions/ccm.user-2.0.0.min.js", { "sign_on": "demo" } ]
+            }
+          ]
+        }]
       },
       {
         "image": "resources/Folie02.jpg",
