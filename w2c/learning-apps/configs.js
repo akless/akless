@@ -41,7 +41,7 @@ ccm.files[ 'configs.js' ] = {
       },
       {
         "image": "https://akless.github.io/akless/w2c/learning-apps/resources/Folie05.jpg",
-        "optional_content": [ "ccm.instance", "https://akless.github.io/ccm-components/teambuild/versions/ccm.teambuild-1.0.0.min.js", [ "ccm.get", "https://akless.github.io/ccm-components/teambuild/resources/configs.min.js", "showcase" ] ]
+        "optional_content": [ "ccm.instance", "https://akless.github.io/ccm-components/teambuild/versions/ccm.teambuild-1.0.0.min.js", [ "ccm.get", "https://akless.github.io/ccm-components/teambuild/resources/configs.min.js", "clicker" ] ]
       },
       {
         "image": "https://akless.github.io/akless/w2c/learning-apps/resources/Folie06.jpg",
