@@ -25,7 +25,7 @@ ccm.files[ 'configs.js' ] = {
               "user": [ "ccm.instance", "https://akless.github.io/ccm-components/user/versions/ccm.user-2.0.0.min.js", { "sign_on": "demo" } ]
             }
           ]
-        }]
+        } ]
       },
       {
         "image": "https://akless.github.io/akless/w2c/learning-apps/resources/Folie02.jpg",
