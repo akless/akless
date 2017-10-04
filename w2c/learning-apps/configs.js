@@ -10,7 +10,7 @@ ccm.files[ 'configs.js' ] = {
       {
         "image": "https://akless.github.io/akless/w2c/learning-apps/resources/Folie01.jpg",
         "audio": "https://akless.github.io/akless/w2c/learning-apps/resources/jingle.mp3",
-        "description": "Zu jeder Folie kann eine individuelle Beschreibung mit zusätzlichen Erläuterungen des Lehrenden hinterlegt werden.",
+        "description": "Zu jeder Folie kann eine individuelle Beschreibung mit zusätzlichen Erläuterungen des Lehrenden hinterlegt werden. Zudem kann jeder Folie auch eine Audioaufnahme zugeordnet werden. In diesem Fall ist es nur eine Melodie: Der Jingle des Projekts \"work&study\".",
         "optional_content": [ "ccm.instance", "https://tkless.github.io/ccm-components/comment/versions/ccm.comment-1.0.0.min.js", {
           "comment_template": "expanded",
           "data": {
@@ -37,18 +37,18 @@ ccm.files[ 'configs.js' ] = {
       },
       {
         "image": "https://akless.github.io/akless/w2c/learning-apps/resources/Folie04.jpg",
-        "optional_content": [ "ccm.instance", "https://akless.github.io/ccm-components/kanban_board/ccm.kanban_board.min.js", [ "ccm.get", "https://akless.github.io/ccm-components/kanban_board/resources/configs.min.js", "showcase" ] ]
-      },
-      {
-        "image": "https://akless.github.io/akless/w2c/learning-apps/resources/Folie05.jpg",
         "optional_content": [ "ccm.instance", "https://akless.github.io/ccm-components/teambuild/versions/ccm.teambuild-1.0.0.min.js", [ "ccm.get", "https://akless.github.io/ccm-components/teambuild/resources/configs.min.js", "demo" ] ]
       },
       {
-        "image": "https://akless.github.io/akless/w2c/learning-apps/resources/Folie06.jpg"
+        "image": "https://akless.github.io/akless/w2c/learning-apps/resources/Folie05.jpg",
+        "optional_content": [ "ccm.instance", "https://akless.github.io/ccm-components/teambuild/versions/ccm.teambuild-1.0.0.min.js", [ "ccm.get", "https://akless.github.io/ccm-components/teambuild/resources/configs.min.js", "showcase" ] ]
       },
       {
-        "image": "https://akless.github.io/akless/w2c/learning-apps/resources/Folie07.jpg",
-        "audio": "https://akless.github.io/akless/w2c/learning-apps/resources/jingle.mp3  "
+        "image": "https://akless.github.io/akless/w2c/learning-apps/resources/Folie06.jpg",
+        "optional_content": [ "ccm.instance", "https://akless.github.io/ccm-components/kanban_board/ccm.kanban_board.min.js", [ "ccm.get", "https://akless.github.io/ccm-components/kanban_board/resources/configs.min.js", "showcase" ] ]
+      },
+      {
+        "image": "https://akless.github.io/akless/w2c/learning-apps/resources/Folie07.jpg"
       },
       {
         "image": "https://akless.github.io/akless/w2c/learning-apps/resources/Folie08.jpg"
