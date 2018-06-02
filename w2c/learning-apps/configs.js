@@ -33,7 +33,7 @@ ccm.files[ 'configs.js' ] = {
       },
       {
         "image": "https://akless.github.io/akless/w2c/learning-apps/resources/Folie03.jpg",
-        "optional_content": [ "ccm.instance", "https://akless.github.io/ccm-components/cloze/versions/ccm.cloze-2.0.0.min.js", [ "ccm.get", "https://akless.github.io/ccm-components/cloze/resources/configs.min.js", "demo" ] ]
+        "optional_content": [ "ccm.instance", "https://akless.github.io/ccm-components/cloze/versions/ccm.cloze-2.2.0.min.js", [ "ccm.get", "https://akless.github.io/ccm-components/cloze/resources/configs.min.js", "demo" ] ]
       },
       {
         "image": "https://akless.github.io/akless/w2c/learning-apps/resources/Folie04.jpg",
