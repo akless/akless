@@ -12,22 +12,20 @@
 
     Instance: function () {
 
-      const self = this;
-
       this.init = callback => {
 
-        self.hello.name = self.owner;
+        this.hello.name = this.owner;
 
         callback();
       };
 
       this.start = callback => {
 
-        self.element.innerHTML = '<h1>Home</h1><div id="hello"></div><p>Welcome home.</p>';
+        this.element.innerHTML = '<h1>Home</h1><div id="hello"></div><p>Welcome home.</p>';
 
-        self.hello.start( () => {
+        this.hello.start( () => {
 
-          self.element.querySelector( '#hello' ).appendChild( self.hello.root );
+          this.element.querySelector( '#hello' ).appendChild( this.hello.root );
 
           callback && callback();
 
