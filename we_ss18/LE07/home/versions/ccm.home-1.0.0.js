@@ -6,31 +6,16 @@
     ccm: 'https://ccmjs.github.io/ccm/versions/ccm-16.6.1.js',
 
     config: {
-      owner: 'John',
-      hello: [ 'ccm.instance', '../hello/versions/ccm.hello-1.0.0.js' ]
+      owner: 'John'
     },
 
     Instance: function () {
-
-      this.init = callback => {
-
-        this.hello.name = this.owner;
-
-        callback();
-      };
 
       this.start = callback => {
 
         this.element.innerHTML = '<h1>Home</h1><div id="hello"></div><p>Welcome home.</p>';
 
-        this.hello.start( () => {
-
-          this.element.querySelector( '#hello' ).appendChild( this.hello.root );
-
-          callback && callback();
-
-        } );
-
+        callback && callback();
       }
 
     }

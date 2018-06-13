@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Not my solution! Student solution. -->
+
+<head>
+  <meta charset="UTF-8">
+  <title>SVG-Clock</title>
+</head>
+<body>
+
+<svg width="400" viewBox="0 0 100 100">
+  <g transform="translate(50,50)">
+    <circle r="48" stroke="black" stroke-width="1" fill="white"/>
+    <line id="hour" y1="0" y2="-20" stroke="black" stroke-width="1" />
+    <line id="minute" y1="0" y2="-30" stroke="grey" stroke-width="1" />
+    <line id="second" y1="0" y2="-35" stroke="red" stroke-width="1" />
+  </g>
+</svg>
+
+<script>
+  const hour = document.getElementById("hour");
+  const minute = document.getElementById("minute");
+  const second = document.getElementById("second");
+  function setHour(date){
+    hour.style.transform = "rotate(" + (30 * date.getHours() + date.getMinutes() / 2) + "deg)";
+  }
+  function setMinute(date){
+    minute.style.transform = "rotate(" + (6 * date.getMinutes() + date.getSeconds() / 10) + "deg)";
+  }
+  function setSecond(date){
+    second.style.transform = "rotate(" + (6 * date.getSeconds()) + "deg)";
+  }
+  function setTime(){
+    const date = new Date();
+    setHour(date);
+    setMinute(date);
+    setSecond(date);
+  }
+
+  setTime();
+  setInterval(() => {
+    setTime();
+  }, 1000);
+</script>
+
+</body>
+</html>

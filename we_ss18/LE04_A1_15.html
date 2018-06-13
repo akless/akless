@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<script>
+
+  function pubSub() {
+
+    var publications = [];
+    var subscribers = [];
+
+    return {
+      publish: function ( publication ) {
+        publications.push( publication );
+        subscribers.map( function ( subscriber ) {
+          subscriber( publications.slice() );
+        } );
+      },
+      subscribe: function ( subscriber ) {
+        subscribers.push( subscriber );
+      }
+    };
+
+  }
+
+  var obj = pubSub();
+
+  obj.subscribe( function ( publications ) { publications.push( 'Virus!' ); } );
+  obj.subscribe( console.log );
+  obj.subscribe( alert );
+  obj.publish( 'Hello, World!' );
+  obj.publish( 'Welcome.' );
+
+</script>

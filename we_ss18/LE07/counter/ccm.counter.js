@@ -1,26 +1,40 @@
 {
   var component = {
 
-    name: 'hello',
-    version: [ 1, 0, 0 ],
+    name: 'counter',
 
-    ccm: {
-      url: 'https://ccmjs.github.io/ccm/versions/ccm-16.6.1.js',
-      integrity: 'sha384-zCsUcQEg4NqpF91vJatXIU7aDUcYENcTCchNCwisDiA1ZzTR+ShsqJtmYIHG120k',
-      crossorigin: 'anonymous'
-    },
+    ccm: 'https://ccmjs.github.io/ccm/versions/ccm-16.6.1.js',
 
     config: {
-      name: 'World'
+      counter: 0
     },
 
     Instance: function () {
 
       this.start = callback => {
 
-        this.element.innerHTML = 'Hello, ' + this.name + '!';
+        const update = () => {
+
+          let string = '';
+          for ( let i = 0; i < this.counter; i++ )
+            string += '&#9733;';
+
+          this.element.innerHTML = string;
+
+          this.ccm.helper.prepend( this.element, button );
+        };
+
+        const button = document.createElement( 'button' );
+        button.innerText = 'click';
+        button.addEventListener( 'click', () => {
+          this.counter++;
+          update();
+        } );
+
+        update();
 
         callback && callback();
+
       }
 
     }

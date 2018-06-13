@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style>
+  li:nth-child(even) { background: snow; }
+  li:nth-child(odd ) { background: #CCC; }
+</style>
+
+<h1>&nbsp;</h1>
+<ul></ul>
+
+<script>
+
+  const h1 = document.querySelector( 'h1' );
+  const ul = document.querySelector( 'ul' );
+
+  const numbers = [
+    'eins',
+    'zwei',
+    'drei',
+    'vier',
+    'fünf',
+    'sechs',
+    'sieben',
+    'acht',
+    'neun',
+    'zehn',
+    'elf',
+    'zwölf',
+    'dreizehn',
+    'vierzehn',
+    'fünfzehn',
+    'sechzehn',
+    'siebzehn',
+    'achzehn',
+    'neunzehn',
+    'zwanzig',
+    'einundzwanzig',
+    'zweiundzwanzig',
+    'dreiundzwanzig',
+    'vierundzwanzig',
+    'fünfundzwanzig',
+    'sechsundzwanzig',
+    'siebenundzwanzig',
+    'achtundzwanzig',
+    'neunundzwanzig',
+    'dreißig',
+    'einunddreißig',
+    'zweiunddreißig',
+    'dreiunddreißig',
+    'vierunddreißig',
+    'fünfunddreißig',
+    'sechsunddreißig',
+    'siebenunddreißig',
+    'achtunddreißig',
+    'neununddreißig',
+    'vierzig',
+    'einundvierzig',
+    'zweiundvierzig',
+    'dreiundvierzig',
+    'vierundvierzig',
+    'fünfundvierzig',
+    'sechsundvierzig',
+    'siebenundvierzig',
+    'achtundvierzig',
+    'neunundvierzig',
+    'fünfzig',
+    'einundfünfzig',
+    'zweiundfünfzig',
+    'dreiundfünfzig',
+    'vierundfünfzig',
+    'fünfundfünfzig',
+    'sechsundfünfzig',
+    'siebenundfünfzig',
+    'achtundfünfzig',
+    'neunundfünfzig',
+    'sechzig',
+    'einundsechzig',
+    'zweiundsechzig',
+    'dreiundsechzig',
+    'vierundsechzig',
+    'fünfundsechzig',
+    'sechsundsechzig',
+    'siebenundsechzig',
+    'achtundsechzig',
+    'neunundsechzig',
+    'siebzig',
+    'einundsiebzig',
+    'zweiundsiebzig',
+    'dreiundsiebzig',
+    'vierundsiebzig',
+    'fünfundsiebzig',
+    'sechsundsiebzig',
+    'siebenundsiebzig',
+    'achtundsiebzig',
+    'neunundsiebzig',
+    'achtzig',
+    'einundachtzig',
+    'zweiundachtzig',
+    'dreiundachtzig',
+    'vierundachtzig',
+    'fünfundachtzig',
+    'sechsundachtzig',
+    'siebenundachtzig',
+    'achtundachtzig',
+    'neunundachtzig',
+    'neunzig',
+    'einundneunzig',
+    'zweiundneunzig',
+    'dreiundneunzig',
+    'vierundneunzig',
+    'fünfundneunzig',
+    'sechsundneunzig',
+    'siebenundneunzig',
+    'achtundneunzig',
+    'neunundneunzig',
+    'einhundert'
+  ];
+
+  numbers.map( ( number, i ) => {
+    const nr = ( i + 1 ).toString();
+    const li = document.createElement( 'li' );
+    li.id = nr;
+    li.innerHTML = number;
+    li.onmouseover = () => h1.innerHTML = nr;
+    ul.appendChild( li )
+  } );
+  ul.onmouseout = () => h1.innerHTML = '&nbsp;'
+
+</script>

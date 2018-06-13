@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<h1></h1>
+
+<script>
+
+  {
+
+    const h1 = document.querySelector( 'h1' );
+
+    clock();
+    window.setInterval( clock, 1000 );
+
+    function clock() {
+      h1.innerHTML = new Date().toLocaleTimeString();
+    }
+
+  }
+
+</script>
