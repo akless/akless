@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<script src="https://ccmjs.github.io/ccm/versions/ccm-16.6.1.js"></script>
+<script>
+
+  useCallbackHell(      () => console.log( 'callback hell finished!' ) );
+  useAsyncAwait().then( () => console.log(   'async await finished!' ) );
+
+  function useCallbackHell( callback ) {
+
+    ccm.store( { store: 'test' }, store =>
+      store.set( { key: 'foo', bar: 'baz' }, () =>      // Create
+        store.get( 'foo', () =>                         // Read
+          store.set( { key: 'foo', bar: 'bug' }, () =>  // Update
+            store.del( 'foo', callback )                // Delete
+          )
+        )
+      )
+    );
+
+  }
+
+  async function useAsyncAwait() {
+
+    store = await ccm_store( { store: 'test' } );
+    await store_set( { key: 'foo', bar: 'baz' } );  // Create
+    await store_get( 'foo' );                       // Read
+    await store_set( { key: 'foo', bar: 'bug' } );  // Update
+    await store_del( 'foo' );                       // Delete
+
+  }
+
+  function ccm_store( settings ) {
+    return new Promise( resolve => ccm.store( settings, resolve ) );
+  }
+
+  function store_get( key ) {
+    return new Promise( resolve => store.get( key, resolve ) );
+  }
+
+  function store_set( priodata ) {
+    return new Promise( resolve => store.set( priodata, resolve ) );
+  }
+
+  function store_del( key ) {
+    return new Promise( resolve => store.del( key, resolve ) );
+  }
+
+</script>

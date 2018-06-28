@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<table></table>
+
+<script>
+
+  const table = document.getElementsByTagName( 'table' )[ 0 ];
+  const g1 = generator1();
+  const g2 = generator2();
+  const g3 = generator3();
+  waitAndAppend();
+
+  function waitAndAppend() {
+    window.setTimeout( () => {
+      const tr = document.createElement( 'tr' );
+      let td = document.createElement( 'td' ); td.innerHTML = g1.next().value; tr.appendChild( td );
+          td = document.createElement( 'td' ); td.innerHTML = g2.next().value; tr.appendChild( td );
+          td = document.createElement( 'td' ); td.innerHTML = g3.next().value; tr.appendChild( td );
+      table.appendChild( tr );
+      waitAndAppend();
+    }, 1000 );
+  }
+
+  function* generator1() {
+    let i = -2;
+    while ( true )
+      yield i += 2;
+  }
+
+  function* generator2() {
+    let i = 0;
+    while ( true )
+      yield i * i++;
+  }
+
+  function* generator3() {
+    let i = 1;
+    while ( true ) {
+      while( !isPrime( i ) ) i += 2;
+      yield i;
+      i += 2;
+    }
+  }
+
+  function isPrime( num ) {
+    for ( let i = 2; i < num; i++ )
+      if ( num % i === 0 ) return false;
+    return num !== 1;
+  }
+
+</script>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<body>
+<script>
+  const url = 'https://akless.github.io/akless/we_ss18/';
+  Promise.all( [ url + 'A.txt', url + 'B.txt' ].map( url =>
+    fetch( url ).then( response => response.text() ) ) ).then( data =>
+      {
+        const a = data[ 0 ].split( '\n' );
+        const b = data[ 1 ].split( '\n' );
+        for ( let i = 0; i < a.length; i++ )
+          document.body.innerHTML += ( i ? '<br>' : '' ) + a[ i ] + b[ i ];
+      } );
+</script>
