@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<script>
+
+  customElements.define( 'w3c-counter', class Counter extends HTMLElement {
+
+    constructor () {
+      super();
+      this.i = 0;
+      this.addEventListener( 'click', this.increment );
+    }
+
+    connectedCallback() {
+      this.increment();
+    }
+
+    increment() {
+      this.innerHTML = ++this.i;
+    }
+
+  } );
+
+</script>
+
+<w3c-counter></w3c-counter>
