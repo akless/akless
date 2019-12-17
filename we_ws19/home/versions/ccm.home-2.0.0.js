@@ -1,10 +1,10 @@
 ( () => {
   const component = {
-    name: 'home',
-    ccm: 'https://ccmjs.github.io/ccm/ccm.js',
+    name: 'home', version: [ 2, 0, 0 ],
+    ccm: 'https://ccmjs.github.io/ccm/versions/ccm-24.1.1.js',
     config: {
       owners: [ 'Mandy', 'Andy', 'Candy' ],
-      hello: [ 'ccm.component', '../hello/ccm.hello.js' ]
+      hello: [ 'ccm.component', '../hello/versions/ccm.hello-1.0.0.js' ]
     },
     Instance: function () {
       this.start = async () => {
