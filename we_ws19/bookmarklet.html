@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<div id="app"></div>
+<div id="window"></div>
+<div id="bookmarklet"></div>
+
+<script src="https://ccmjs.github.io/ccm/versions/ccm-24.1.1.js"></script>
+<script>
+  ( async () => {
+
+    const helper = await ccm.load( 'https://ccmjs.github.io/akless-components/modules/helper.mjs' );
+    console.log( 'helper', helper );
+
+    const app = await ccm.instance( "https://ccmjs.github.io/akless-components/live_poll/versions/ccm.live_poll-2.3.2.js",
+      [ "ccm.get", { "name": "dms-configs", "url": "https://ccm2.inf.h-brs.de" }, "1576529201083X5634723293385682" ] );
+    ccm.helper.setContent( document.querySelector( '#app' ), app.root );
+    await app.start();
+    console.log( 'app', app );
+
+    const dependency = [ "ccm.get", { "name": "dms-configs", "url": "https://ccm2.inf.h-brs.de" }, "1576529201083X5634723293385682" ];
+    const config = await ccm.helper.solveDependency( ccm.helper.clone( dependency ) );
+    console.log( 'config', config );
+
+    const window = await ccm.instance( 'https://ccmjs.github.io/akless-components/window/ccm.window.js', {
+      "app": [ "ccm.start", "https://ccmjs.github.io/akless-components/live_poll/versions/ccm.live_poll-2.3.2.js", ccm.helper.clone( dependency ) ],
+//    "icon": "https://ccmjs.github.io/akless-components/live_poll/resources/icon.svg",
+      "title": "Live Poll"
+    } );
+    ccm.helper.setContent( document.querySelector( '#window' ), window.root );
+    await window.start();
+    console.log( 'window', window );
+
+    const bookmarklet = await window.bookmarklet();
+    console.log( bookmarklet );
+
+    ccm.helper.setContent( document.querySelector( '#bookmarklet' ), ccm.helper.html( { tag: 'a', href: bookmarklet, inner: 'Bookmarklet' } ) );
+
+  } )();
+</script>
