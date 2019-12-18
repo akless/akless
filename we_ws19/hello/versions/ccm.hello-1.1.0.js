@@ -1,19 +1,17 @@
 ( () => {
   const component = {
-    name: 'home',
-    ccm: 'https://ccmjs.github.io/ccm/ccm.js',
+    name: 'hello', version: [ 1, 1, 0 ],
+    ccm: 'https://ccmjs.github.io/ccm/versions/ccm-24.1.1.js',
     config: {
-      owner: 'World',
-      hello: [ 'ccm.instance', '../hello/ccm.hello.js' ]
+      name: 'World'
     },
     Instance: function () {
-      this.init = async () => {
-        this.hello.name = this.owner;
-      };
       this.start = async () => {
-        this.element.innerHTML = '<h1>Home</h1><div id="hello"></div><p>Welcome home.</p>';
-        this.element.querySelector( '#hello' ).appendChild( this.hello.root );
-        await this.hello.start();
+        this.element.innerHTML = `Hello, ${this.name}!`;
+      };
+      this.update = async ( key, value ) => {
+        this[ key ] = value;
+        await this.start();
       };
     }
   };

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<div></div>
+
+<script src="https://ccmjs.github.io/ccm/ccm.js"></script>
+
+<script>
+  ccm.start( "https://ccmjs.github.io/akless-components/quiz/ccm.quiz.js", {  /* app configuration */
+    "root": document.querySelector( "div" ),
+    "css": [ "ccm.load", "https://ccmjs.github.io/akless-components/quiz/resources/weblysleek.css" ],
+    "questions": [
+      {
+        "text": "How many of these answers are correct?",
+        "description": "Select the correct answer from the following answers.",
+        "answers": [
+          { "text": "one", "correct": true, "comment": "Because you can't choose more than one answer." },
+          { "text": "two" },
+          { "text": "three" }
+        ],
+        "input": "radio"
+      }
+    ],
+    "feedback": true,
+    "onfinish": { "log": true }
+  } );
+</script>

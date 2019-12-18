@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<div></div>
+<script src="https://ccmjs.github.io/ccm/ccm.js"></script>
+<script>
+  ( async () => {
+
+    const component = await window.ccm.component( 'hello/versions/ccm.hello-1.1.0.js', {
+      "name": "John"
+    } );
+
+    const instance = await component.instance( {
+      "key": [ "ccm.get", "hello/resources/resources.js", "demo" ],
+      "name": "Jake",
+      root: document.querySelector( 'div' )
+    } );
+
+    await instance.start();
+    await instance.update( 'name', 'Julia' );
+  } )();
+</script>
