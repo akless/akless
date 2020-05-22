@@ -118,11 +118,11 @@ img {
   border: 1px solid black;
   padding: 0 5px;
   height: 110px;
+  overflow: hidden;
 }
 
 .text p {
   margin: 5px 0;
-  overflow: hidden;
 }
 
 .card:not(.creature) .attributes {
