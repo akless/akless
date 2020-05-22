@@ -45,8 +45,8 @@
   position: absolute;
   backface-visibility: hidden;
 
-  width: 420px;
-  height: 295px;
+  width: 295px;
+  height: 420px;
   border: 10px solid black;
   border-radius: 10px;
   background-color: snow;
