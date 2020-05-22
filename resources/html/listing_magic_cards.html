@@ -1,0 +1,70 @@
+<!--
+@overview HTML templates for a listing of magic cards
+@author André Kless <andre.kless@web.de.de> 2020
+-->
+
+<ccm-template key="main">
+  <div id="main">
+    <div id="top">
+      <div id="reload" onclick="%%" title="Reload">↻</div>
+    </div>
+    <div id="entries"></div>
+  </div>
+</ccm-template>
+
+<ccm-template key="entry">
+  <div class="entry flip-card">
+    <div class="flip">
+      <div class="front">
+        <div class="card %classes%">
+          <div class="header">
+            <div class="title">%title%</div>
+            <div class="mana">%mana%</div>
+          </div>
+          <div class="image">
+            <img src="%image%">
+         </div>
+          <div class="line">
+            <div class="type">%type%</div>
+            <div class="edition"><img src="%edition%"></div>
+          </div>
+          <div class="text">%text%</div>
+          <div class="footer">
+            <div class="left">
+              <span class="author">%author%</span><br>
+              %release% %company%
+            </div>
+            <div class="right">
+              <div class="attributes">%strength%/%resilience%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="back">
+        <div class="card %back.classes%">
+          <div class="header">
+            <div class="title">%back.title%</div>
+            <div class="mana">%back.mana%</div>
+          </div>
+          <div class="image">
+            <img src="%back.image%">
+          </div>
+          <div class="line">
+            <div class="type">%back.type%</div>
+            <div class="edition"><img src="%back.edition%"></div>
+          </div>
+          <div class="text">%back.text%</div>
+          <div class="footer">
+            <div class="left">
+              <span class="author">%back.author%</span><br>
+              %back.release% %back.company%
+            </div>
+            <div class="right">
+              <div class="attributes">%back.strength%/%back.resilience%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ccm-template>
