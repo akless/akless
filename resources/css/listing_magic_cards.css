@@ -83,6 +83,7 @@
 img {
   width: 16px;
   vertical-align: bottom;
+  padding: 0 1px;
 }
 
 .image {
@@ -93,6 +94,7 @@ img {
   width: 280px;
   height: 205px;
   border: 1px solid black;
+  padding: 0;
 }
 
 .transform {
