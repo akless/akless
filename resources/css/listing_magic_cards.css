@@ -28,7 +28,7 @@
 
 .flip-card {
   background-color: transparent;
-  width: 320px;
+  width: 315px;
   height: 440px;
   perspective: 1000px;
 }
@@ -45,11 +45,13 @@
   position: absolute;
   backface-visibility: hidden;
 
-  width: 300px;
-  height: 420px;
+  width: 420px;
+  height: 295px;
   border: 10px solid black;
   border-radius: 10px;
   background-color: snow;
+  font-family: 'Times New Roman', sans-serif;
+  line-height: 16px;
 }
 
 .back {
@@ -89,7 +91,7 @@ img {
 
 .image img {
   width: 280px;
-  height: 200px;
+  height: 205px;
   border: 1px solid black;
 }
 
@@ -112,14 +114,15 @@ img {
 }
 
 .text {
-  margin: 3px 5px 0;
+  margin: 3px 5px;
   border: 1px solid black;
   padding: 0 5px;
-  height: 120px;
+  height: 110px;
 }
 
 .text p {
-  margin: 3px 0;
+  margin: 5px 0;
+  overflow: hidden;
 }
 
 .card:not(.creature) .attributes {
@@ -129,11 +132,13 @@ img {
 .footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 33px;
 }
 
 .footer .left {
   font-size: small;
-  padding: 0 5px 3px;
+  padding: 0 5px;
   font-style: italic;
   white-space: nowrap;
 }
