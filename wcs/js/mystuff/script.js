@@ -16,7 +16,7 @@ async function renderList() {
   // set content of <body>
   document.body.innerHTML = `
 <div class="container-fluid">
-  <h1>My Stuff Frontend <span class="badge badge-warning">JavaScript</span></h1>
+  <h1>MyStuff Frontend <span class="badge badge-warning">JavaScript</span></h1>
   <table class="table table-hover">
     <thead class="thead-light">
       <tr>
