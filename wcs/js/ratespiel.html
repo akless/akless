@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<script>
+  const number = Math.ceil( Math.random() * 100 );
+  alert( 'Ich denke mir eine Zahl zwischen 1 und 100. Du hast 10 Versuche sie zu erraten.' );
+  let i, input;
+  for ( i = 1; i <= 10; i++ ) {
+    input = prompt( i + '. Versuch' );
+    if ( !input ) break;
+    if ( number < input )
+      alert( 'Meine Zahl ist kleiner.' );
+    else if ( number > input )
+      alert( 'Meine Zahl ist größer.' );
+    else {
+      alert( 'Tatsächlich! Meine Zahl ist die ' + number + '. Glückwunsch! Du hast ' + i + ' Versuche gebraucht.' );
+      break;
+    }
+  }
+  if ( i > 10 || !input )
+    alert( 'Schade, du hast leider verloren. Meine Zahl war die ' + number + '.' );
+</script>

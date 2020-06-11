@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<script src="https://ccmjs.github.io/ccm/versions/ccm-17.0.0.js"></script>
+<script src="https://ccmjs.github.io/ccm/versions/ccm-18.0.0.js"></script>
+<script>
+
+  useCallbackHell(      () => console.log( 'callback hell finished!' ) );
+  useAsyncAwait().then( () => console.log(   'async await finished!' ) );
+
+  function useCallbackHell( callback ) {
+
+    ccm[ '17.0.0' ].store( { store: 'test' }, store =>
+      store.set( { key: 'foo', bar: 'baz' }, () =>      // Create
+        store.get( 'foo', () =>                         // Read
+          store.set( { key: 'foo', bar: 'bug' }, () =>  // Update
+            store.del( 'foo', callback )                // Delete
+          )
+        )
+      )
+    );
+
+  }
+
+  async function useAsyncAwait() {
+
+    const store = await ccm[ '18.0.0' ].store( { store: 'test' } );
+    await store.set( { key: 'foo', bar: 'baz' } );  // Create
+    await store.get( 'foo' );                       // Read
+    await store.set( { key: 'foo', bar: 'bug' } );  // Update
+    await store.del( 'foo' );                       // Delete
+
+  }
+
+</script>
