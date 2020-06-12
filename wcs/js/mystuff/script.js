@@ -82,6 +82,7 @@ async function renderList() {
       await renderList();
     } );
   } );
+
 }
 
 /**
@@ -91,8 +92,10 @@ async function renderList() {
  * @returns {Promise<void>}
  */
 async function renderForm( item = {}, readonly ) {
+
   const {id, name, location, amount, description} = item;
-  const form = `
+
+  document.body.innerHTML = `
 <div class="container-fluid">
   <br>
   <form id="myform">
@@ -119,7 +122,6 @@ async function renderForm( item = {}, readonly ) {
   <button class="btn btn-secondary">Back to List</button>
 </div>
   `;
-  document.body.innerHTML = form;
 
   // no need for submit button if all input fields are not editable => remove submit button
   readonly && document.querySelector( 'button' ).parentElement.removeChild( document.querySelector( 'button' ) );
