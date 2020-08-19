@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<style>
+  section {
+    margin: 1em 0;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1em;
+  }
+  #chart {
+    margin-bottom: 2em;
+  }
+</style>
+<script src="https://ccmjs.github.io/ccm/versions/ccm-25.5.3.js"></script>
+<script>
+  // IIFE => Immediate Invoked Function Expression
+  ( async () => {
+    const xml = await ccm.load( { url: 'data.xml', method: 'GET' } );
+
+    const region = xml.querySelector('region').innerHTML;
+    const kategorie = xml.querySelector('kategorie_name').innerHTML;
+    const stand = xml.querySelector('stand').innerHTML;
+    const von = xml.querySelector('von').innerHTML;
+    const bis = xml.querySelector('bis').innerHTML;
+
+    document.body.innerHTML = `
+      <div class="container mt-2 mb-2">
+        <div id="chart"></div>
+        <header>
+          <blockquote class="blockquote">
+            <p class="mb-0">Marktdaten - ${kategorie} - ${region}</p>
+            <footer class="blockquote-footer">Stand: <cite>${stand}</cite>, Zeitraum von <cite>${von} bis ${bis}</cite></footer>
+          </blockquote>
+        </header>
+        <main></main>
+      </div>
+    `;
+
+    const data = [];
+    xml.querySelectorAll( 'baustein' ).forEach( ( xml_baustein, i ) => {
+      const values = [];
+      xml_baustein.querySelectorAll( 'wert' ).forEach( wert => values.push( parseInt( ( wert.innerHTML === '-' ? '0' : wert.innerHTML ).replace('.','') ) ) );
+      data[ i ] = {
+        name: xml_baustein.querySelector( 'baustein_name' ).innerHTML,
+        data: values
+      }
+    } );
+
+    ccm.start( 'https://ccmjs.github.io/akless-components/highchart/versions/ccm.highchart-3.0.2.js', {
+      "root": document.querySelector( '#chart' ),
+      "settings": {
+        "title": {
+          "text": `Marktdaten - ${kategorie} - ${region}`
+        },
+        "subtitle": {
+          "text": `Stand: <cite>${stand}</cite>, Zeitraum von <cite>${von} bis ${bis}</cite>`
+        },
+        "yAxis": {
+          "title": {
+            "text": "MWh"
+          }
+        },
+        "legend": {
+          "layout": "vertical",
+          "align": "right",
+          "verticalAlign": "middle"
+        },
+        "plotOptions": {
+          "series": {
+            "label": {
+              "connectorAllowed": false
+            }
+          }
+        },
+        "series": data,
+        "responsive": {
+          "rules": [
+            {
+              "condition": {
+                "maxWidth": 500
+              },
+              "chartOptions": {
+                "legend": {
+                  "layout": "horizontal",
+                  "align": "center",
+                  "verticalAlign": "bottom"
+                }
+              }
+            }
+          ]
+        }
+      }
+    } );
+
+
+
+    const html_main = document.querySelector( 'main' );
+
+    xml.querySelectorAll( 'baustein' ).forEach( ( xml_baustein, i ) => {
+      console.log( xml_baustein );
+      const einheit = xml_baustein.querySelector( 'einheit' ).innerHTML;
+      const name = xml_baustein.querySelector( 'baustein_name' ).innerHTML;
+      const section_element = document.createElement( 'section' );
+      section_element.innerHTML = `
+        <h3>${name}</h3>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Datum</th>
+              <th scope="col">Uhrzeit</th>
+              <th scope="col">Wert [${einheit}]</th>
+            </tr>
+          </thead>
+          <tbody id="section-${i+1}"></tbody>
+        </table>
+      `;
+      html_main.appendChild( section_element );
+
+      const html_tbody = html_main.querySelector( `#section-${i+1}` );
+      const xml_details = xml_baustein.querySelectorAll( 'wert_detail' );
+      xml_details.forEach( ( xml_detail, i ) => {
+        const datum = xml_detail.querySelector( 'Datum' ).innerHTML;
+        const uhrzeit = xml_detail.querySelector( 'Uhrzeit' ).innerHTML;
+        const wert = xml_detail.querySelector( 'wert' ).innerHTML;
+        const tr_element = document.createElement( 'tr' );
+        tr_element.innerHTML = `
+          <th scope="row">${i+1}</th>
+          <td>${datum}</td>
+          <td>${uhrzeit}</td>
+          <td>${wert}</td>
+        `;
+        html_tbody.appendChild( tr_element );
+      } );
+    } );
+  } )();
+</script>
