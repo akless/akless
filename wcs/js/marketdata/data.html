@@ -16,6 +16,24 @@
 <script>
   // IIFE => Immediate Invoked Function Expression
   ( async () => {
+    /*
+    const xml = await ccm.load( {
+      url: 'https://www.smard.de/nip-download-manager/nip/download/market-data',
+      params: {
+        "request_form": [
+            {
+              "format":"XML",
+              "moduleIds":[1001224,1004066,1004067,1004068,1001223,1004069,1004071,1004070,1001226,1001228,1001227,1001225],
+              "region":"DE",
+              "timestamp_from":1599948000000,
+              "timestamp_to":1600898399999,
+              "type":"discrete",
+              "language":"de"
+            }
+        ]
+      }
+    } );
+    */
     const xml = await ccm.load( { url: 'data.xml', method: 'GET' } );
 
     const region = xml.querySelector('region').innerHTML;
