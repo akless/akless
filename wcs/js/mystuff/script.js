@@ -1,11 +1,11 @@
 
-renderList().then();
+renderList( document.body ).then();
 
 /**
  * renders a list of all items inside <body>
  * @returns {Promise<void>}
  */
-async function renderList() {
+async function renderList( element ) {
 
   /**
    * all item datasets
@@ -14,27 +14,27 @@ async function renderList() {
   const items = await fetch( 'http://localhost:8080/api/v1/items', { method: 'GET' } ).then( result => result.json() );
 
   // set content of <body>
-  document.body.innerHTML = `
-<div class="container-fluid">
-  <h1>MyStuff Frontend <span class="badge badge-warning">JavaScript</span></h1>
-  <table class="table table-hover">
-    <thead class="thead-light">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Location</th>
-        <th scope="col">Amount</th>
-        <th scope="col">Description</th>
-        <th scope="col"></th>
-        <th scope="col"></th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
-  <button type="button" class="btn btn-success btn-sm">Create</button>
-</div>
+  element.innerHTML = `
+    <div class="container-fluid">
+      <h1>MyStuff Frontend <span class="badge badge-warning">JavaScript</span></h1>
+      <table class="table table-hover">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Location</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Description</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <button type="button" class="btn btn-success btn-sm">Create</button>
+    </div>
   `;
 
   // append table row for each loaded item dataset
@@ -46,7 +46,7 @@ async function renderList() {
   <td>${item.location}</td>
   <td>${item.amount}</td>
   <td>${item.description || '-'}</td>
-  <td><button type="button" class="btn btn-primary btn-sm" data-id="${item.id}">Read</button></td>
+  <td><button type="button" class="btn btn-primary btn-sm" data-id="${item.id}" onclick="renderForm(item.id)">Read</button></td>
   <td><button type="button" class="btn btn-warning btn-sm" data-id="${item.id}">Update</button></td>
   <td><button type="button" class="btn btn-danger btn-sm" data-id="${item.id}">Delete</button></td>
 </tr>
