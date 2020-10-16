@@ -1,7 +1,7 @@
-package bonus.aquarium.more;
+package aquarium2;
 
-import bonus.aquarium.Aquarium;
-import bonus.aquarium.Fisch;
+import aquarium.Aquarium;
+import aquarium.Fisch;
 
 public class Haifisch extends Fisch {
 
