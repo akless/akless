@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de"> 
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Training</title>
+    <script>
+
+      promiseAllExample();
+
+      function calculate() {
+
+        run();
+
+        function add( a, b ) { return a + b; }
+        function sub( a, b ) { return a - b; }
+        function mul( a, b ) { return a * b; }
+        function div( a, b ) { return a / b; }
+
+        function getOperation( op ) {
+          switch ( op ) {
+            case '+': return add;
+            case '-': return sub;
+            case '*': return mul;
+            case '/': return div;
+            default:  return add;
+          }
+        }
+
+        function run() {
+
+          let x;
+          x = getOperation('+')(1, 2);  //  1 + 2 = 3
+          x = getOperation('*')(x, 4);  //  3 * 4 = 12
+          x = getOperation('/')(x, 3);  // 12 / 3 = 4
+          x = getOperation('-')(x, 1);  //  4 - 1 = 3
+          console.log( x );             // => 3
+
+        }
+
+        foo( true, 'hallo', 3, add );
+
+        function foo( a, b, c, d ) {
+          console.log( d( c, c ) );
+        }
+
+      }
+
+      function realPromise() {
+
+        const promise = new Promise( function ( resolve, reject ) {
+
+          if ( Math.random() >= 0.5 ) {
+            resolve( 'You win the coin flip. Luck is with us!' );
+          }
+          else {
+            reject( 'You lose the coin flip. Never give up!' );
+          }
+        } );
+
+        promise
+            .then ( function resolve( result ) { console.log( 'Success!', result ); } )
+            .catch( function reject ( error  ) { console.log( 'Error!'  , error  ); } );
+      }
+
+      function ownPromise() {
+
+        let obj = {
+          constructor: function ( executor ) {
+            executor( this.onSuccess, this.onError );
+          },
+          then: function ( onSuccess ) {
+            this.onSuccess = onSuccess;
+            return this;
+          },
+          catch: function ( onError ) {
+            this.onError = onError;
+            return this;
+          }
+        };
+
+        obj
+            .then ( function onSuccess( result ) { console.log( 'Success!', result ); } )
+            .catch( function onError  ( result ) { console.log( 'Error!'  , result ); } )
+            .constructor( function ( resolve, reject ) {
+              if ( Math.random() > 0.5 ) {
+                resolve( 'You win the coin flip. Luck is with us!' );
+              }
+              else {
+                reject( 'You lose the coin flip. Never give up!' );
+              }
+            } );
+      }
+
+      async function promiseAllExample() {
+
+        Promise.all(
+          [
+            fetch( 'https://ccm2.inf.h-brs.de', {
+              method: 'POST',
+              body: '{"store":"dms-apps","get":{"creator":"André Kless"}}'
+            } ).then( response => response.json() ).then( function onSuccess( result ) { console.log( result ); } ),
+
+            fetch( 'https://ccm2.inf.h-brs.de', {
+              method: 'POST',
+              body: '{"store":"dms-components","get":{"creator":"André Kless"}}'
+            } ).then( response => response.json() ).then( function onSuccess( result ) { console.log( result ); } )
+          ]
+        ).then( () => console.log( 'finished' ) );
+
+      }
+
+    </script>
+  </head>
+  <body></body>
+</html>
