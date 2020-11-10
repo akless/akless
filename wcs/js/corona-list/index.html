@@ -34,20 +34,38 @@
   </div>
   <script src="qrcode.js"></script>
   <script>
-    document.querySelector( 'form' ).addEventListener( 'submit', /** @param {HTMLFormElement} event.target */ function ( event ) {
+
+    // log scanned QR code data
+    let data = new URL( location.href ).searchParams.get( 'contact' );
+    console.log( data, atob( data ) );
+
+    // listen to submit event of contact form
+    document.querySelector( 'form' ).addEventListener( 'submit', function ( event ) {
+
+      // prevent page reload
       event.preventDefault();
+
+      // get contact data form input fields
       let contact = {
-        vorname: event.target.querySelector( 'input[name="vorname"]' ).value,
-        nachname: event.target.querySelector( 'input[name="nachname"]' ).value,
-        adresse: event.target.querySelector( 'textarea[name="adresse"]' ).value,
-        telefon: event.target.querySelector( 'input[name="telefon"]' ).value,
-        email: event.target.querySelector( 'input[name="email"]' ).value
+        vorname:  event.target.querySelector( '#vorname'  ).value,
+        nachname: event.target.querySelector( '#nachname' ).value,
+        adresse:  event.target.querySelector( '#adresse'  ).value,
+        telefon:  event.target.querySelector( '#telefon'  ).value,
+        email:    event.target.querySelector( '#email'    ).value
       };
+
+      // save contact data in local storage
       contact = JSON.stringify( contact );
       localStorage.setItem( 'contact', contact );
+
+      // show QR code
       contact = btoa( contact );
-      new QRCode( document.getElementById( 'qrcode' ), 'https://akless.github.io/akless/wcs/js/corona-list/index.html?contact=' + contact );
+      const url = 'https://akless.github.io/akless/wcs/js/corona-list/index.html?contact=' + contact;
+      new QRCode( document.getElementById( 'qrcode' ), url );
+      console.log( url );
+
     } );
+
   </script>
 </body>
 </html>
