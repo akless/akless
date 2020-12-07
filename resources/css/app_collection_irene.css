@@ -1,0 +1,79 @@
+#element {
+  height: 100%;
+}
+
+.article > #padding {
+  padding: 1rem;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+#container > .header {
+  display: flex;
+  justify-content: space-between;
+  grid-area: header;
+  border: 1px solid grey;
+  background-color: #f8f9fa;
+  color: #777;
+  height: 80px;
+  padding: .5rem;
+}
+
+.header #home:hover,
+.footer .app-icon:hover {
+  color: #333;
+}
+
+#title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.material-icons {
+  cursor: pointer;
+  font-size: 45px;
+}
+
+.sidebar {
+  border: 1px solid grey;
+}
+
+.article {
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  overflow: scroll;
+  height: 100%;
+}
+
+#section{
+  background-color: limegreen;
+  color: #fff;
+  padding: 0.7em 1em;
+  font-size: 1.4em;
+}
+
+.footer {
+  padding: .4rem;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #777;
+}
+
+.footer:last-child {
+  line-height: .8rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+#more {
+  text-align: center;
+}
