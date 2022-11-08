@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
+<title>Live-Coding: JS und DOM</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous">
 <style>
-  header,
-  h2 {
+  header, h2 {
     text-align: center;
   }
 </style>
@@ -26,13 +26,10 @@
     const region = xml.querySelector( 'region' ).innerHTML;
     const bausteine = xml.querySelectorAll( 'baustein' );
     document.querySelector( 'h1' ).innerHTML = topic;
-    document.querySelector( 'p' ).innerHTML =
-        `${ topic } in ${ region } im Zeitraum von ${ von } bis ${ bis } - Stand: ${ stand }`;
-    console.log( bausteine );
+    document.querySelector( 'p' ).innerHTML = `${ topic } in ${ region } im Zeitraum von ${ von } bis ${ bis } - Stand: ${ stand }`;
     const main = document.querySelector( 'main' );
     const einheit = xml.querySelector( 'einheit' ).innerHTML;
     const data = [];
-    const categories = [];
     bausteine.forEach( baustein => {
       const table = document.createElement( 'div' );
       const name = baustein.querySelector( 'baustein_name' ).innerHTML;
@@ -65,16 +62,16 @@
         const row = document.createElement( 'tr' );
         const [ day, month, year ] = datum.split( '.' );
         const [ hour, min ] = uhrzeit.split( ':' );
-        date = new Date(
+        const date = new Date(
             parseInt( year ),
-            parseInt( month ),
+            parseInt( month ) - 1,
             parseInt( day ),
             parseInt( hour ),
             parseInt( min ),
             0
         );
         obj.data.push( [
-          date,
+          date.getTime(),
           parseInt( kwh.replace( '.', '' ) ) || 0
         ] );
         row.innerHTML = `
@@ -96,10 +93,7 @@
         }
       },
       xAxis: {
-        type: "datetime",
-        labels: {
-          formatter: () => Highcharts.dateFormat( '%b/%e/%Y', this.value )
-        }
+        type: 'datetime'
       },
       legend: {
         layout: 'vertical',
