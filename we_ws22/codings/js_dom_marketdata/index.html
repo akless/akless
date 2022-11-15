@@ -1,112 +1,119 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
-<title>Live-Coding: JS und DOM - Marktdaten</title>
-<link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet">
-<style>
-  header, h2 {
-    text-align: center;
-  }
-</style>
-<script src="libs/highchart/highcharts.js"></script>
-<script src="libs/highchart/series-label.js"></script>
-<script src="libs/highchart/exporting.js"></script>
-<script src="libs/highchart/export-data.js"></script>
-<script src="libs/highchart/accessibility.js"></script>
-<script>
-  const xml = fetch( 'data.xml' )
-      .then( response => response.text() )
-      .then( str => new DOMParser().parseFromString( str, 'text/xml' ) )
-      .then( xml =>
-  {
-    console.log( xml );
-    const topic = xml.querySelector( 'kategorie_name' ).innerHTML;
-    const von = xml.querySelector( 'von' ).innerHTML;
-    const bis = xml.querySelector( 'bis' ).innerHTML;
-    const stand = xml.querySelector( 'stand' ).innerHTML;
-    const region = xml.querySelector( 'region' ).innerHTML;
-    const bausteine = xml.querySelectorAll( 'baustein' );
-    document.querySelector( 'h1' ).innerHTML = topic;
-    document.querySelector( 'p' ).innerHTML = `${ topic } in ${ region } im Zeitraum von ${ von } bis ${ bis } - Stand: ${ stand }`;
-    const main = document.querySelector( 'main' );
-    const einheit = xml.querySelector( 'einheit' ).innerHTML;
-    const data = [];
-    bausteine.forEach( baustein => {
-      const table = document.createElement( 'div' );
-      const name = baustein.querySelector( 'baustein_name' ).innerHTML;
-      const obj = {
-        name: name,
-        data: []
-      };
-      data.push( obj );
-      table.innerHTML = `
-        <h2>${ name }</h2>
-        <table class="table table-striped table-hover table-sm">
-          <thead>
-            <tr>
-              <th scope="col">Datum</td>
-              <th scope="col">Uhrzeit</td>
-              <th scope="col">Wert [${ einheit }]</td>
-            </tr>
-          </thead>
-          <tbody class="table-group-divider">
-          </tbody>
-        </table>
-      `;
-      main.appendChild( table );
-      const tbody = table.querySelector( 'tbody' );
-      const werte = baustein.querySelectorAll( 'wert_detail' );
-      werte.forEach( wert => {
-        const datum = wert.querySelector( 'Datum' ).innerHTML;
-        const uhrzeit = wert.querySelector( 'Uhrzeit' ).innerHTML;
-        const kwh = wert.querySelector( 'wert' ).innerHTML;
-        const row = document.createElement( 'tr' );
-        const [ day, month, year ] = datum.split( '.' );
-        const [ hour, min ] = uhrzeit.split( ':' );
-        const date = new Date(
-            parseInt( year ),
-            parseInt( month ) - 1,
-            parseInt( day ),
-            parseInt( hour ),
-            parseInt( min ),
-            0
-        );
-        obj.data.push( [
-          date.getTime(),
-          parseInt( kwh.replace( '.', '' ) ) || 0
-        ] );
-        row.innerHTML = `
-          <td>${ datum }</td>
-          <td>${ uhrzeit }</td>
-          <td>${ kwh }</td>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live-Coding: JS und DOM - Marktdaten</title>
+  <script src="libs/highchart/highcharts.js"></script>
+  <script src="libs/highchart/series-label.js"></script>
+  <script src="libs/highchart/exporting.js"></script>
+  <script src="libs/highchart/export-data.js"></script>
+  <script src="libs/highchart/accessibility.js"></script>
+  <link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <style>
+    header, h2 {
+      text-align: center;
+    }
+  </style>
+  <script>
+    const xml = fetch( 'data.xml' )
+        .then( response => response.text() )
+        .then( str => new DOMParser().parseFromString( str, 'text/xml' ) )
+        .then( xml =>
+    {
+      console.log( xml );
+      const topic = xml.querySelector( 'kategorie_name' ).innerHTML;
+      const von = xml.querySelector( 'von' ).innerHTML;
+      const bis = xml.querySelector( 'bis' ).innerHTML;
+      const stand = xml.querySelector( 'stand' ).innerHTML;
+      const region = xml.querySelector( 'region' ).innerHTML;
+      const bausteine = xml.querySelectorAll( 'baustein' );
+      document.querySelector( 'h1' ).innerHTML = topic;
+      document.querySelector( 'p' ).innerHTML = `${ topic } in ${ region } im Zeitraum von ${ von } bis ${ bis } - Stand: ${ stand }`;
+      const main = document.querySelector( 'main' );
+      const einheit = xml.querySelector( 'einheit' ).innerHTML;
+      const data = [];
+      bausteine.forEach( baustein => {
+        const table = document.createElement( 'div' );
+        const name = baustein.querySelector( 'baustein_name' ).innerHTML;
+        const obj = {
+          name: name,
+          data: []
+        };
+        data.push( obj );
+        table.innerHTML = `
+          <h2>${ name }</h2>
+          <table class="table table-striped table-hover table-sm">
+            <thead>
+              <tr>
+                <th scope="col">Datum</td>
+                <th scope="col">Uhrzeit</td>
+                <th scope="col">Wert [${ einheit }]</td>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+            </tbody>
+          </table>
         `;
-        tbody.appendChild( row );
+        main.appendChild( table );
+        const tbody = table.querySelector( 'tbody' );
+        const werte = baustein.querySelectorAll( 'wert_detail' );
+        werte.forEach( wert => {
+          const datum = wert.querySelector( 'Datum' ).innerHTML;
+          const uhrzeit = wert.querySelector( 'Uhrzeit' ).innerHTML;
+          const kwh = wert.querySelector( 'wert' ).innerHTML;
+          const row = document.createElement( 'tr' );
+          const [ day, month, year ] = datum.split( '.' );
+          const [ hour, min ] = uhrzeit.split( ':' );
+          const date = new Date(
+              parseInt( year ),
+              parseInt( month ) - 1,
+              parseInt( day ),
+              parseInt( hour ),
+              parseInt( min ),
+              0
+          );
+          obj.data.push( [
+            date.getTime(),
+            parseInt( kwh.replace( '.', '' ) ) || 0
+          ] );
+          row.innerHTML = `
+            <td>${ datum }</td>
+            <td>${ uhrzeit }</td>
+            <td>${ kwh }</td>
+          `;
+          tbody.appendChild( row );
+        } );
+      } );
+      console.log( data );
+      Highcharts.chart( 'diagram', {
+        title: {
+          text: ''
+        },
+        yAxis: {
+          title: {
+            text: 'Wert [' + einheit + ']'
+          }
+        },
+        xAxis: {
+          type: 'datetime'
+        },
+        legend: {
+          layout: 'vertical',
+          align: 'right',
+          verticalAlign: 'middle'
+        },
+        series: data
       } );
     } );
-    console.log( data );
-    Highcharts.chart( 'diagram', {
-      title: {
-        text: ''
-      },
-      yAxis: {
-        title: {
-          text: 'Wert [' + einheit + ']'
-        }
-      },
-      xAxis: {
-        type: 'datetime'
-      },
-      legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'middle'
-      },
-      series: data
-    } );
-  } );
-</script>
-<header>
-  <h1 id="topic"></h1>
-  <p></p>
-</header>
-<div id="diagram"></div>
-<main id="tables"></main>
+  </script>
+</head>
+<body>
+  <header>
+    <h1 id="topic"></h1>
+    <p></p>
+  </header>
+  <div id="diagram"></div>
+  <main id="tables"></main>
+</body>
+</html>
