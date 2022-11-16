@@ -1,195 +1,201 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live-Coding: Einstieg in HTML und CSS</title>
+  <style>
 
-  @font-face {
-    font-family: 'WeblySleekUI';
-    src: url('weblysleekui/sl.eot');
-    src: url('weblysleekui/sl.eot?#iefix') format('embedded-opentype'),
-      /*url('uisl.woff') format('woff'),*/
-    url('weblysleekui/sl.ttf') format('truetype'),
-    url('weblysleekui/sl.svg#WeblySleekUISemilight') format('svg');
-  }
+    @font-face {
+      font-family: 'WeblySleekUI';
+      src: url('weblysleekui/sl.eot');
+      src: url('weblysleekui/sl.eot?#iefix') format('embedded-opentype'),
+        /*url('uisl.woff') format('woff'),*/
+      url('weblysleekui/sl.ttf') format('truetype'),
+      url('weblysleekui/sl.svg#WeblySleekUISemilight') format('svg');
+    }
 
-  html {
-    height: 100%;
-  }
+    html {
+      height: 100%;
+    }
 
-  body {
-    margin: 0;
-    font-family: "WeblySleekUI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-size: 150%;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
+    body {
+      margin: 0;
+      font-family: "WeblySleekUI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-size: 150%;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
 
-  main {
-    flex-grow: 1;
-    display: flex;
-  }
+    main {
+      flex-grow: 1;
+      display: flex;
+    }
 
-  ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
+    ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
 
-  header {
-    position: sticky;
-    top: 0;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: #ccc;
-    border-bottom: 1px solid black;
-  }
+    header {
+      position: sticky;
+      top: 0;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: #ccc;
+      border-bottom: 1px solid black;
+    }
 
-  header nav {
-    flex-grow: 1;
-  }
+    header nav {
+      flex-grow: 1;
+    }
 
-  header ul,
-  footer ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+    header ul,
+    footer ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-  header li,
-  footer li {
-    padding: 1rem;
-  }
+    header li,
+    footer li {
+      padding: 1rem;
+    }
 
-  li:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
+    li:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
 
-  img {
-    width: 64px;
-    padding: 5px;
-  }
+    img {
+      width: 64px;
+      padding: 5px;
+    }
 
-  main nav,
-  main aside {
-    background-image: linear-gradient(white, skyblue);
-    padding: 1rem;
-  }
+    main nav,
+    main aside {
+      background-image: linear-gradient(white, skyblue);
+      padding: 1rem;
+    }
 
-  main nav {
-    border-right: 1px solid black;
-  }
+    main nav {
+      border-right: 1px solid black;
+    }
 
-  main nav ul {
-    display: flex;
-    flex-direction: column;
-  }
+    main nav ul {
+      display: flex;
+      flex-direction: column;
+    }
 
-  main section {
-    padding: 1rem;
-  }
+    main section {
+      padding: 1rem;
+    }
 
-  main aside {
-    border-left: 1px solid black;
-  }
+    main aside {
+      border-left: 1px solid black;
+    }
 
-  #multilingualism,
-  #login_logout {
-    padding: 1rem;
-  }
+    #multilingualism,
+    #login_logout {
+      padding: 1rem;
+    }
 
-  #content {
-    flex-grow: 1;
-  }
+    #content {
+      flex-grow: 1;
+    }
 
-  article {
-    padding: 1rem;
-  }
+    article {
+      padding: 1rem;
+    }
 
-  footer {
-    position: sticky;
-    background-color: gray;
-    bottom: 0;
-    border-top: 1px solid black;
-  }
+    footer {
+      position: sticky;
+      background-color: gray;
+      bottom: 0;
+      border-top: 1px solid black;
+    }
 
-  input[type="radio"] {
-    display: none;
-  }
+    input[type="radio"] {
+      display: none;
+    }
 
-  input[type="radio"]:not(:checked) + article {
-    display: none;
-  }
+    input[type="radio"]:not(:checked) + article {
+      display: none;
+    }
 
-</style>
-<header>
-  <div>
-    <img src="img/logo.png" id="logo">
-  </div>
-  <nav>
-    <ul>
-      <li>
-        <a>Home</a>
-      </li>
-      <li>
-        <a>HTML</a>
-      </li>
-      <li>
-        <a>CSS</a>
-      </li>
-    </ul>
-  </nav>
-  <div id="multilingualism">Lang</div>
-  <div id="login_logout">User</div>
-</header>
-<main>
-  <nav>
-    <ul>
-      <li>
-        <label for="a">A</label>
-      </li>
-      <li>
-        <label for="b">B</label>
-      </li>
-      <li>
-        <label for="c">C</label>
-      </li>
-    </ul>
-  </nav>
-  <div id="content">
-    <input type="radio" name="article" id="a" checked>
-    <article>
-      Artikel 1
-    </article>
-    <input type="radio" name="article" id="b">
-    <article>
-      Artikel 2
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-      </p>
-    </article>
-    <input type="radio" name="article" id="c">
-    <article>
-      Artikel 3
-    </article>
-  </div>
-  <aside>Werbung</aside>
-</main>
-<footer>
-  <nav>
-    <ul>
-      <li>Über uns</li>
-      <li>Kontakt</li>
-      <li>Impressum</li>
-    </ul>
-  </nav>
-</footer>
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <img src="img/logo.png" id="logo">
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a>Home</a>
+        </li>
+        <li>
+          <a>HTML</a>
+        </li>
+        <li>
+          <a>CSS</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="multilingualism">Lang</div>
+    <div id="login_logout">User</div>
+  </header>
+  <main>
+    <nav>
+      <ul>
+        <li>
+          <label for="a">A</label>
+        </li>
+        <li>
+          <label for="b">B</label>
+        </li>
+        <li>
+          <label for="c">C</label>
+        </li>
+      </ul>
+    </nav>
+    <div id="content">
+      <input type="radio" name="article" id="a" checked>
+      <article>
+        Artikel 1
+      </article>
+      <input type="radio" name="article" id="b">
+      <article>
+        Artikel 2
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+      </article>
+      <input type="radio" name="article" id="c">
+      <article>
+        Artikel 3
+      </article>
+    </div>
+    <aside>Werbung</aside>
+  </main>
+  <footer>
+    <nav>
+      <ul>
+        <li>Über uns</li>
+        <li>Kontakt</li>
+        <li>Impressum</li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>
