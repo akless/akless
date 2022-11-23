@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live-Coding: Corona-Kontaktliste</title>
+  <link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+  <script src="libs/jquery/jquery.min.js"></script>
+  <script src="libs/qrcode/qrcode.min.js"></script>
+  <style>html, body, body > div { height: 100%; }</style>
+</head>
+<body>
+  <script>
+    const params = new URLSearchParams( location.search );
+    const contact = params.get( 'contact' );
+    if ( contact ) {
+      window.history.replaceState( null, null, window.location.pathname );
+      const str = localStorage.getItem( 'contact_list' );
+      const list = str ? decode( str ) : [];
+      list.push( decode( contact ) );
+      localStorage.setItem( 'contact_list', encode( list ) );
+      renderContactList();
+    }
+    else if ( localStorage.getItem( 'contact_list' ) )
+      renderContactList();
+    else if ( localStorage.getItem( 'contact' ) )
+      renderContactCode();
+    else
+      renderContactForm();
+
+    function renderContactList() {
+      const list = decode( localStorage.getItem( 'contact_list' ) );
+      document.body.innerHTML = `
+        <table class="table table-striped table-hover text-nowrap align-middle">
+          <thead>
+            <tr>
+              <th scope="col">Vorname</th>
+              <th scope="col">Nachname</th>
+              <th scope="col">Adresse</th>
+              <th scope="col">Postleitzahl</th>
+              <th scope="col">Stadt</th>
+              <th scope="col">Telefon</th>
+              <th scope="col">E-Mail</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            ${ list.map( ( { firstname, lastname, address, postal, city, tel, email } ) => `
+              <tr>
+                <td>${ firstname }</td>
+                <td>${ lastname }</td>
+                <td>${ address }</td>
+                <td>${ postal }</td>
+                <td>${ city }</td>
+                <td>${ tel }</td>
+                <td>${ email }</td>
+                <td>
+                  <button class="btn btn-danger btn-sm">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            ` ).join( '' ) }
+          </tbody>
+        </table>
+        <div class="m-2">
+          <button class="btn btn-primary" id="share">Share App</button>
+          <button class="btn btn-secondary" id="print">Liste drucken</button>
+          <button class="btn btn-danger" id="delete">Alles Löschen</button>
+        </div>
+      `;
+      document.querySelectorAll( 'table button' ).forEach( ( button, i ) => button.addEventListener( 'click', () => {
+        if ( !confirm( 'Sind Sie sicher?' ) ) return;
+        const list = decode( localStorage.getItem( 'contact_list' ) );
+        list.splice( i, 1 );
+        localStorage.setItem( 'contact_list', encode( list ) );
+        renderContactList();
+      } ) );
+      document.querySelector( '#share' ).addEventListener( 'click', renderContactCode );
+      document.querySelector( '#print' ).addEventListener( 'click', () => window.print() );
+      document.querySelector( '#delete' ).addEventListener( 'click', () => {
+        if ( !confirm( 'Sind Sie sicher?' ) ) return;
+        localStorage.removeItem( 'contact_list' );
+        location.reload();
+      } );
+    }
+
+    function renderContactForm() {
+      const contact = localStorage.getItem( 'contact' );
+      document.body.innerHTML = `
+        <form class="p-3">
+          <div class="mb-3">
+            <label for="firstname" class="form-label">Vorname*</label>
+            <input type="text" class="form-control" id="firstname" required name="firstname">
+          </div>
+          <div class="mb-3">
+            <label for="lastname" class="form-label">Nachname*</label>
+            <input type="text" class="form-control" id="lastname" required name="lastname">
+          </div>
+          <div class="mb-3">
+            <label for="address" class="form-label">Adresse*</label>
+            <input type="text" class="form-control" id="address" required name="address">
+          </div>
+          <div class="mb-3">
+            <label for="postal" class="form-label">Postleitzahl*</label>
+            <input type="text" class="form-control" id="postal" required name="postal">
+          </div>
+          <div class="mb-3">
+            <label for="city" class="form-label">Stadt*</label>
+            <input type="text" class="form-control" id="city" required name="city">
+          </div>
+          <div class="mb-3">
+            <label for="tel" class="form-label">Telefon*</label>
+            <input type="tel" class="form-control" id="tel" required name="tel">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">E-Mail</label>
+            <input type="email" class="form-control" id="email" name="email">
+          </div>
+          <div>
+            <button class="btn btn-primary">Speichern</button>
+            ${ contact ? '<button class="btn btn-danger" id="delete">Löschen</button>' : '' }
+          </div>
+        </form>
+      `;
+      const $form = document.querySelector( 'form' );
+      let data = localStorage.getItem( 'contact' );
+      if ( data ) {
+        data = decode( data );
+        for ( const key in data )
+          $form.querySelector( `[name="${key}"]` ).value = data[ key ];
+      }
+      $form.addEventListener( 'submit', event => {
+        event.preventDefault();
+        data = Object.fromEntries( new FormData( $form ).entries() );
+        localStorage.setItem( 'contact', encode( data ) );
+        renderContactCode();
+      } );
+      contact && $form.querySelector( '#delete' ).addEventListener( 'click', () => {
+        if ( !confirm( 'Sind Sie sicher?' ) ) return;
+        localStorage.removeItem( 'contact' );
+        renderContactForm();
+      } );
+    }
+
+    function renderContactCode() {
+      const contact = localStorage.getItem( 'contact' );
+      document.body.innerHTML = `
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <div id="qrcode" role="button"></div>
+          ${ contact ? '<button class="btn btn-primary mt-4">Kontaktdaten editieren</button>' : '' }
+        </div>
+      `;
+      const url = location.href + ( contact ? '?contact=' + contact : '' );
+      const $qrcode = document.querySelector( "#qrcode" );
+      new QRCode( $qrcode, url );
+      document.body.querySelector( '#qrcode' ).addEventListener( 'click', () => location = url );
+      contact && document.body.querySelector( 'button' ).addEventListener( 'click', renderContactForm );
+    }
+
+    function encode( json ) {
+      return btoa( JSON.stringify( json ) );
+    }
+
+    function decode( str ) {
+      return JSON.parse( atob( str ) );
+    }
+
+  </script>
+</body>
+</html>
