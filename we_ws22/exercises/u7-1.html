@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <title>7.1. Funktionen in JavaScript</title>
+  <script>
+    /* Schreiben Sie eine Funktion identity_function, die einen Parameter
+       entgegennimmt und eine Funktion zurückgibt, die dieses Argument zurückgibt. */
+    function identity_function( x ) {
+      return function () {
+        return x;
+      }
+    }
+    console.log( 'identity_function( 1 )() =>', identity_function( 1 )() );
+
+    /* Schreiben Sie eine Funktion addf, sodass addf(x)(y) genau x + y zurückgibt.
+       (Es haben also zwei Funktionsaufrufe zu erfolgen. addf(x) liefert eine Funktion, die auf y angewandt wird.) */
+    function addf( x ) {
+      return function ( y ) {
+        return x + y;
+      }
+    }
+    console.log( 'addf(3)(4) =>', addf( 3 )( 4 ) );
+
+    /* Schreiben Sie eine Funktion applyf, die aus einer binären Funktion wie add(x,y) eine Funktion addf berechnet,
+       die mit zwei Aufrufen das gleiche Ergebnis liefert, z.B. addf = applyf(add); addf(x)(y) soll add(x,y) liefern.
+       Entsprechend soll applyf(mul)(5)(6) für Multiplikation 30 liefern. */
+    function applyf( bf ) {
+      return function ( x ) {
+        return function ( y ) {
+          return bf( x, y );
+        }
+      }
+    }
+    function add( x, y ) { return x + y; }
+    function mul( x, y ) { return x * y; }
+    console.log( 'applyf(add)(3)(4) =>', applyf( add )( 3 )( 4 ) );
+    console.log( 'applyf(mul)(3)(4) =>', applyf( mul )( 3 )( 4 ) );
+
+    /* Schreiben Sie eine Funktion curry (von Currying), die eine binäre Funktion und ein Argument nimmt,
+       um daraus eine Funktion zu erzeugen, die ein zweites Argument entgegennimmt.
+       Beispiele: add3 = curry(add, 3); add3(4) ergibt 7 und curry(mul, 5)(6) ergibt 30. */
+    function curry( bf, x ) {
+      return function ( y ) {
+        return bf( x, y );
+      }
+    }
+    console.log( 'curry(add,3)(4) =>', curry( add, 3 )( 4 ) );
+
+    /* Erzeugen Sie die inc-Funktion mithilfe einer der Funktionen addf, applyf und curry aus den letzten Aufgaben,
+       ohne die Funktion inc selbst zu implementieren. inc(x) soll immer x + 1 zurückgeben
+       und lässt sich natürlich auch direkt implementieren. Das ist aber hier nicht die Aufgabe.
+       Vielleicht schaffen Sie es, drei Varianten der inc-Implementierung zu schreiben? */
+    function inc1( x ) {
+      return addf( x )( 1 );
+    }
+    function inc2( x ) {
+      return applyf( add )( x )( 1 );
+    }
+    function inc3( x ) {
+      return curry( add, x )( 1 );
+    }
+    let i = 0;
+    console.log( 'i = inc1(i), i = inc2(i), i = inc3(i) =>', i = inc1( i ), i = inc2( i ), i = inc3( i ) );
+
+    /* Schreiben Sie eine Funktion methodize, die eine binäre Funktion (z.B. add oder mul) in eine unäre Methode verwandelt.
+       Nach Number.prototype.add = methodize(add) soll (3).add(4) genau 7 ergeben. */
+    function methodize( bf ) {
+      return function ( y ) {
+        return bf( this.valueOf(), y );
+      }
+    }
+    Number.prototype.add = methodize( add );
+    console.log( 'Number.prototype.add = methodize( add ); ( 3 ).add( 4 ) =>', ( 3 ).add( 4 ) );
+
+    // ...
+  </script>
+</head>
+</html>
