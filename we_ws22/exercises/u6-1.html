@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<input type="text">
+<script>
+  const $input = document.querySelector( 'input' );
+  const brackets = [
+    [ '[', ']', 0 ],
+    [ '(', ')', 0 ],
+    [ '{', '}', 0 ]
+  ];
+  const opened = brackets.map( line => line[ 0 ] );
+  const closed = brackets.map( line => line[ 1 ] );
+  $input.addEventListener( 'input', e => {
+    brackets.forEach( bracket => bracket[ 2 ] = 0 );
+    const str = document.querySelector( 'input' ).value;
+    e.target.style.backgroundColor = check( str ) ? 'limegreen' : 'red';
+  } );
+
+  function check( str ) {
+    let result = true;
+    const stack = [];
+    [ ...str ].forEach( c => {
+      if ( opened.includes( c ) ) {
+        brackets[ opened.indexOf( c ) ][ 2 ]++;
+        stack.push( c );
+        console.log( stack );
+      }
+      if ( closed.includes( c ) ) {
+        const i = closed.indexOf( c );
+        if ( opened[ i ] !== stack.at( -1 ) )
+          result = false;
+        if ( brackets[ i ][ 2 ] < 0 )
+          result = false;
+        brackets[ i ][ 2 ]--;
+        stack.pop();
+        console.log( stack );
+      }
+    } );
+    brackets.forEach( bracket => {
+      if ( bracket[ 2 ] )
+        result = false;
+    } );
+    console.log( brackets );
+    return result;
+  }
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<script>
+
+  const Auto = {
+    name: ''
+  };
+
+  const Person = {
+    name: '',
+    cars: []
+  };
+
+  const ford = {
+    name: 'Ford',
+    __proto__: Auto
+  }
+  const seat = {
+    name: 'SEAT',
+    __proto__: Auto
+  }
+
+  const hans = {
+    name: 'Hans',
+    cars: [ seat ],
+    __proto__: Person
+  };
+  const peter = {
+    name: 'Peter',
+    cars: [ ford, seat ],
+    __proto__: Person
+  };
+
+  function conflict( car, persons ) {
+    let owners = 0;
+    persons.forEach( person => person.cars.includes( car ) && owners++ );
+    return owners > 1;
+  }
+  const result = conflict( seat, [ peter, hans ] );
+  console.log( result, seat, [ peter, hans ] );
+</script>
