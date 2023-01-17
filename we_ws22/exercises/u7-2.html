@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<script>
+  ( async () => {
+
+    let stop_words = await fetch( 'https://raw.githubusercontent.com/solariz/german_stopwords/master/german_stopwords_plain.txt' ).then( response => response.text() );
+    stop_words = stop_words.split( '####' )[ 2 ].trim().split( '\n' );
+    console.log( stop_words );
+
+    let text = await fetch( 'https://kaul.inf.h-brs.de/ccm/we/ws22/resources/assets/Plagiatsresolution.html' ).then( response => response.text() );
+    document.body.innerHTML = text;
+    text = document.body.innerText.match( /\b(\S+|')+\b/gim );
+    text = text.filter( word => !stop_words.includes( word.toLowerCase() ) );
+    console.log( text );
+
+    const histogram = {};
+    text.forEach( word => {
+      word = word.toLowerCase();
+      if ( histogram[ word ] )
+        histogram[ word ]++
+      else
+        histogram[ word ] = 1;
+    } );
+    console.log( histogram );
+
+    const amount = [];
+    for ( const key in histogram ) {
+      if ( amount[ histogram[ key ] ] )
+        amount[ histogram[ key ] ].push( key );
+      else
+        amount[ histogram[ key ] ] = [ key ];
+    }
+    console.log( amount );
+
+    const result = [];
+    while ( result.length < 3 ) {
+      const last = amount.pop();
+      last && result.push( ...last );
+    }
+    result.length = 3;
+    console.log( result );
+
+  } )();
+</script>
